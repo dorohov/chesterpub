@@ -1,0 +1,228 @@
+.index-restaurant__section{
+	background: url('@{url-path-img}/index/bg-index-slide2.jpg') no-repeat center top;
+	//opacity: @opacity;
+    @media @media-size-sm{
+    	._ps__inside-line{
+    		min-height: 670px;
+    	}
+    }
+}
+._ir__heading{
+	@media @media-screen-notebook{
+		letter-spacing: 15px;
+	}
+
+}
+._ir__flex{
+	display: flex;
+	margin: 0 -15px;
+	> div{
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	@media @media-size-sm-p{
+		flex-wrap: wrap;
+	}
+	@media @media-screen-hsmall{
+		height: 100%;
+		max-height: 290px;
+	}
+	@media @media-screen-hbig{
+		height: 100%;
+		max-height: 510px;
+	}
+	@media @media-screen-h1080{
+		height: 100%;
+		max-height: 690px;
+	}
+	@media @media-screen-notebook{
+		height: 100%;
+		max-height: 340px;
+	}
+}
+._ir__left-col{
+	width: 100%;
+	max-width: 870px;
+	position: relative;
+	height: 100%;
+	@media @media-screen-hsmall{
+		max-width: 390px!important;
+	}	
+	@media @media-screen-hbig{
+		max-width: 660px!important;
+	}	
+	@media @media-screen-notebook{
+		max-width: 450px!important;
+	}	
+	@media @media-size-sm{
+		max-width: 305px!important;
+	}
+	@media @media-size-sm-p{
+		max-width: 100%!important;
+		display: flex;
+		justify-content: center;
+		order: 1;
+		> div{
+			margin: 0 20px;
+		}
+	}
+}
+._ir__virt-link{
+	@media @media-screen{		
+		position: absolute;
+		bottom: 105px;
+		right: -95px;
+		box-shadow: 20px 20px 40px fadeout(@black, 75%);
+	}
+	@media @media-screen-hsmall{
+		bottom: inherit!important;
+    	right: -255px!important; 
+    	top: 0;
+    	display: none;
+    }
+	@media @media-screen-hbig{
+		bottom: 65px!important;
+    	right: -65px!important;
+    	width: 180px;
+    }
+	@media @media-size-sm{
+		position: relative;
+		bottom: inherit!important;
+		right: inherit!important;
+		box-shadow: none;
+		display: block;
+	}
+	@media @media-size-sm-l{
+		.hidden-sm{
+			display: none!important;
+		}
+		.visible-sm{
+			display: block!important;
+		}
+	}
+}
+._ir__fotogal-link{
+	display: none;
+	@media @media-size-sm{
+		display: block;
+		margin-bottom: 35px;
+	}
+
+}
+._ir__note{
+	width: 100%;
+	max-width: 740px;
+	line-height: 36px;
+	@media @media-screen-hsmall{
+		max-width: 1280px!important;
+	}
+	@media @media-screen-hbig{
+		max-width: 990px!important;
+	}
+	@media @media-screen-notebook{
+		font-size: 14px;
+		line-height: 30px;
+	}	
+	@media @media-size-sm-p{
+		max-width: 100%!important;
+		margin-bottom: 30px;
+	}
+}
+._ir__note-content{
+	max-width: 540px;
+	margin: 0 auto;
+	text-align: center;
+	&:before{
+		background: url('@{url-path-img}/index/rest-venzel.png') no-repeat center;
+		display: block;
+		content: '';
+		height: 16px;
+		margin-bottom: 60px;
+		margin-top: 15px; 
+		@media @media-size-sm{
+			display: none;
+		}
+		@media @media-screen-hsmall{
+			margin-bottom: 20px;
+		}
+		@media @media-screen-hbig{
+			margin-bottom: 40px;
+		}
+		@media @media-screen-notebook{
+			margin: 0 0 10px;
+		}
+	}
+	&:after{
+		background: url('@{url-path-img}/index/rest-beer.png') no-repeat center;
+		display: block;
+		content: '';
+		height: 120px;
+		margin-top: 55px;
+		@media @media-screen-hsmall{
+			margin-top: 20px;
+		}
+		@media @media-screen-hbig{
+			margin-top: 25px;
+		}
+		@media @media-screen-notebook{
+			background-size: 50px;
+			height: 80px;
+			margin-top: 10px; 
+		}
+		@media @media-size-sm{					
+			height: 100px;
+			background-size: 55px;
+		}
+		@media @media-size-sm-p{
+			margin-top: 15px;
+		}
+	}
+	@media @media-size-sm{
+		font-size: 14px;
+		padding-top: 15px;
+		line-height: 30px;
+		max-width: 100%;
+	}
+	@media @media-size-sm-p{
+		padding: 0;
+	}
+	@media @media-screen-hsmall{
+		max-width: 800px;
+	}	
+	@media @media-screen-hbig{
+		max-width: 700px;
+	}
+	@media @media-screen-notebook{
+		max-width: 640px;
+	}		
+}
+._ir__carousel{
+	height: 100%;
+	@media @media-size-sm{
+		display: none;
+	}		
+}
+._ir__carousel-inner{
+	height: 100%;	
+	.item{
+		height: 100%;	
+		img{
+			height: 90%;
+		}		
+	}
+}
+.carousel-control{
+	position: absolute;
+	top: 47%;
+	width: 52px;
+	height: 20px;
+	transform: translateY(-50%);
+	&.left{
+		background: url('@{url-path-img}/index/icon-arrow-left.png') no-repeat center;
+		left: -25px;
+	}
+	&.right{
+		background: url('@{url-path-img}/index/icon-arrow-right.png') no-repeat center;
+		right: -25px;
+	}
+}

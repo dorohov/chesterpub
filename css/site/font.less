@@ -1,20 +1,29 @@
 @bebas: 		bebasneueregular-webfont;
+@bebas-bold: 	bebasneuebold-webfont;
 @proxima: 		proxima_nova_regular-webfont;
 @proxima-bold: 	proxima_nova_bold-webfont;
 
 .include-custom-font(@family: @bebas, @weight: normal, @style: normal){
 	@font-face{			
 		font-family: "@{family}";			
-		src:url('/fonts/@{family}.eot');
-		src:url('/fonts/@{family}.eot?#iefix') format('embedded-opentype'),
-			url('/fonts/@{family}.woff') format('woff'),
-			url('/fonts/@{family}.ttf') format('truetype'),
-			url('/fonts/@{family}.svg#icon') format('svg');
+		src:url('@{url-path-fonts}/@{family}.eot');
+		src:url('@{url-path-fonts}/@{family}.eot?#iefix') format('embedded-opentype'),
+			url('@{url-path-fonts}/@{family}.woff') format('woff'),
+			url('@{url-path-fonts}/@{family}.ttf') format('truetype'),
+			url('@{url-path-fonts}/@{family}.svg#icon') format('svg');
 		font-weight: @weight;
 		font-style: @style;		
 	}
 }
 
 .include-custom-font(@family: @bebas, @weight: normal, @style: normal);
+.include-custom-font(@family: @bebas-bold, @weight: normal, @style: normal);
 .include-custom-font(@family: @proxima, @weight: normal, @style: normal);
 .include-custom-font(@family: @proxima-bold, @weight: normal, @style: normal);
+
+.mixin-headings(@font-family: @proxima, @font-size: 20px, @line-height: 26px, @color: @black){
+	font-family: @font-family;
+	font-size: @font-size;
+	line-height: @line-height;
+	color: @color;
+} 

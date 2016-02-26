@@ -4,6 +4,17 @@
 		[snp tpl="src/block/site/page/head/.html" ]
 	</head>
 	<body>
-		Привет
+		<div id="fullpage" class="fullpage-site">
+			[snp tpl="src/block/site/page/index/_b-header/.html" class="section index-header__section section-green"]
+
+			[snp tpl="src/block/site/page/index/_b-restaurant/.html" class="section index-restaurant__section section-grey"]
+		    
+			[snp tpl="src/block/site/page/index/_b-beer/.html" class="section index-beer__section section-green"]
+
+			[snp tpl="src/block/site/page/index/_b-news/.html" class="section index-news__section section-grey"] 
+			
+			[snp tpl="src/block/site/default/_b-footer/.html" class="section footer-block"] 
+		</div>
+		[snp tpl="src/block/site/default/_b-navbar/.html" class="navbar-modal-block"] 
 	</body>
 </html>

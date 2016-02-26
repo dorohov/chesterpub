@@ -1,0 +1,177 @@
+.navbar-modal-block{
+	//background: @maket;
+}
+._nbmodal__dialog{
+	height: 100%;
+	background: rgb(38, 112, 59);
+	padding: 25px 50px 50px;
+	//opacity: @opacity;
+	max-width: 1900px;
+	margin: 0 auto;
+	@media @media-size-sm{
+		padding: 12px 30px 40px;
+	}
+	@media @media-screen-h1080{
+		padding: 25px 50px 85px;
+	}
+}
+._nbmodal__inside-line{
+	padding: 70px 0 0 0;
+	@media @media-size-sm{
+		padding: 60px 0 0 0;
+	}
+}
+._nbmodal__close{
+	._ps__btn-line{
+		span{
+			&:nth-child(1){
+				top: 50%;
+				transform: rotate(-45deg) translateY(-50%);
+
+			}
+			&:nth-child(2){display: none;}
+			&:nth-child(3){
+				bottom: 50%;
+				transform: rotate(45deg) translateY(50%);
+			}
+		}
+	}
+}
+._nbmodal__flex{
+	display: flex;
+	height: 100%;
+	> div{
+		width: 100%;
+	}
+}
+._nbmodal__nav{
+	height: 100%;
+	background: url('@{url-path-img}/navbar/bg-navbar-mod-top.png') no-repeat top left, url('@{url-path-img}/navbar/bg-navbar-mod-bottom.png') no-repeat bottom left;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	@media @media-screen-notebook{
+		background: url('@{url-path-img}/navbar/bg-navbar-mod-bottom.png') no-repeat bottom left;
+		background-size: 770px;
+
+	}
+	ul{    
+		max-width: 250px;
+		width: 100%;
+		list-style: none;
+		padding: 0;
+		text-align: center;
+		transform: translateY(-40px);
+		// @media @media-screen-hsmall{
+		//     max-width: 500px;
+		// 	transform: translateY(0px);
+		// 	display: flex;
+		// 	flex-wrap: wrap;
+		// }
+		@media @media-screen-hbig{
+			transform: translateY(-20px);
+		}
+		&:after{
+			display: block;
+			content: ''; 
+	    	width: 100%;
+	    	max-width: 100%;
+			height: 11px;
+			margin: 20px auto 0;
+			background: url('@{url-path-img}/index/ibm-venzel.png') center no-repeat; 
+		}
+		li{
+			/* @media @media-screen-hsmall{
+				width: 50%;
+			} */
+			a{
+				.mixin-headings(
+					@font-family: @bebas-bold, 
+					@font-size: 28px, 
+					@line-height: 72px, 
+					@color: @white);
+				text-transform: uppercase;
+				letter-spacing: 5px;
+				@media @media-size-sm{
+				   font-size: 24px;
+				   line-height: 60px;
+				}
+				@media @media-screen-hsmall{
+				   line-height: 52px;
+				   font-size: 22px;
+				}
+				@media @media-screen-hbig{
+				   line-height: 52px;
+				   font-size: 22px;
+				}
+			}
+		}
+	}
+}
+._nbmodal__soc{
+	display: flex;
+	justify-content: space-between;    
+	max-width: 180px;
+    width: 100%; 
+	@media @media-screen-hsmall{
+		transform: translateY(30px);
+	}
+	@media @media-screen-hbig{
+		transform: translateY(10px);
+	}
+}
+._nbmodal__soc-item{
+	width: 22px;
+	height: 22px;
+	display: block;
+	&.soc-vk{
+		background: url('@{url-path-img}/navbar/icon-vk.png') center no-repeat;
+	}
+	&.soc-fb{
+		background: url('@{url-path-img}/navbar/icon-fb.png') center no-repeat;
+	}
+	&.soc-inst{
+		background: url('@{url-path-img}/navbar/icon-inst.png') center no-repeat;
+	}
+}
+
+._nbmodal__navprev{
+	display: flex;
+	flex-direction: column;
+}
+._nbmodal__navprev-item{
+	display: flex;
+	height: 500px;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	background: url('@{url-path-img}/navbar/preview-lock.png') no-repeat center;
+	text-decoration: none;
+	&:hover,
+	&:focus{
+		text-decoration: none;
+	}
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: fadeout(@black, 40%);
+	}
+	span{
+		.mixin-headings(
+			@font-family: @bebas-bold, 
+			@font-size: 32px, 
+			@line-height: 72px, 
+			@color: @white);
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		border: 1px solid @white;
+		border-left: 0;
+		border-right: 0;
+    	padding: 5px 20px;
+	}
+}
