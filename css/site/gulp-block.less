@@ -834,6 +834,145 @@
     	padding: 5px 20px;
 	}
 }
+.menu-page__section{
+	//opacity: @opacity;
+}
+._menuP__bg{	
+	position: absolute;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	&._menuP__left-bg{
+		left: 0;
+		background: url('@{url-path-img}/menu/bg-menu-top.png') no-repeat right top, url('@{url-path-img}/menu/bg-menu-bottom.png') no-repeat left bottom, url('@{url-path-img}/menu/bg-yellow-left.jpg') repeat center top;
+	}
+	&._menuP__right-bg{
+		right: 0;
+		background: url('@{url-path-img}/bg-chester.jpg') no-repeat center;	
+		&:before{
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background: fadeout(@black, 60%);
+			height: 100%;
+			width: 100%;
+			.transition(@duration:0.2s, @ease:ease-out);
+		}	
+	}
+}
+._menuP__flex{	
+	display: flex;
+    height: 100%;
+	> div{
+		width: 100%;
+		height: 100%;
+	}
+}
+._menuP__left-col{
+	padding-right: 65px;
+}
+._menuP__right-col{
+	padding-left: 65px;
+}
+._menuP__list-block{
+	transform: translateY(-10px);
+    max-width: 745px;
+    display: flex;
+    margin-left: -15px;
+}
+
+._menuP__list-heading{
+	margin: 0px;
+	font-size: 24px;
+	line-height: 36px;
+	font-weight: 700;
+	margin-bottom: 20px;
+	padding-left: 15px;
+}
+._menuP__item{
+	padding: 8px 10px 8px 15px;
+	margin-bottom: 13px;
+	&.active{
+		background: fadeout(@black, 90%);
+	}
+}
+._menuP__item-flex{
+	display: flex;
+	justify-content: space-between;
+	>div{
+		width: 100%;
+		padding: 0 10px;
+	}
+}
+._menuP__item-name{
+	overflow-x: hidden;
+	width: 98%!important;
+	text-overflow: ellipsis;    
+	white-space: nowrap;
+	padding-left: 0px !important;
+	span{
+		&:after{
+			margin-left: 10px;
+			display: inline-block;
+			content: '';
+			width: 1000%;
+			border-top:1px dotted lighten(@black, 20%);
+
+		}
+	}
+}
+._menuP__item-cost{
+	font-weight: 700;
+	max-width: 100px;
+}
+._menuP__item-qty{	
+	//visibility: hidden;
+	.mixin-headings(
+		@font-family: @bebas, 
+		@font-size: 18px, 
+		@line-height: inherit, 
+		@color: inherit);    
+	max-width: 50px;
+	padding: 0!important;
+}
+._menuP__item-qty-btn{
+	color: @green;
+	font-size: 26px;
+	line-height: 26px;
+	cursor: pointer;
+	margin: 0 3px;    
+	vertical-align: middle;
+}
+._menuP__item-note{
+	font-style: italic;
+	color: rgb(177, 164, 129);
+	font-size: 14px;
+	line-height: 14px;
+}
+._menuP__btn-block{
+	margin-top: 45px;
+}
+._menuP__btn-green{
+	max-width: 300px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+._menuP__link-italic{
+	text-align: center;
+	a{
+		font-size: 14px;
+		font-style: italic;
+		color: fadeout(@black, 20%);
+		text-decoration: underline;
+		&:hover,
+		&:focus{
+			text-decoration: none;
+		}
+	}
+}
 .index-beer__section{
 	//background: fadeout(@black, 30%) url('@{url-path-img}/index/bg-index-beer.jpg') no-repeat left top, fadeout(@black, 30%) url('@{url-path-img}/index/bg-index-menu.jpg') no-repeat right top;
 	//opacity: @opacity;
@@ -934,6 +1073,9 @@
 		margin: 35px auto 0;
 		background: url('@{url-path-img}/index/ibm-venzel.png') no-repeat center;
 	}
+	@media @media-screen-WSXGA900{
+		transform: translateY(-100px);
+	}
 	// @media @media-screen-hsmall{
 	// 	transform: translateY(-100px);
 	// }
@@ -991,6 +1133,9 @@
 	// @media @media-screen-hsmall{
 	// 	transform: translateY(-65px);
 	// }
+	@media @media-screen-WSXGA900{
+		transform: translateY(-65px);
+	}
 	@media @media-screen-hbig{
 		transform: translateY(-65px);
 	}
@@ -1011,6 +1156,9 @@
 	// @media @media-screen-hsmall{
 	// 	transform: translateY(15px);
 	// }
+	@media @media-screen-WSXGA900{
+		transform: translateY(-15px);
+	}
 	@media @media-screen-hbig{
 		transform: translateY(15px);
 	}
@@ -1077,6 +1225,9 @@
 		}
    		@media @media-screen-h1080{
 			transform: translateY(-65px);
+		}
+		@media @media-screen-WSXGA900{
+			transform: translateY(-75px); 
 		}
 	}
 	@media @media-screen-hsmall{
@@ -1179,6 +1330,9 @@
 		bottom: 35px;
     }
     @media @media-screen-h1080{    	
+		bottom: 50px;
+    }
+	@media @media-screen-WSXGA900{			
 		bottom: 50px;
     }
 	&:before{
@@ -1444,6 +1598,10 @@
 		height: 100%;
 		max-height: 340px;
 	}
+	@media @media-screen-WSXGA900{
+		height: 100%;
+		max-height: 470px;
+	}
 }
 ._ir__left-col{
 	width: 100%;
@@ -1504,6 +1662,10 @@
 		.visible-sm{
 			display: block!important;
 		}
+	}
+	@media @media-screen-WSXGA900{
+		bottom: -45px;
+		right: -5px;
 	}
 }
 ._ir__fotogal-link{
@@ -1573,6 +1735,11 @@
 			background-size: 50px;
 			height: 80px;
 			margin-top: 10px; 
+		}
+		@media @media-screen-WSXGA900{
+			background-size: 60px;
+			height: 90px;
+			margin-top: 30px; 
 		}
 		@media @media-size-sm{					
 			height: 100px;

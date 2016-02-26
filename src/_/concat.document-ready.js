@@ -7,3 +7,4 @@ $(".page-loader .close-loader").on("click",function(e){e.preventDefault(),$(".pa
 $(".scrollto").on("click",function(e){e.preventDefault(),$($(this).attr("href")).eq(0).jqfeScrollTo({diff:0,speed:777})});
 $("img").addClass("img-responsive");
 device.desktop()&&$("#fullpage").fullpage({navigation:!0,navigationPosition:"right"}),$("._ibm__left-col").hover(function(){$("._ibm__left-bg").addClass("bg-hover")},function(){$("._ibm__left-bg").removeClass("bg-hover")}),$("._ibm__right-col").hover(function(){$("._ibm__right-bg").addClass("bg-hover")},function(){$("._ibm__right-bg").removeClass("bg-hover")});
+device.desktop()&&$("#fullpage-second").fullpage({navigation:!0,navigationPosition:"right",navigation:!1});
