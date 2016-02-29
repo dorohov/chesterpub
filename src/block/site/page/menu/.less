@@ -23,9 +23,8 @@
 			right: 0;
 			top: 0;
 			bottom: 0;
-			//background: fadeout(@black, 60%);
-
-			background: fadeout(@green, 20%);
+			background: fadeout(@black, 60%);
+			//background: fadeout(@green, 20%);
 			height: 100%;
 			width: 100%;
 			.transition(@duration:0.2s, @ease:ease-out);
@@ -298,11 +297,25 @@
 }
 //delivery
 ._menuP__delivery{
-	padding-top: 28px;
-	font-size: 24px;
 	color: @white;
 	text-align: center;
 	display: flex;
+	&.step1{
+		padding-top: 28px;
+		font-size: 24px;
+	}
+	&.step2{
+		padding-top: 55px;
+		.btn-deliv{
+			font-family: @bebas-bold;
+		} 
+		._menuP__delivery-step{
+			margin-bottom: 80px;
+			@media @media-screen-hbig{
+			margin-bottom: 40px;				
+			}
+		}
+	}
 	a{
 		color: @white;
 		text-decoration: underline;
@@ -316,7 +329,9 @@
 		}
 	}
 	@media @media-screen-hbig{
-		padding-top: 0;
+		&.step1{
+			padding-top: 0;
+		}
 	}
 	._navbar__scroll-container{
 	}
@@ -391,6 +406,43 @@
 	margin: 80px auto 20px;
 	@media @media-screen-hbig{
 		margin: 20px auto 15px;
+	}
+}
+._menuP__delivery-input{
+	max-width: 425px;
+	margin: 40px auto 60px;
+	position: relative;
+	&:after{
+		content: '';
+		background: url('@{url-path-img}/beer/icon-phone.png') center no-repeat;
+		width: 23px;
+		height: 23px;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		display: block;
+		transform: translateY(-50%);
+	}
+	input{
+		background: none;
+		width: 100%;
+		border:none;
+		border-bottom: 1px solid rgb(69, 192, 115);
+		color: @white;
+		padding: 7px 0;
+		&:focus{
+			outline: none;
+		}
+		&::-webkit-input-placeholder {
+			color: rgb(69, 192, 115);
+			font-style: italic;
+			font-size: 14px;
+		}
+		&:-moz-placeholder {
+			color: rgb(69, 192, 115);
+			font-style: italic;
+			font-size: 14px;
+		}
 	}
 }
 .btn-deliv{
