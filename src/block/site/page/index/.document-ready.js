@@ -1,15 +1,3 @@
-/*$('#fullpage').fullpage({
-	navigation: true,
-	navigationPosition: 'right',
-	//scrollOverflow: true
-});*/
-if(device.desktop()) {
-	$('#fullpage').fullpage({
-		navigation: true,
-		navigationPosition: 'right',
-		//scrollOverflow: true
-	});
-}
 $('._ibm__left-col').hover(
 	function(){
 		$('._ibm__left-bg').addClass('bg-hover')
