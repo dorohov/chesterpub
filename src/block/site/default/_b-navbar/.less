@@ -54,7 +54,6 @@
 	@media @media-screen-notebook{
 		background: url('@{url-path-img}/navbar/bg-navbar-mod-bottom.png') no-repeat bottom left;
 		background-size: 770px;
-
 	}
 	ul{    
 		max-width: 250px;
@@ -62,7 +61,9 @@
 		list-style: none;
 		padding: 0;
 		text-align: center;
-		transform: translateY(-40px);
+		transform: translateY(-40px);    
+		z-index: 20;
+		position: relative;
 		// @media @media-screen-hsmall{
 		//     max-width: 500px;
 		// 	transform: translateY(0px);

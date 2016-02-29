@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[snp tpl="src/block/site/page/head/.html" ]
+	</head>
+	<body>
+		<div id="fullpage-second" class="fullpage-site">
+			[snp tpl="src/block/site/page/beer/weisen.html" class="section beer-page__section section-grey"]
+			
+			[snp tpl="src/block/site/default/_b-footer/.html" class="section footer-block"] 
+		</div>
+		[snp tpl="src/block/site/default/_b-navbar/.html" class="navbar-modal-block"] 
+		<script>
+			if(device.desktop()) {
+				$('#fullpage-second').fullpage({
+					navigation: true,
+					navigationPosition: 'right',
+					navigation: false,
+				});
+			}
+		</script>
+	</body>
+</html>
