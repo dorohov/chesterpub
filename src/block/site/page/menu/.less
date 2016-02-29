@@ -23,7 +23,9 @@
 			right: 0;
 			top: 0;
 			bottom: 0;
-			background: fadeout(@black, 60%);
+			//background: fadeout(@black, 60%);
+
+			background: fadeout(@green, 20%);
 			height: 100%;
 			width: 100%;
 			.transition(@duration:0.2s, @ease:ease-out);
@@ -164,6 +166,30 @@
 		}
 	}
 }
+._menuP__btn-step1{
+	@media @media-screen-notebook{
+		margin-top: 50px;
+	}
+	@media @media-screen-WSXGA900{
+		margin-top: 50px;
+	}
+	@media @media-screen-hbig{
+		margin-top: 30px;
+	}
+	@media @media-screen-h1080{
+		margin-top: 100px;
+	}
+}
+._menuP__green-text{
+	.mixin-headings(
+		@font-family: @bebas-bold, 
+		@font-size: 20px, 
+		@line-height: 24px, 
+		@color: @green);
+	text-align: center;
+	letter-spacing: 6px;
+	margin-bottom: 15px;
+}
 .btn-menu{
 	position: absolute;
 	right: -114px;
@@ -270,3 +296,115 @@
 		display: flex;
 	}
 }
+//delivery
+._menuP__delivery{
+	padding-top: 28px;
+	font-size: 24px;
+	color: @white;
+	text-align: center;
+	display: flex;
+	a{
+		color: @white;
+		text-decoration: underline;
+		font-style: italic;
+		font-size: 14px;
+		line-height: 24px;
+		&:hover,
+		&:focus{
+			text-decoration: none;
+			color: @white;
+		}
+	}
+	@media @media-screen-hbig{
+		padding-top: 0;
+	}
+	._navbar__scroll-container{
+	}
+	._navbar__block-container{
+		@media @media-screen-hbig{
+			height: inherit;
+		}
+		@media @media-screen-h1080{
+			height: inherit;
+		}
+	}
+	._navbar__scroll-line{
+		@media @media-screen-hbig{
+			display: none;
+		}
+		@media @media-screen-h1080{
+			display: none;
+		}
+	}
+}
+._menuP__delivery-heading{	
+	.mixin-headings(
+		@font-family: @bebas-bold, 
+		@font-size: 36px, 
+		@line-height: 48px, 
+		@color: @white);  
+	letter-spacing: 10px;
+	text-align: center;
+	&:after{
+		content: '';
+		background: url('@{url-path-img}/index/bg-venzel.png') center top no-repeat;
+		width: 100%;
+		display: block;
+		height: 33px;
+		background-size: 200px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+}
+._menuP__delivery-step{
+	font-size: 16px;
+	font-style: italic;
+	color: rgb(69, 192, 115);
+    text-align: center;
+    margin-bottom: 55px;
+	@media @media-screen-notebook{
+   		margin-bottom: 25px;
+	}
+	@media @media-screen-hbig{
+   		margin-bottom: 15px;
+	}
+}
+._menuP__delivery-count{
+	font-weight: 700;
+	margin-bottom: 10px;
+	&.mb{
+		margin-bottom: 15px;
+	}
+	a{
+		font-size: 24px;
+		font-style: normal;
+	}
+}
+._menuP__delivery-cost{
+	font-size: 60px;
+	font-weight: 700;
+	line-height: 60px;
+	margin-bottom: 25px;
+}
+._menuP__delivery-btn{
+	max-width: 300px;
+	margin: 80px auto 20px;
+	@media @media-screen-hbig{
+		margin: 20px auto 15px;
+	}
+}
+.btn-deliv{
+	background: rgb(69, 192, 115);
+	.mixin-headings(
+		@font-family: @bebas, 
+		@font-size: 20px, 
+		@line-height: 24px, 
+		@color: @white); 
+	border: none;
+	padding: 20px;
+	letter-spacing: 6px;
+	display: block;
+	width: 100%;
+
+}
+// end's

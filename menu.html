@@ -30,10 +30,7 @@
 <script src="plugins/fullPage.js/vendors/jquery.slimscroll.min.js"></script>
 <script src="plugins/fullPage.js/jquery.fullPage.min.js" ></script>
 
-<script src="/js/document-ready.js" ></script> 
-<script>
-	
-</script>
+<script src="/js/document-ready.js" ></script>
 	</head>
 	<body>
 		<div id="fullpage-second" class="fullpage-site">
@@ -254,15 +251,20 @@
 							<div class="scroll  ui-draggable ui-draggable-handle"></div>
 						</div>
 					</div>
-					<div class="_menuP__btn-block">
+					<!-- <div class="_menuP__btn-block">
 						<div class="_menuP__btn-green"><a href="#" class="btn-green">заказать доставку</a></div>
 						<div class="_menuP__link-italic"><a href="#">Ознакомиться с условиями доставки</a></div>
+					</div> -->
+					<div class="_menuP__btn-step1">
+						<div class="_menuP__green-text">выберите блюда из меню</div>
+
+						<div class="_menuP__link-italic"><a href="#">Спасибо, я озвучу заказ по телефону</a></div>
 					</div>
 				</div>
 				<div class="_menuP__right-col">
 					<div class="_menuP__navbar">
 						<div class="scroll-container _navbar__scroll-container">
-							<div class="scroll-block _navbar__block-container">		
+							<div class="scroll-block _navbar__block-container">
 								<ul>
 									<li><a href="#">Все блюда</a></li>
 									<li><a href="#">Пиво</a></li>
@@ -286,6 +288,24 @@
 						<div class="scroll-line _navbar__scroll-line">
 							<div class="scroll  ui-draggable ui-draggable-handle"></div>
 						</div>
+					</div>
+					<div class="_menuP__delivery">
+						<div class="scroll-container _navbar__scroll-container">
+							<div class="scroll-block _navbar__block-container">
+								<div class="_menuP__delivery-heading">заявка на доставку</div>
+								<div class="_menuP__delivery-step">Шаг 1 из 2</div>
+								<div class="_menuP__delivery-count mb">Вы заказали <a href="#">4 блюда</a></div>
+								<div class="_menuP__delivery-count">на сумму</div>
+								<div class="_menuP__delivery-cost">1250 рублей</div>
+								<div><a href="#">Редактировать заказ</a></div>
+								<div class="_menuP__delivery-btn"><button type="button" class="btn-deliv">продолжить</button></div>
+								<div><a href="#">Отменить</a></div>
+							</div>
+						</div>
+						<div class="scroll-line _navbar__scroll-line">
+							<div class="scroll  ui-draggable ui-draggable-handle"></div>
+						</div>
+
 					</div>							
 				</div>
 			</div>
@@ -372,7 +392,7 @@
 					navigationPosition: 'right',
 					navigation: false,
 				});
-			}
+			} 
 		</script>
 	</body>
 </html>
