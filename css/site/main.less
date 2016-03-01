@@ -139,12 +139,12 @@ body {
 .btn-order{
 	background: url('@{url-path-img}/round/icon-order.png') no-repeat center;
 	border: none;
-	width: 70px;
-	height: 70px;
+	width: 73px;
+	height: 73px;
 	display: inline-block;
 	position: relative;
-	top: -21px;
-	right: -35px;
+	top: -23px;
+    right: -35px;
 	@media @media-size-sm{
 		width: 60px;
 		height: 60px;
@@ -338,6 +338,8 @@ body {
 		height: 31px;
 		background: url('@{url-path-img}/round/round-grey-top.png') no-repeat center top;
 		display: block;
+	    z-index: 99;
+	    position: relative;
 		@media @media-size-sm {
 			background: url('@{url-path-img}/round/round-grey-top-sm.png') no-repeat center top;
 			height: 19px;			
@@ -554,3 +556,11 @@ body {
     padding-right: 35px
 }
 //end's
+.btn-close-xs{
+	border: none;
+	background: url('@{url-path-img}/icon/icon-close-small.png') no-repeat center;	
+	width: 14px;
+	height: 14px;
+	outline: none;
+	
+}

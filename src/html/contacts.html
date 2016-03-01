@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[snp tpl="src/block/site/page/head/.html" ]
+
+	</head>
+	<!-- <body class="open-rev"> -->
+	<body>
+		<div id="fullpage-second" class="fullpage-site">
+			[snp tpl="src/block/site/page/contacts/.html" class="section contacts-page__section section-grey"] 
+			
+			[snp tpl="src/block/site/default/_b-footer/.html" class="section footer-block"] 
+		</div>
+		[snp tpl="src/block/site/default/_b-navbar/.html" class="navbar-modal-block"] 
+		<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		<script>
+			if(device.desktop()) {
+				$('#fullpage-second').fullpage({
+					navigation: true,
+					navigationPosition: 'right',
+					navigation: false,
+				});
+			} 
+			ymaps.ready(init);
+			function init () {
+			    var myMap = new ymaps.Map("map", {
+			            //center: [55.76, 37.64],
+			            center: [52.958972, 36.0649],
+			            zoom: 17 
+			            //controls: ['']
+			        }, {
+			            searchControlProvider: 'yandex#search'
+			        }),
+
+			    // Создаем геообъект с типом геометрии "Точка".
+			        myGeoObject = new ymaps.GeoObject();
+
+			    myMap.geoObjects
+			        .add(myGeoObject)
+			        .add(new ymaps.Placemark([52.959001,36.065204], {
+			        }, {
+			            //preset: 'islands#icon',
+			            //iconColor: '#0095b6'
+			            // Опции.
+			            // Необходимо указать данный тип макета.
+			            iconLayout: 'default#image',
+			            // Своё изображение иконки метки.
+			            iconImageHref: 'img/icon-map.png',
+			            // Размеры метки.
+			            iconImageSize: [36, 50],
+			            // Смещение левого верхнего угла иконки относительно
+			            // её "ножки" (точки привязки).
+			            iconImageOffset: [-18, -50]
+			        }));
+			}
+
+		</script>
+	</body>
+</html>

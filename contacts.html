@@ -31,15 +31,19 @@
 <script src="plugins/fullPage.js/jquery.fullPage.min.js" ></script>
 
 <script src="/js/document-ready.js" ></script>
+
 	</head>
+	<!-- <body class="open-rev"> -->
 	<body>
 		<div id="fullpage-second" class="fullpage-site">
-			<div class="section beer-page__section section-grey page-section" id="section1">
+			<div class="section contacts-page__section section-grey page-section">
+	<div class="_contP__left-bg _contP__bg "></div>
+	<div class="_contP__right-bg _contP__bg" id="map"></div>
 	<div class="_ps__rel">
 		<header class="header-block _sgr__header">
 			<div class="_hb__flex">
 				<div>
-					<button type="button" class="_ps__btn _sgg__btn" data-toggle="modal" data-target="#modal-navbar">
+					<button type="button" class="_ps__btn _sgr__btn" data-toggle="modal" data-target="#modal-navbar">
 						<span class="_ps__btn-line _sgr__btn-line">
 							<span></span>
 							<span></span>
@@ -59,54 +63,53 @@
 				</div>
 			</div>
 		</header>
-		<div class="_ps__inside-line _sgr__inside-line">
-			<div class="_beer__inner">
-				<div class="_ps__heading-block _beer__heading-block">
-					<h1 class="_ps__heading _beer__heading">Наше пиво</h2>		
-				</div>
-				<div class="_beer__bg-text pilsner">Chester Pilsner</div>	
-				<div class="_beer__flex">
-					<div class="_beer__left-col beer-pilsner">
-						<div class="_beer__item-sort">
-							Доля спирта <span>5.5%</span>
-						</div>
-						<div class="_beer__item-sort">
-							Плотность <span>12%</span>
-						</div>
+		<div class="_ps__inside-line _sgr__inside-line">			
+			<div class="_contP__flex">
+				<div class="_contP__left-col">
+					<div class="_ps__heading-block _contP__heading-block">
+						<h1 class="_ps__heading">контакты</h1>
 					</div>
-					<div class="_beer__right-col">
-						<div class="scroll-container _beer__scroll-container">
-							<div class="scroll-block _beer__block-container _beer__item-note">
-								<h3 class="_beer__item-heading">Chester Pilsner</h3>
-								<div>Потребление этого сорта пива в Германии составляет около 68%. Цельное пиво низового брожения светло-золотистого цвета с преобладающим вкусом хмеля и пеной, похожей на взбитые сливки. Сравнительно высокая хмелевая горечь делает его типично мужским напитком. Его нельзя спутать ни с каким другим пивом: искристое, чистое, освежающее, с явным присутствием горечи благородного немецкого хмеля. Типичным является легкий зерновой аромат солода пильз и характерный цветочный или пряный запах благородного хмеля.</div>
-								<div class="_beer__item-cost">
-									<div>1000 мл. - <span>300 руб.</span></div>
-									<div>500 мл. - <span>150 руб.</span></div>
-									<div>300 мл. - <span>90 руб.</span></div>
+					<div class="_contP__note">
+						<div>Адрес</div>
+						<div class="_contP__address">
+							<b>302026</b>, Россия<br> г. Орёл, ул. Комсомольская, 36 
+						</div>
+						<div>Телефон</div>
+						<div class="_contP__tel" ><a href="tel:+74862543054">+7 (4862) 54-30-54</a></div>
+						<div>E-mail</div>
+						<div  class="_contP__mail"><a href="mailto:chesterpub57@mail.ru">chesterpub57@mail.ru</a></div>
+						<div class="_contP__btn-green"><a href="#" class="btn-green">напишите нам!</a></div> 
+					</div>
+				</div>
+				<div class="_contP__right-col">
+					<!-- <div class="_contP__rev">
+						<button type="button" class="btn-close-xs"></button>
+						<div class="scroll-container _rev__scroll-container">
+							<div class="scroll-block _rev__block-container">
+								<h3 class="_contP__rev-heading">обратная связь</h3>
+								<div class="_contP__rev-note">Если у Вас остались вопросы, замечания                       или предложения, напишите нам!</div> 
+								<form action="" class="_contP__rev-form">
+									<div class="icon-user _icon"><input type="text" placeholder="Ваше имя"></div>
+									<div class="icon-mail _icon"><input type="text" placeholder="Ваш e-mail"></div>
+									<div class="icon-commit _icon"><input type="text" placeholder="Ваше сообщение"></div>
+									<div class="_contP__rev-btn-green">
+										<button type="submit" class="btn-deliv">Отправить</button> 
+									</div>
+								</form>
+								<div class="_contP__link-italic">
+									<a href="#">Отмена</a>
 								</div>
 							</div>
 						</div>
-						<div class="scroll-line _beer__scroll-line">
-							<div class="scroll ui-draggable ui-draggable-handle"></div>
-						</div>
-					</div>				
-				</div>	
-				<!-- <div class="right _beer__nav ">
-					<ul>
-						<li>
-							<a href="/beer.html" ><i>Chester Hell</i> <span></span></a>
-						</li>
-						<li>
-							<a href="/beer-pilsner.html" class="active"><i>Chester Pilsner</i> <span></span></a>
-						</li>
-						<li><a href="/beer-weisen.html"><i>Chester Weisen</i> <span></span></a></li>
-						<li><a href="/beer-stout.html"><i>Chester Irish Dry Stout</i> <span></span></a></li> 
-					</ul>
-				</div> -->
-			</div>	
+						<div class="scroll-line _rev__scroll-line">
+							<div class="scroll"></div>
+						</div>						
+					</div>	 -->					
+				</div> 
+			</div> 
 		</div>		
 	</div>
-</div>
+</div> 
 			
 			<div class="section footer-block">
 	<div class="container _b-footer__container ">
@@ -180,6 +183,7 @@
 		</div>
 	</div>
 </div> 
+		<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 		<script>
 			if(device.desktop()) {
 				$('#fullpage-second').fullpage({
@@ -187,7 +191,40 @@
 					navigationPosition: 'right',
 					navigation: false,
 				});
+			} 
+			ymaps.ready(init);
+			function init () {
+			    var myMap = new ymaps.Map("map", {
+			            //center: [55.76, 37.64],
+			            center: [52.958972, 36.0649],
+			            zoom: 17 
+			            //controls: ['']
+			        }, {
+			            searchControlProvider: 'yandex#search'
+			        }),
+
+			    // Создаем геообъект с типом геометрии "Точка".
+			        myGeoObject = new ymaps.GeoObject();
+
+			    myMap.geoObjects
+			        .add(myGeoObject)
+			        .add(new ymaps.Placemark([52.959001,36.065204], {
+			        }, {
+			            //preset: 'islands#icon',
+			            //iconColor: '#0095b6'
+			            // Опции.
+			            // Необходимо указать данный тип макета.
+			            iconLayout: 'default#image',
+			            // Своё изображение иконки метки.
+			            iconImageHref: 'img/icon-map.png',
+			            // Размеры метки.
+			            iconImageSize: [36, 50],
+			            // Смещение левого верхнего угла иконки относительно
+			            // её "ножки" (точки привязки).
+			            iconImageOffset: [-18, -50]
+			        }));
 			}
+
 		</script>
 	</body>
 </html>
