@@ -31,20 +31,18 @@
 <script src="plugins/fullPage.js/jquery.fullPage.min.js" ></script>
 
 <script src="/js/document-ready.js" ></script>
-
 	</head>
-	<!-- <body class="open-rev"> -->
 	<body>
 		<div id="fullpage-second" class="fullpage-site">
-			<div class="section contacts-page__section section-grey page-section">
-	<div class="_contP__left-bg _contP__bg "></div>
-	<div class="_contP__right-bg _contP__bg" id="map"></div>
+			<div class="section delivery-page__section section-grey-green page-section">
+	<div class="_deliveryP__left-bg _deliveryP__bg "></div>
+	<div class="_deliveryP__right-bg _deliveryP__bg"></div>
 	<div class="_ps__rel">
-		<header class="header-block _sgr__header">
+		<header class="header-block _sgg__header">
 			<div class="_hb__flex">
 				<div>
-					<button type="button" class="_ps__btn _sgr__btn" data-toggle="modal" data-target="#modal-navbar">
-						<span class="_ps__btn-line _sgr__btn-line">
+					<button type="button" class="_ps__btn _sgg__btn" data-toggle="modal" data-target="#modal-navbar">
+						<span class="_ps__btn-line _sgg__btn-line">
 							<span></span>
 							<span></span>
 							<span></span>
@@ -57,54 +55,44 @@
 						<a href="/"><img src="img/index/logotip-green.png" alt=""></a>
 					</div>				
 				</div>
-				<div class="_hb__phone _sgr__phone ">
+				<div class="_hb__phone _sgg__phone ">
 					<div>Заказ столов <a href="tel:+74862543054"><span>+7 (4862)</span> 54-30-54</a></div>
 					<button type="button" class="btn-order"></button>
 				</div>
 			</div>
 		</header>
-		<div class="_ps__inside-line _sgr__inside-line">			
-			<div class="_contP__flex">
-				<div class="_contP__left-col">
-					<div class="_ps__heading-block _contP__heading-block">
-						<h1 class="_ps__heading">контакты</h1>
-					</div>
-					<div class="_contP__note">
-						<div>Адрес</div>
-						<div class="_contP__address">
-							<b>302026</b>, Россия<br> г. Орёл, ул. Комсомольская, 36 
-						</div>
-						<div>Телефон</div>
-						<div class="_contP__tel" ><a href="tel:+74862543054">+7 (4862) 54-30-54</a></div>
-						<div>E-mail</div>
-						<div  class="_contP__mail"><a href="mailto:chesterpub57@mail.ru">chesterpub57@mail.ru</a></div>
-						<div class="_contP__btn-green"><a href="#" class="btn-green">напишите нам!</a></div> 
-					</div>
-				</div>
-				<div class="_contP__right-col">
-					<!-- <div class="_contP__rev">
-						<button type="button" class="btn-close-xs"></button>
-						<div class="scroll-container _rev__scroll-container">
-							<div class="scroll-block _rev__block-container">
-								<h3 class="_contP__rev-heading">обратная связь</h3>
-								<div class="_contP__rev-note">Если у Вас остались вопросы, замечания                       или предложения, напишите нам!</div> 
-								<form action="" class="_contP__rev-form">
-									<div class="icon-user _icon"><input type="text" placeholder="Ваше имя"></div>
-									<div class="icon-mail _icon"><input type="text" placeholder="Ваш e-mail"></div>
-									<div class="icon-commit _icon"><input type="text" placeholder="Ваше сообщение"></div>
-									<div class="_contP__rev-btn-green">
-										<button type="submit" class="btn-deliv">Отправить</button> 
+		<div class="_ps__inside-line _sgg__inside-line">			
+			<div class="_deliveryP__flex">
+				<div class="_deliveryP__left-col">
+					<div class="_ps__heading-block _deliveryP__heading-block">
+						<h1 class="_ps__heading _deliveryP__heading">Доставка</h1>
+					</div>	
+					<div class="_deliveryP__flex-scroll">
+						<div class="scroll-container _deliveryP__scroll-container">
+							<div class="scroll-block _deliveryP__block-container">
+								<div class="_deliveryP__note-flex">
+									<div class="_deliveryP__phone">
+										<div><a href="tel:+74862543054">+7 (4862) 54-30-54</a></div>
+										<div><a href="tel:+79155043054">+7 (915) 504-30-54</a></div>
 									</div>
-								</form>
-								<div class="_contP__link-italic">
-									<a href="#">Отмена</a>
+									<div class="_deliveryP__line-green"></div> 
+									<div class="_deliveryP__flex-cont">Телефоны службы доставки «Chester Pub»</div>
 								</div>
+								<div class="_deliveryP__note">
+									<div>Мы принимаем заказы с 12 до 23 часов</div>
+									<div>При сумме заказа менее 3500 рублей, стоимость доставки расчитывается по<br> тарифам службы такси города Орла.</div> 
+									<div>Доставка на сумму свыше 3500 рублей осуществляется бесплатно.</div>
+								</div>
+								<div class="_deliveryP__btn-green"><a href="/menu.html" class="btn-green">перейти в меню</a></div>
 							</div>
 						</div>
-						<div class="scroll-line _rev__scroll-line">
+						<div class="scroll-line _deliveryP__scroll-line">
 							<div class="scroll"></div>
-						</div>						
-					</div>	 -->					
+						</div>	
+					</div>	
+				</div>
+				<div class="_deliveryP__right-col">
+ 
 				</div> 
 			</div> 
 		</div>		
@@ -183,7 +171,6 @@
 		</div>
 	</div>
 </div> 
-		<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 		<script>
 			if(device.desktop()) {
 				$('#fullpage-second').fullpage({
@@ -192,39 +179,6 @@
 					navigation: false,
 				});
 			} 
-			ymaps.ready(init);
-			function init () {
-			    var myMap = new ymaps.Map("map", {
-			            //center: [55.76, 37.64],
-			            center: [52.958972, 36.0649],
-			            zoom: 17 
-			            //controls: ['']
-			        }, {
-			            searchControlProvider: 'yandex#search'
-			        }),
-
-			    // Создаем геообъект с типом геометрии "Точка".
-			        myGeoObject = new ymaps.GeoObject();
-
-			    myMap.geoObjects
-			        .add(myGeoObject)
-			        .add(new ymaps.Placemark([52.959001,36.065204], {
-			        }, {
-			            //preset: 'islands#icon',
-			            //iconColor: '#0095b6'
-			            // Опции.
-			            // Необходимо указать данный тип макета.
-			            iconLayout: 'default#image',
-			            // Своё изображение иконки метки.
-			            iconImageHref: 'img/icon-map.png',
-			            // Размеры метки.
-			            iconImageSize: [36, 50],
-			            // Смещение левого верхнего угла иконки относительно
-			            // её "ножки" (точки привязки).
-			            iconImageOffset: [-18, -50]
-			        }));
-			}
-
 		</script>
 	</body>
 </html>
