@@ -116,6 +116,11 @@
 			background: fadeout(@green, 20%);
 		}
 	}
+	._vacP__bg._vacP__right-bg{		
+		&:before{
+			background: fadeout(@green, 20%);
+		}
+	}
 	//section-grey
 	.section-grey{	
 		&:before{
@@ -258,6 +263,9 @@
 	._icon{
 		position: relative;
 		margin-bottom: 42px;
+	    @media @media-screen-hbig{
+	    	margin-bottom: 25px;
+	    }
 		&:after{
 			content: '';
 			width: 23px;
@@ -305,6 +313,32 @@
 			color: rgb(69, 192, 115);
 			font-style: italic;
 			font-size: 14px;
+		}
+		&[type="file"]{
+			border: none;
+			opacity: 0;
+			position: relative;
+			z-index: 10;
+		}
+	}
+	.file-block{
+		position: relative;
+		cursor: pointer;
+		.file-visible{
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: rgb(69, 192, 115);
+			font-size: 14px;
+			font-style: italic;
+		}
+		.file-btn{
+			border: 1px solid rgb(69, 192, 115);
+			display: inline-block;
+			vertical-align: middle;
+			padding: 0px 32px;
+			margin-right: 20px;
+			line-height: 38px;
 		}
 	}
 }
