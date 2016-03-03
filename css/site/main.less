@@ -79,12 +79,13 @@ body {
     }
 }
 ._ps__btn-line{
-	display: inline-block;
-	vertical-align: middle;
-	width: 20px;
-	height: 14px;
-	margin-right: 5px;
-	position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 16px;
+    margin-right: 5px;
+    position: relative;
+    transform: translateY(-2px);
 	span{
 		display: block;
 		width: 100%;
@@ -418,6 +419,15 @@ body {
 						}
 					}
 				}
+				&:hover{
+					a {
+						&.active{
+							span{
+								background: @green-line;
+							}
+						}
+					}
+				}
 			}
 		}
 	}	
@@ -513,33 +523,33 @@ body {
 }
 //end's
 //scroll
-.scroll-line{
-	width: 4px;
-	position: relative;
-	.scroll{
-		background: rgb(182, 170, 135);
-		width: 4px;
-		height: 110px;
-		position: relative;
-		@media @media-screen-notebook{
-			height: 50px;
-		}
-		@media @media-screen-WSXGA900{	
-			height: 75px;
-		}
-	}
-	&:before{
-		content: '';
-		width: 1px;
-		height: 100%;
-		background: rgb(182, 170, 135);
-		position: absolute;
-		top: 0;
-		left: 0;
+// .scroll-line{
+// 	width: 4px;
+// 	position: relative;
+// 	.scroll{
+// 		background: rgb(182, 170, 135);
+// 		width: 4px;
+// 		height: 110px;
+// 		position: relative;
+// 		@media @media-screen-notebook{
+// 			height: 50px;
+// 		}
+// 		@media @media-screen-WSXGA900{	
+// 			height: 75px;
+// 		}
+// 	}
+// 	&:before{
+// 		content: '';
+// 		width: 1px;
+// 		height: 100%;
+// 		background: rgb(182, 170, 135);
+// 		position: absolute;
+// 		top: 0;
+// 		left: 0;
 
-	}
-}
-.scroll-container{
+// 	}
+// }
+/* .scroll-container{
 	width: 100%;
 	overflow-x: hidden;
 	padding-right: 20px;
@@ -555,7 +565,7 @@ body {
     position: relative;
     overflow: auto;
     padding-right: 35px
-}
+} */
 //end's
 .btn-close-xs{
 	border: none;
