@@ -58,6 +58,7 @@
 	display: flex;
 	margin-top: 20px;
 	margin-bottom: 55px;
+	position: relative;
 	@media @media-screen-notebook{
 		margin: 0 0 35px; 
 	}
@@ -77,7 +78,7 @@
 		overflow: inherit;
 	}
 } */
-._vacP__block-container{
+._vacP__scroll-hide{
 	@media @media-screen-notebook{
 		height: 125px;
 	}
@@ -85,9 +86,46 @@
 		height: 215px;
 	}
 	@media @media-screen-hbig{
-		/* width: 100%;
+		height: 215px;
+	}
+	@media @media-screen-h1080{
+		height: 355px;
+	}
+}
+._vacP__scroll-element{
+	width: 110%;
+	height: 110%;
+	@media @media-screen-notebook{
+		height: 125%;
+	}
+	@media @media-screen-WSXGA900{
+		height: 120%;
+	}
+	@media @media-screen-hbig{
+		height: 120%;
+	}
+}
+._vacP__scroll-overflow{
+	@media @media-screen-notebook{
+		padding-right: 4%;
+	}
+	@media @media-screen-WSXGA900{
+		padding-right: 4%;
+	}
+
+	padding-right: 6%;
+}
+/* ._vacP__block-container{
+	@media @media-screen-notebook{
+		height: 125px;
+	}
+	@media @media-screen-WSXGA900{
+		height: 215px;
+	}
+	@media @media-screen-hbig{
+		 width: 100%;
 		padding: 0;
-		overflow: inherit; */
+		overflow: inherit; 
 		height: 215px;
 	}
 	@media @media-screen-h1080{
@@ -96,7 +134,7 @@
 		//overflow: inherit;
 		height: 355px;
 	}
-}
+} */
 ._vacP__scroll-line{	
 	// @media @media-screen-hbig{
 	// 	display: none;
