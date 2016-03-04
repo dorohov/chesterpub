@@ -1,0 +1,1 @@
+ $('.pgwSlideshow').pgwSlideshow();
