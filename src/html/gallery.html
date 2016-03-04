@@ -2,13 +2,11 @@
 <html dir="ltr" lang="ru-RU"> 
 	<head>
 		[snp tpl="src/block/site/page/head/.html" ]
-		<!-- <link href="plugins/PgwSlideshow/css/pgwslideshow.css" rel="stylesheet"> -->
-		<script src="plugins/PgwSlideshow/js/pgwslideshow.js"></script>
 	</head>
 	<body>
 	<!-- <body class="open-rev"> -->
 		<div id="fullpage-second" class="fullpage-site">
-			[snp tpl="src/block/site/page/gallery/.html" class="section news-page__section section-green"] 
+			[snp tpl="src/block/site/page/gallery/.html" class="section gallery-page__section section-green"] 
 			
 			[snp tpl="src/block/site/default/_b-footer/.html" class="section footer-block"] 
 		</div>
@@ -21,7 +19,10 @@
 					navigation: false,
 				});
 			} 
-		</script>
+		</script> 
 
+		<link rel="stylesheet" href="/plugins/owl-carousel/owl.carousel.css">
+		<link rel="stylesheet" href="/plugins/owl-carousel/owl.theme.css">
+		<script src="/plugins/owl-carousel/owl.carousel.js"></script>
 	</body>
 </html>
