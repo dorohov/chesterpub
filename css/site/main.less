@@ -13,6 +13,9 @@ body {
     @media @media-size-sm{
     	padding: 12px 30px 20px;
     }
+    @media @media-size-xs{
+    	padding: 25px 20px 20px;
+    }
 }
 .fp-tableCell {    
     @media @media-screen-hbig{
@@ -30,6 +33,10 @@ body {
 	padding-left: 60px;
 	padding-right: 60px;
 	position: relative;
+	@media @media-size-xs{
+		padding: 0px;
+		border: none; 
+	}
 	@media @media-size-sm{
 		padding: 105px 35px 30px;
 	}
@@ -52,6 +59,9 @@ body {
 	bottom: 0px;
 	right: 0px;
 	cursor: pointer;
+	@media @media-size-xs{
+		display: none;
+	}
 	@media @media-size-sm{
 		display: none;
 	}
@@ -130,6 +140,12 @@ body {
     letter-spacing: 23px;
     position: relative;
     z-index: 100;
+    @media @media-size-xs{
+		font-size: 32px;
+		line-height: 48px;
+		letter-spacing: 10px;
+		margin-bottom: 15px;
+    }
     @media @media-size-sm{
 		font-size: 36px;
 		line-height: 32px;
@@ -177,6 +193,9 @@ body {
 	position: absolute;
 	width: 100%;
 	z-index: 10;
+	@media @media-size-xs{
+		display: none;
+	}
 }
 ._hb__flex{
 	.flex-display(@display: flex);
@@ -219,6 +238,9 @@ body {
 		display: block;
 		z-index: 99;
 		position: relative;
+		@media @media-size-xs{
+			display: none;
+		}
 		@media @media-size-sm {
 			background: url('@{url-path-img}/round/round-grey-green-top-sm.png') no-repeat center top;
 			height: 19px;			
@@ -289,6 +311,9 @@ body {
 		display: block;
 		z-index: 99;
 		position: relative;
+		@media @media-size-xs{
+			display: none;
+		}
 		@media @media-size-sm {
 			background: url('@{url-path-img}/round/round-green-top-sm.png') no-repeat center top;
 			height: 19px;			
@@ -343,6 +368,9 @@ body {
 		display: block;
 	    z-index: 99;
 	    position: relative;
+		@media @media-size-xs{
+			display: none;
+		}
 		@media @media-size-sm {
 			background: url('@{url-path-img}/round/round-grey-top-sm.png') no-repeat center top;
 			height: 19px;			

@@ -1,6 +1,10 @@
 .index-restaurant__section{
 	background: url('@{url-path-img}/index/bg-index-slide2.jpg') no-repeat center top;
 	//opacity: @opacity;
+    @media @media-size-xs{  
+		padding-bottom: 40px;
+		background-size: cover;
+	}
     @media @media-size-sm{
     	._ps__inside-line{
     		min-height: 670px;
@@ -19,6 +23,10 @@
 	> div{
 		padding-right: 15px;
 		padding-left: 15px;
+	}
+	@media @media-size-xs{
+		flex-wrap: wrap;
+		margin: 0 -20px;
 	}
 	@media @media-size-sm-p{
 		flex-wrap: wrap;
@@ -49,6 +57,9 @@
 	max-width: 870px;
 	position: relative;
 	height: 100%;
+	@media @media-size-xs{
+		padding: 0!important;
+	}
 	@media @media-screen-hsmall{
 		max-width: 390px!important;
 	}	
@@ -75,6 +86,11 @@
 	z-index: 100;
     backface-visibility: visible;
     transform: translate3d(0,0,0);
+	@media @media-size-xs{
+		img{
+			margin: 0 auto;
+		}
+	}		
 	@media @media-screen{		
 		position: absolute;
 		bottom: 105px;
@@ -124,6 +140,12 @@
 	width: 100%;
 	max-width: 740px;
 	line-height: 36px;
+	@media @media-size-xs{
+		line-height: 28px;
+		order: -1;
+		padding: 0 20px!important; 
+		margin-bottom: 20px;
+	}
 	@media @media-screen-hsmall{
 		max-width: 1280px!important;
 	}
@@ -193,6 +215,11 @@
 			margin-top: 15px;
 		}
 	}
+	@media @media-size-xs{
+		text-align: left;
+		max-width: 100%;
+		&:before, &:after{display: none;}
+	}
 	@media @media-size-sm{
 		font-size: 14px;
 		padding-top: 15px;
@@ -214,6 +241,13 @@
 }
 ._ir__carousel{
 	height: 100%;
+	@media @media-size-xs-l{
+		display: none;
+	}
+	@media @media-size-xs{
+		height: 350px;
+		.carousel-caption{display: none;}
+	}
 	@media @media-size-sm{
 		display: none;
 	}		
@@ -240,5 +274,20 @@
 	&.right{
 		background: url('@{url-path-img}/index/icon-arrow-right.png') no-repeat center;
 		right: -25px;
+	}
+	@media @media-size-xxs{
+		background-size: 60px!important;
+	}
+	@media @media-size-xs{
+		width: 85px;
+		height: 40px;
+		&.left{
+			left: 10px;
+			background: url('@{url-path-img}/index/icon-arrow-left-white.png') no-repeat center;
+		}
+		&.right{
+			right: 10px;
+			background: url('@{url-path-img}/index/icon-arrow-right-white.png') no-repeat center;
+		}
 	}
 }

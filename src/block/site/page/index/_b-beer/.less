@@ -4,6 +4,10 @@
 	font-size: 18px;
 	line-height: 36px;
 	color: @white;
+    @media @media-size-xs{
+    	padding: 0;
+    	background: rgb(250, 248, 205);
+    }
 	@media @media-size-sm{
 		font-size: 16px;
     	._ps__inside-line{
@@ -30,6 +34,9 @@
 		width: 100%;
 		.transition(@duration:0.2s, @ease:ease-out);
 	}
+    @media @media-size-xs{
+    	display: none;
+    }
 	&._ibm__left-bg{
 		left: 0;
 		background: url('@{url-path-img}/index/bg-index-beer.jpg') no-repeat center top;
@@ -56,6 +63,9 @@
 		display: flex;
 		align-items: center;
 	}
+    @media @media-size-xs{  
+		flex-wrap: wrap;
+	}
 	@media @media-size-sm{
    		align-items: flex-start;
 
@@ -63,6 +73,24 @@
 }
 ._ibm__left-col{
 	padding: 15px 15px 15px 0;
+	position: relative;
+	@media @media-size-xs{
+		padding: 30px 20px 40px;
+    	background: url('@{url-path-img}/index/bg-index-beer.jpg') no-repeat center top;
+    	margin-bottom: 3px;
+		&:before{
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background: fadeout(@black, 35%);
+			height: 100%;
+			width: 100%;
+			.transition(@duration:0.2s, @ease:ease-out);
+		}
+	}
 	@media @media-screen-notebook{
 		padding-right: 45px; 
 	}
@@ -72,6 +100,23 @@
 }
 ._ibm__right-col{
 	padding: 15px 0 15px 15px;
+	position: relative;
+	@media @media-size-xs{
+		padding: 30px 20px 40px;
+		background: url('@{url-path-img}/index/bg-index-menu.jpg') no-repeat center top;
+		&:before{
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background: fadeout(@black, 35%);
+			height: 100%;
+			width: 100%;
+			.transition(@duration:0.2s, @ease:ease-out);
+		}
+	}
 	@media @media-screen-notebook{
 		padding-left: 45px; 
 	}
@@ -82,6 +127,10 @@
 ._ibm__col-inner{
 	margin: 0 auto;
 	max-width: 550px;
+	@media @media-size-xs{
+		position: relative;
+		z-index: 2;
+	}
 }
 ._ibm__heading{	
 	.mixin-headings(
@@ -97,6 +146,9 @@
 		height: 11px;
 		margin: 35px auto 0;
 		background: url('@{url-path-img}/index/ibm-venzel.png') no-repeat center;
+	}
+	@media @media-size-xs{
+		margin-bottom: 20px;
 	}
 	@media @media-screen-WSXGA900{
 		transform: translateY(-100px);
@@ -126,6 +178,10 @@
 		width: 68px;
 		height: 74px;
 		margin: 0 auto 60px;
+		@media @media-size-xs{
+			margin-bottom: 40px;
+    		transform: translateX(7px);
+		}
 		@media @media-screen-notebook{
 			margin-bottom: 30px
 		}
@@ -144,6 +200,10 @@
 		width: 98px;
 		height: 74px;
 		margin: 0 auto 60px;
+		@media @media-size-xs{
+			margin-bottom: 40px;
+    		transform: translateX(-5px);
+		}
 		@media @media-screen-notebook{
 			margin-bottom: 30px
 		}
@@ -158,6 +218,10 @@
 	// @media @media-screen-hsmall{
 	// 	transform: translateY(-65px);
 	// }
+	@media @media-size-xs{
+		margin-bottom: 20px;
+		font-size: 17px;
+	}
 	@media @media-screen-WSXGA900{
 		transform: translateY(-65px);
 	}
@@ -181,6 +245,11 @@
 	// @media @media-screen-hsmall{
 	// 	transform: translateY(15px);
 	// }
+	@media @media-size-xs{
+		.btn-bron{
+			max-width: 210px;
+		}
+	}
 	@media @media-screen-WSXGA900{
 		transform: translateY(-15px);
 	}
