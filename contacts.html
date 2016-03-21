@@ -33,9 +33,27 @@
 <script src="/js/document-ready.js" ></script>
 
 	</head>
-	<!-- <body class="open-rev"> -->
-	<body>
+	
+	<body> 
 		<div id="fullpage-second" class="fullpage-site">
+			<nav class="navbar navbar-fixed-top navbar-xs navbar-second ">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> -->
+			<button type="button" class="navbar-toggle" data-toggle="modal" data-target="#modal-navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<div class="_nbxs__logotip">
+				<a href="/"><img src="img/index/logotip-green.png" alt=""></a>
+			</div>
+			<button type="button" class="btn-order"></button>
+		</div>
+	</div> 
+</nav>
+
 			<div class="section contacts-page__section section-grey page-section">
 	<div class="_contP__left-bg _contP__bg "></div>
 	<div class="_contP__right-bg _contP__bg" id="map"></div>
@@ -78,7 +96,8 @@
 						<div class="_contP__tel" ><a href="tel:+74862543054">+7 (4862) 54-30-54</a></div>
 						<div>E-mail</div>
 						<div  class="_contP__mail"><a href="mailto:chesterpub57@mail.ru">chesterpub57@mail.ru</a></div>
-						<div class="_contP__btn-green"><a href="#" class="btn-green">напишите нам!</a></div> 
+						<div class="_contP__btn-green hidden-sm hidden-xs"><a href="#" class="btn-green">напишите нам!</a></div> 
+						<div class="_contP__btn-green visible-sm visible-xs"><a href="#" class="btn-green" data-toggle="modal" data-target="#modal-cont">напишите нам!</a></div> 
 					</div>
 				</div>
 				<div class="_contP__right-col">
@@ -108,6 +127,70 @@
 				</div> 
 			</div> 
 		</div>		
+	</div>
+</div>
+
+<div class="modal fade _vacP__modal" id="modal-cont" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class=" section-green _nbmodal__dialog _vacP__dialog">
+		<div class="_ps__rel">
+			<header class="header-block _sg__header">
+				<div class="_hb__flex">
+					<div>
+						<button type="button" class="_ps__btn _sg__btn" data-toggle="modal" data-target="#modal-navbar">
+							<span class="_ps__btn-line _sgg__btn-line">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>					
+							меню сайта
+						</button>
+					</div>
+					<div class="_hb__logotip">
+						<div>
+							<a href="/"><img src="img/index/logotip-green.png" alt=""></a>
+						</div>				
+					</div>
+					<div class="_hb__phone _sg__phone ">
+						<div>Заказ столов <a href="tel:+74862543054"><span> +7 (4862)</span> 54-30-54</a></div>
+						<button type="button" class="btn-order"></button>
+					</div>
+				</div>
+			</header>
+			<nav class="navbar navbar-fixed-top navbar-xs">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> -->
+						<button type="button" class="navbar-toggle" data-toggle="modal" data-target="#modal-navbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<div class="_nbxs__logotip">
+							<a href="/"><img src="img/index/logotip-green.png" alt=""></a>
+						</div>
+						<button type="button" class="btn-order"></button>
+					</div>
+				</div> 
+			</nav>
+			<div class="_ps__inside-line _sg__inside-line _nbmodal__inside-line _vacP__inside-line">
+				<div class="_vacP__modal-inner">				
+					<button type="button" class="btn-close-xs" data-dismiss="modal"></button>
+					<h3 class="_contP__rev-heading">обратная связь</h3>
+					<div class="_contP__rev-note">Если у Вас остались вопросы, замечания                       или предложения, напишите нам!</div> 
+					<form action="" class="_contP__rev-form">
+						<div class="icon-user _icon"><input type="text" placeholder="Ваше имя"></div>
+						<div class="icon-mail _icon"><input type="text" placeholder="Ваш e-mail"></div>
+						<div class="icon-commit _icon"><input type="text" placeholder="Ваше сообщение"></div>
+						<div class="_contP__rev-btn-green">
+							<button type="submit" class="btn-deliv">Отправить</button> 
+						</div>
+					</form>
+					<div class="_contP__link-italic">
+						<a href="#" data-dismiss="modal">Отмена</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div> 
 			
@@ -151,7 +234,7 @@
 					</div>
 				</div>
 			</header>
-			<nav class="navbar navbar-fixed-top navbar-modal-block navbar-xs">
+			<nav class="navbar navbar-fixed-top navbar-xs">
 				<div class="container-fluid">
 					<div class="navbar-header">
 						<!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> -->

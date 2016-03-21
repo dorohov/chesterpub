@@ -34,11 +34,29 @@
 	</head>
 	<body>
 	<!-- <body class="open-rev"> -->
-		<div id="fullpage-second" class="fullpage-site">
+		<div id="fullpage-second" class="fullpage-site open-rev">
+			<nav class="navbar navbar-fixed-top navbar-xs navbar-second ">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> -->
+			<button type="button" class="navbar-toggle" data-toggle="modal" data-target="#modal-navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<div class="_nbxs__logotip">
+				<a href="/"><img src="img/index/logotip-green.png" alt=""></a>
+			</div>
+			<button type="button" class="btn-order"></button>
+		</div>
+	</div> 
+</nav>
+
 			<div class="section vacancy-page__section section-grey-green page-section">
 	<div class="_vacP__left-bg _vacP__bg "></div>
 	<div class="_vacP__right-bg _vacP__bg"></div>
-	<div class="_ps__rel">
+	<div class="_ps__rel _vacP__rel">
 		<header class="header-block _sgg__header">
 			<div class="_hb__flex">
 				<div>
@@ -110,20 +128,25 @@
 									</div>
 								</div>
 							</div>
-							<div class="scroll-container vertical right" data-target="#overflow-container" >
+							<div class="scroll-container _vacP__scroll-container vertical right" data-target="#overflow-container" > 
 								<div class="scroll-line" >
 									<div class="scroll" ></div>
 								</div>
 							</div>
 						</div>
-						<div class="_vacP__btn-green"><a href="#" class="btn-green">отправить резюме</a></div>	
+						<div class="_vacP__btn-green hidden-sm hidden-xs">
+							<a href="#" class="btn-green">отправить резюме</a>
+						</div>	
+						<div class="_vacP__btn-green visible-sm visible-xs">
+							<a href="#" class="btn-green" data-toggle="modal" data-target="#modal-rev">отправить резюме</a>
+						</div>	
 					</div>
 					<div class="_vacP__note-small">
 						Также Вы можете заполнить анкету в ресторане по адресу : ул. Комсомольская, 36,<br> или выслать резюме на <a href="mailto:ele009@mail.ru">ele009@mail.ru</a>
 					</div>	
 				</div>
 				<div class="_vacP__right-col">
-					<!-- <div class="_contP__rev">
+					<div class="_contP__rev">
 						<button type="button" class="btn-close-xs"></button>
 						<div class="scroll-container _rev__scroll-container">
 							<div class="scroll-block _rev__block-container">
@@ -151,10 +174,80 @@
 						<div class="scroll-line _rev__scroll-line">
 							<div class="scroll"></div>
 						</div>						
-					</div> -->	
+					</div> 	
 				</div> 
 			</div> 
 		</div>		
+	</div>
+</div>
+
+<div class="modal fade _vacP__modal" id="modal-rev" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class=" section-green _nbmodal__dialog _vacP__dialog">
+		<div class="_ps__rel">
+			<header class="header-block _sg__header">
+				<div class="_hb__flex">
+					<div>
+						<button type="button" class="_ps__btn _sg__btn" data-toggle="modal" data-target="#modal-navbar">
+							<span class="_ps__btn-line _sgg__btn-line">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>					
+							меню сайта
+						</button>
+					</div>
+					<div class="_hb__logotip">
+						<div>
+							<a href="/"><img src="img/index/logotip-green.png" alt=""></a>
+						</div>				
+					</div>
+					<div class="_hb__phone _sg__phone ">
+						<div>Заказ столов <a href="tel:+74862543054"><span> +7 (4862)</span> 54-30-54</a></div>
+						<button type="button" class="btn-order"></button>
+					</div>
+				</div>
+			</header>
+			<nav class="navbar navbar-fixed-top navbar-xs">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> -->
+						<button type="button" class="navbar-toggle" data-toggle="modal" data-target="#modal-navbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<div class="_nbxs__logotip">
+							<a href="/"><img src="img/index/logotip-green.png" alt=""></a>
+						</div>
+						<button type="button" class="btn-order"></button>
+					</div>
+				</div> 
+			</nav>
+			<div class="_ps__inside-line _sg__inside-line _nbmodal__inside-line _vacP__inside-line">
+				<div class="_vacP__modal-inner">				
+					<button type="button" class="btn-close-xs" data-dismiss="modal"></button>	
+					<h3 class="_contP__rev-heading">заполнение анкеты</h3>
+					<div class="_vacP__rev-note">Пожалуйста, заполните все поля анкеты.</div> 
+					<form action="" class="_contP__rev-form">
+						<div class="icon-user _icon"><input type="text" placeholder="Ваше имя"></div>
+						<div class="icon-mail _icon"><input type="text" placeholder="Ваш e-mail"></div>
+						<div class="icon-commit _icon"><input type="text" placeholder="Немного о себе"></div>
+						<div class="file-block">
+							<input type="file" >
+							<div class="file-visible">
+								<span class="file-btn">Прикрепить</span> Ваше резюме (не более 10 Mb)
+							</div>					
+						</div>
+						<div class="_vacP__rev-btn-green">
+							<button type="submit" class="btn-deliv">Отправить</button> 
+						</div>
+					</form>
+					<div class="_contP__link-italic">
+						<a href="#" data-dismiss="modal">Отмена</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div> 
 			
@@ -198,7 +291,7 @@
 					</div>
 				</div>
 			</header>
-			<nav class="navbar navbar-fixed-top navbar-modal-block navbar-xs">
+			<nav class="navbar navbar-fixed-top navbar-xs">
 				<div class="container-fluid">
 					<div class="navbar-header">
 						<!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> -->

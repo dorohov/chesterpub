@@ -3,16 +3,23 @@
 	width: 100%;
 	.scroll-element {
 		overflow:scroll;
-		
+		@media @media-size-xs{
+			overflow: auto;
+		}		
 		.scroll-overflow {
 			overflow:scroll;
+			@media @media-size-xs{
+				overflow: auto;
+			}
 		}
 	}
 }
 
 .scroll-container {
 	position:absolute;
-	
+	@media @media-size-xs{
+		position: relative;
+	}
 	&.horizontal {
 		#fe.w(100%);
 		#fe.h(5px);
@@ -31,7 +38,6 @@
 			#fe.h(1px);
 			left:2%;
 			top:50%;
-			
 			.scroll {
 				#fe.w(10%);
 				#fe.h(500%);
@@ -94,6 +100,9 @@
 		//#fe.bg(#999999);
 		#fe.bg(rgb(182, 170, 135));
 		
+		@media @media-size-xs{
+			display: none;
+		}
 		.scroll {
 			position:absolute;
 			left:0;
