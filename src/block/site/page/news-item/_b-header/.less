@@ -12,7 +12,22 @@
 		background: fadeout(@black, 40%);
 		height: 100%;
 		z-index: 1;
+	}
+	@media @media-size-xs{
+		background: url('@{url-path-img}/menu/bg-yellow-left.jpg') repeat center top!important;
+		padding-top: 155px;
+		&:after{
+			display: none;
+		}
 	}	
+	@media @media-size-xs-l{
+		padding-top: 135px;
+
+	}
+	@media @media-size-sm{
+		background-size: cover!important;
+
+	}
 }
 
 ._newsI__flex{
@@ -22,6 +37,9 @@
     text-align: center;
     padding-left: 0;
     padding-right: 0;
+	@media @media-size-xs{
+   		text-align: left;
+	}
 }
 ._newsI__date{
 	.mixin-headings(
@@ -31,6 +49,17 @@
 		@color: inherit);
     transform: translateY(-100px);
     letter-spacing: 1px;
+	@media @media-size-xs{
+    	transform: translateY(0px);
+    	.mixin-headings(
+		@font-family: @proxima-bold, 
+		@font-size: 12px, 
+		@line-height: 20px, 
+		@color: rgb(191, 183, 149));
+	}
+	@media @media-size-sm{
+    	transform: translateY(0px);
+	}
 	@media @media-screen-notebook{
 		font-size: 16px;
 		line-height: 52px;
@@ -45,6 +74,21 @@
 	letter-spacing: 12px;	
     transform: translateY(-85px);
     padding: 0 100px;
+	@media @media-size-xs{
+		padding: 0;
+		font-size: 28px;
+		line-height: 40px;
+		color: @green;
+		text-align: left;
+		letter-spacing: 5px;
+    	transform: translateY(0px);
+	}
+	@media @media-size-sm{
+    	transform: translateY(0px);    
+    	font-size: 40px;
+		line-height: 52px;
+		letter-spacing: 10px;
+	}
 	@media @media-screen-notebook{
 		font-size: 40px;
 		line-height: 52px;
@@ -59,6 +103,12 @@
 	top: 50%;
 	text-decoration: none;
 	letter-spacing: 6px;
+	@media @media-size-xs{
+		display: none
+	}
+	@media @media-size-sm{
+		display: none;
+	}
 	&:hover{
 		color: @green-line;
 		text-decoration: none;
