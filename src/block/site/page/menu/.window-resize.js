@@ -8,3 +8,9 @@ if(device.tablet()){
 		el.appendTo(el.closest('.editDev__item').find('.editDev__item-cost'))
 	}); 
 }
+if(device.mobile()){
+	$('._menuP__navbar').appendTo($("._mp-modal__flex"));
+	$('._menuP__delivery.step1').appendTo($('._menuP__panel-bottom .sm-panel'));
+	$('._menuP__delivery.step2').appendTo($('._menuP__panel-bottom .sm-panel'));
+	$('._menuP__delivery.editDev').appendTo($('._menuP__panel-bottom .sm-panel'));
+}
