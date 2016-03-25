@@ -174,8 +174,20 @@
 		padding: 12px 20px;
 	}
 }
+
+@keyframes animated-mouse2scroll {
+	from, to {
+		margin-bottom:20px;
+	}
+
+	50% {
+		margin-bottom:14px;
+	}
+}
+
 ._ih__btn-scroll{
 	font-size: 16px;
+	display:block;
 	color: @white;
 	font-style: italic;
 	position: absolute;
@@ -199,6 +211,10 @@
 	@media @media-screen-WSXGA900{			
 		bottom: 50px;
     }
+	&:hover {
+		text-decoration:none;
+		color: @white;
+	}
 	&:before{
 		content: '';
 		width: 20px;
@@ -206,5 +222,9 @@
 		background: url('@{url-path-img}/index/bg-scroll.png') no-repeat center top;
 		display: block;
 		margin: 0 auto 20px;
+		animation-duration: @trans-speed * 3;
+		animation-name: animated-mouse2scroll;
+		animation-fill-mode: both;
+		animation-iteration-count: infinite;
 	}
 }
