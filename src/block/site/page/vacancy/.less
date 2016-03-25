@@ -145,6 +145,10 @@
         margin-top: 10px;
         margin-bottom: 20px;
     }
+    @media @media-screen-HD720 {
+        margin-top: 0px;
+        margin-bottom: 35px;
+    }
     @media @media-screen-notebook
     {
         margin: 0 0 35px;
@@ -177,6 +181,9 @@
     {
         height: 125px;
     }
+    @media @media-screen-HD720 {
+        height: 175px;
+    }
     @media @media-screen-WSXGA900
     {
         height: 215px;
@@ -206,6 +213,9 @@
 
         width: 100%;
         height: 100%;
+    }
+    @media @media-screen-HD720 {
+        height: 118%;
     }
     @media @media-screen-notebook
     {
@@ -380,8 +390,32 @@
     {
         display: none;
     }
-    ._contP__rev
-    {
+    ._contP__rev{
+        position: relative;
+        .scroll-site();
+        .scroll-green();
+        @media @media-screen-HD720 {
+            ._s__scroll-hide{            
+               height: 400px; 
+               ._s__scroll-element{
+                    height: 108%;
+               }
+            }
+        }  
+        @media @media-screen-WSXGA900 {
+            ._s__scroll-hide{
+               height: 500px; 
+               ._s__scroll-element{
+                    height: 106%;
+               }
+            }
+        }            
+        @media @media-screen-FullHD-sm {            
+            .scroll-hidden();
+        }
+        @media @media-screen-FullHD {            
+            .scroll-hidden();
+        }
         @media @media-screen-h1080
         {
             //margin-top: 35px;

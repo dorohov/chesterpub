@@ -10,6 +10,10 @@ body {
 	max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    @media @media-screen-HD720 {
+		padding: 25px 25px 50px;
+
+    }
     @media @media-size-sm{
     	padding: 12px 30px 20px;
     }
@@ -657,4 +661,18 @@ body {
 	.scroll-container{
 		display: none;
 	} 
+}
+.scroll-site(){
+	._s__scroll-hide{
+	    ._s__scroll-element{
+	        width: 110%;
+	        height: 110%;
+	        ._s__scroll-overflow{
+	            padding-right: 6%;
+	        }
+	    }
+	}
+	._s__scroll-container{
+
+	}
 }
