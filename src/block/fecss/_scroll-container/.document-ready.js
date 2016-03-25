@@ -76,3 +76,8 @@
 		});
 		
 	});
+
+$('.modal').on('shown.bs.modal', function (event) {
+	alert(2);
+	$('.scroll-container').trigger('init');
+});

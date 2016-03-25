@@ -629,3 +629,32 @@ body {
 	outline: none;
 	
 }
+.scroll-green(){
+	.scroll-container{
+		.scroll-line{
+			background-color: @green-line;
+			.scroll {
+				background-color: @green-line;
+			}
+		}
+	}
+}
+.scroll-hidden(){
+	.scroll-hide{
+		height: inherit;
+		overflow: inherit;
+	}
+	.scroll-element{
+		width: 100%;
+		height: 100%;
+		overflow: inherit;
+	}
+	.scroll-overflow{
+		padding: 0;
+		width: 100%;
+		overflow: inherit!important;
+	}
+	.scroll-container{
+		display: none;
+	} 
+}
