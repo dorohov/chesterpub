@@ -33,15 +33,34 @@
 <script src="/js/document-ready.js" ></script>
 	</head>
 	<body>
-		<div class="_galleryP__lock">			
+		<!--<div class="_galleryP__lock">			
 			<div class="_galleryP__inner">
 				<div class="_galleryP__lock-img"></div>
 				<div class="_galleryP__lock-note">Листайте фотографии стрелками клавиатуры</div>
 				<div class="_galleryP__btn"><button type="button" class="btn-bron">Хорошо</button></div>
 			</div>			
+		</div>-->
+		<div id="fullpage-second" class="fullpage-site fullpage-gallery">
+
+			<nav class="navbar navbar-fixed-top navbar-xs">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> -->
+			<button type="button" class="navbar-toggle" data-toggle="modal" data-target="#modal-navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<div class="_nbxs__logotip">
+				<a href="/"><img src="img/index/logotip-green.png" alt=""></a>
+			</div>
+			<button type="button" class="btn-order"></button>
 		</div>
-		<div id="fullpage-second" class="fullpage-site">
-			<div class="section gallery-page__section section-green page-section" style="background: url(/img/bg/bg-news-item.jpg) no-repeat center">
+	</div> 
+</nav>
+
+			<div class="section gallery-page__section section-green page-section" style="background: url(http://chester.dorohovdesign.ru/wp-content/uploads/2016/03/ch_0113.jpg) no-repeat center">
 	<div class="_ps__rel">
 		<header class="header-block _sg__header">
 			<div class="_hb__flex">
@@ -66,9 +85,9 @@
 				</div>
 			</div>
 		</header>
-		<div class="_ps__inside-line _sg__inside-line _galleryP__flex">			 
+		<div class="_ps__inside-line _sg__inside-line _galleryP__flex">	 
 			<div class="_ps__heading-block _in__heading-block">
-				<h1 class="_ps__heading _galleryP__heading">галерея</h1>		
+				<h1 class="_ps__heading _galleryP__heading">галерея</h1>
 			</div>
 			<div class="_galleryP__controls left"></div>
 			<div class="_galleryP__controls right"></div>
@@ -86,6 +105,9 @@
 					<div class="item"><img src="/img/gallery/item-lock.png" alt=""></div>
 					<div class="item"><img src="/img/gallery/item-lock.png" alt=""></div>
 				</div> 
+			</div>
+			<div class="_galleryP__content-xs">
+				
 			</div>
 		</div>
 	</div>
