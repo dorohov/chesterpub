@@ -13,7 +13,8 @@
 	@media @media-size-xs{
 		width: 100%;
 	}
-	@media @media-size-sm-p{
+	//@media @media-size-sm-p{
+	@media @media-size-sm{
 		width: 100%;
 	}
 	&._contP__left-bg{
@@ -53,7 +54,8 @@
 				display: none;
 			}
 		} 
-		@media @media-size-sm-p{
+		//@media @media-size-sm-p{
+		@media @media-size-sm{
 			height: 400px;
 			top: inherit;
 			bottom: 0;
@@ -74,7 +76,8 @@
 	@media @media-size-xs{
 		display: block;
 	}
-	@media @media-size-sm-p{
+	//@media @media-size-sm-p{
+	@media @media-size-sm{
 		flex-wrap: wrap;
 		padding-bottom: 400px;
 	}
@@ -258,7 +261,6 @@
 	display: flex;
 	z-index: 99;
 	color: @white;
-	display: flex;
     @media @media-screen-h1080{
 		margin-top: 35px;
     }
@@ -351,6 +353,12 @@
 			right: 0;
 			display: block;
 			transform: translateY(-50%);
+		}
+	
+		&.icon-phone{
+			&:after{				
+				background: url('@{url-path-img}/beer/icon-phone.png') center no-repeat;
+			}
 		}
 		&.icon-user{
 			&:after{				

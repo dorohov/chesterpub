@@ -67,7 +67,8 @@
 	@media @media-size-xs{
 		justify-content: flex-start;
 		align-items: flex-start;
-		background: url('@{url-path-img}/navbar/bg-navbar-mod-bottom.png') no-repeat bottom left;
+		//background: url('@{url-path-img}/navbar/bg-navbar-mod-bottom.png') no-repeat bottom left;
+		background: none;
 	}
 	@media @media-screen-notebook{
 		background: url('@{url-path-img}/navbar/bg-navbar-mod-bottom.png') no-repeat bottom left;
@@ -96,6 +97,12 @@
 			height: 11px;
 			margin: 20px auto 0;
 			background: url('@{url-path-img}/index/ibm-venzel.png') center no-repeat; 
+		}
+		@media @media-screen-WXGA768 {
+			transform: translateY(0px);   			
+			&:after{
+				margin: 20px auto;
+			}
 		}
 		@media @media-size-xs{
 			transform: translateY(0px);
@@ -134,6 +141,10 @@
 				   line-height: 52px;
 				   font-size: 22px;
 				}
+				@media @media-screen-WXGA768 {
+				   line-height: 42px;
+				   font-size: 22px;
+				}
 				@media @media-screen-hbig{
 				   line-height: 52px;
 				   font-size: 22px;
@@ -154,6 +165,9 @@
 	@media @media-screen-hbig{
 		transform: translateY(10px);
 	}
+	@media @media-screen-WXGA768 {
+		transform: translateY(0px);   			
+	}
 }
 ._nbmodal__soc-item{
 	width: 22px;
@@ -173,6 +187,7 @@
 ._nbmodal__navprev{
 	display: flex;
 	flex-direction: column;
+	position: relative;
 	@media @media-size-xs {
 		display: none;
 	}
@@ -335,4 +350,55 @@
 	._contP__rev-btn-green {
 		margin-top:35px;
 	}
+	._nbmodal__flex{
+		background: url('@{url-path-img}/navbar/bg-navbar-mod-top.png') no-repeat top left, url('@{url-path-img}/navbar/bg-navbar-mod-bottom.png') no-repeat bottom left;
+	}
+	._nbmodal__nav{
+		background: none;
+	}
+	@media @media-size-xs {
+		._nbmodal__flex{
+			background: none;
+		}
+		._nbmodal__nav{
+			display: none;
+		}
+		._contMe__rev{display: block;}
+		.scroll-container._rev__scroll-container{
+			top: 0;
+		}
+	    .btn-close-xs{
+	    	display: none;
+	    }
+	    ._contP__rev-heading {
+		    font-size: 32px;
+		    line-height: 44px;
+		    letter-spacing: 8px;
+		}
+	}
+	@media @media-screen-WXGA768 {		
+		.scroll-container._rev__scroll-container {
+			top: 6em;
+		}
+	}
+}
+
+._contMe__rev{
+	z-index: 99;
+	color: @white;
+	padding: 0 25px;
+    @media @media-screen-h1080{
+		margin-top: 35px;
+    }
+    .btn-close-xs{
+    	position: absolute;	
+		top: 20px;
+		right: -5px;
+		@media @media-screen-h1080{	
+		   
+		}
+    }
+    >div{
+    	position: relative;
+    }
 }

@@ -430,6 +430,9 @@
 	.scroll-line .scroll {
 		background-color: @green-line;
 	}
+	@media @media-screen-WXGA768 {
+		.scroll-hide{height: 275px;}
+	}
 }
 ._navbar__block-container{
 	@media @media-screen-notebook{
@@ -915,7 +918,7 @@
 		padding-bottom: 0;
 	}
 	@media @media-size-sm {
-		display: block;
+		//display: block;
 	}
 	._menuP-pb__inside-line{
 		margin: 0 30px;
