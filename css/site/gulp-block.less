@@ -592,6 +592,11 @@
 	/* @media @media-size-xs{
 		position: relative;
 	} */
+	
+	&._rev__scroll-container {
+		width:100%;
+	}
+	
 	&.horizontal {
 		#fe.w(100%);
 		#fe.h(5px);
@@ -1133,6 +1138,15 @@
 				transform: rotate(45deg) translateY(50%);
 			}
 		}
+	}
+}
+
+#modal-contactme {
+	.scroll-container._rev__scroll-container {
+		top: 10em;
+	}
+	._contP__rev-btn-green {
+		margin-top:35px;
 	}
 }
 .beer-page__section{
@@ -5431,8 +5445,20 @@
 		padding: 12px 20px;
 	}
 }
+
+@keyframes animated-mouse2scroll {
+	from, to {
+		margin-bottom:20px;
+	}
+
+	50% {
+		margin-bottom:14px;
+	}
+}
+
 ._ih__btn-scroll{
 	font-size: 16px;
+	display:block;
 	color: @white;
 	font-style: italic;
 	position: absolute;
@@ -5456,6 +5482,10 @@
 	@media @media-screen-WSXGA900{			
 		bottom: 50px;
     }
+	&:hover {
+		text-decoration:none;
+		color: @white;
+	}
 	&:before{
 		content: '';
 		width: 20px;
@@ -5463,6 +5493,10 @@
 		background: url('@{url-path-img}/index/bg-scroll.png') no-repeat center top;
 		display: block;
 		margin: 0 auto 20px;
+		animation-duration: @trans-speed * 3;
+		animation-name: animated-mouse2scroll;
+		animation-fill-mode: both;
+		animation-iteration-count: infinite;
 	}
 }
 .index-news__section{
@@ -5751,6 +5785,7 @@
 	@media @media-size-xs{
 		flex-wrap: wrap;
 		margin: 0 -20px;
+<<<<<<< HEAD
 	}
 	@media @media-size-sm-p{
 		flex-wrap: wrap;
@@ -5763,6 +5798,20 @@
 		height: 100%;
 		max-height: 510px;
 	}
+=======
+	}
+	@media @media-size-sm-p{
+		flex-wrap: wrap;
+	}
+	@media @media-screen-hsmall{
+		height: 100%;
+		max-height: 290px;
+	}
+	@media @media-screen-hbig{
+		height: 100%;
+		max-height: 510px;
+	}
+>>>>>>> fc4fbc9115c4aed966188b00a03a163cef77fda8
 	@media @media-screen-h1080{
 		height: 100%;
 		max-height: 690px;
@@ -5891,6 +5940,7 @@
 	text-align: center;
 	&:before{
 		background: url('@{url-path-img}/index/rest-venzel.png') no-repeat center;
+<<<<<<< HEAD
 		display: block;
 		content: '';
 		height: 16px;
@@ -5959,6 +6009,76 @@
 	@media @media-screen-hbig{
 		max-width: 700px;
 	}
+=======
+		display: block;
+		content: '';
+		height: 16px;
+		margin-bottom: 60px;
+		margin-top: 15px; 
+		@media @media-size-sm{
+			display: none;
+		}
+		@media @media-screen-hsmall{
+			margin-bottom: 20px;
+		}
+		@media @media-screen-hbig{
+			margin-bottom: 40px;
+		}
+		@media @media-screen-notebook{
+			margin: 0 0 10px;
+		}
+	}
+	&:after{
+		background: url('@{url-path-img}/index/rest-beer.png') no-repeat center;
+		display: block;
+		content: '';
+		height: 120px;
+		margin-top: 55px;
+		@media @media-screen-hsmall{
+			margin-top: 20px;
+		}
+		@media @media-screen-hbig{
+			margin-top: 25px;
+		}
+		@media @media-screen-notebook{
+			background-size: 50px;
+			height: 80px;
+			margin-top: 10px; 
+		}
+		@media @media-screen-WSXGA900{
+			background-size: 60px;
+			height: 90px;
+			margin-top: 30px; 
+		}
+		@media @media-size-sm{					
+			height: 100px;
+			background-size: 55px;
+		}
+		@media @media-size-sm-p{
+			margin-top: 15px;
+		}
+	}
+	@media @media-size-xs{
+		text-align: left;
+		max-width: 100%;
+		&:before, &:after{display: none;}
+	}
+	@media @media-size-sm{
+		font-size: 14px;
+		padding-top: 15px;
+		line-height: 30px;
+		max-width: 100%;
+	}
+	@media @media-size-sm-p{
+		padding: 0;
+	}
+	@media @media-screen-hsmall{
+		max-width: 800px;
+	}	
+	@media @media-screen-hbig{
+		max-width: 700px;
+	}
+>>>>>>> fc4fbc9115c4aed966188b00a03a163cef77fda8
 	@media @media-screen-notebook{
 		max-width: 640px;
 	}		
@@ -6073,6 +6193,7 @@
 		@font-size: 12px, 
 		@line-height: 20px, 
 		@color: rgb(191, 183, 149));
+<<<<<<< HEAD
 	}
 	@media @media-size-sm{
     	transform: translateY(0px);
@@ -6143,6 +6264,78 @@
 		right: 0;
 		transform: translateX(65px) translateY(-50%) rotate(90deg);
 	}
+=======
+	}
+	@media @media-size-sm{
+    	transform: translateY(0px);
+	}
+	@media @media-screen-notebook{
+		font-size: 16px;
+		line-height: 52px;
+	}
+}
+._newsI__heading{
+	.mixin-headings(
+		@font-family: @bebas-bold, 
+		@font-size: 60px, 
+		@line-height: 72px, 
+		@color: inherit);
+	letter-spacing: 12px;	
+    transform: translateY(-85px);
+    padding: 0 100px;
+	@media @media-size-xs{
+		padding: 0;
+		font-size: 28px;
+		line-height: 40px;
+		color: @green;
+		text-align: left;
+		letter-spacing: 5px;
+    	transform: translateY(0px);
+	}
+	@media @media-size-sm{
+    	transform: translateY(0px);    
+    	font-size: 40px;
+		line-height: 52px;
+		letter-spacing: 10px;
+	}
+	@media @media-screen-notebook{
+		font-size: 40px;
+		line-height: 52px;
+	}
+	@media @media-screen-WSXGA900{
+		font-size: 48px;
+		line-height: 60px;
+	}
+}
+._newsI__controls{
+	position: absolute;
+	top: 50%;
+	text-decoration: none;
+	letter-spacing: 6px;
+	@media @media-size-xs{
+		display: none
+	}
+	@media @media-size-sm{
+		display: none;
+	}
+	&:hover{
+		color: @green-line;
+		text-decoration: none;
+	}
+	&:focus{
+		color: @white;
+		text-decoration: none;
+	}
+	.mixin-headings(
+		@font-family: @bebas-bold, 
+		@font-size: 20px, 
+		@line-height: 28px, 
+		@color: inherit);
+	&._newsI__nextArticle{
+		right: 0;
+		transform: translateX(65px) translateY(-50%) rotate(90deg);
+	}
+>>>>>>> fc4fbc9115c4aed966188b00a03a163cef77fda8
 	&._newsI__prevArticle{
 		left: 0;
 		transform: translateX(-65px) translateY(-50%) rotate(-90deg);
@@ -6156,6 +6349,15 @@
 		color: @green;
 		&:hover{
 			color: @grey;
+<<<<<<< HEAD
+		}
+	}
+	@media @media-size-xs{
+		background:  url('@{url-path-img}/bg/bg-news-item-pic.png') no-repeat 200% 100%, url('@{url-path-img}/menu/bg-yellow-left.jpg') repeat center top;
+		padding-top: 0;
+		padding-bottom: 30px;
+		._ps__btn-news {
+=======
 		}
 	}
 	@media @media-size-xs{
@@ -6182,6 +6384,27 @@
 	@media @media-size-xs{
 		margin: 0;
 		.scroll-container{
+>>>>>>> fc4fbc9115c4aed966188b00a03a163cef77fda8
+			display: none;
+		}
+	}
+	@media @media-size-sm{
+<<<<<<< HEAD
+		._ps__btn-news {
+			display: none;
+		}
+	}
+}
+._newsI-text__flex{
+	display: flex;
+	margin-top: 85px;
+	max-width: 810px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	@media @media-size-xs{
+		margin: 0;
+		.scroll-container{
 			display: none;
 		}
 	}
@@ -6190,6 +6413,21 @@
 		.scroll-container{
 			display: none;
 		}
+=======
+		margin: 20px 0 0 0;
+		.scroll-container{
+			display: none;
+		}
+	}
+	@media @media-screen-notebook{
+		margin-top: 25px;
+	}
+	@media @media-screen-WSXGA900{
+		margin-top: 45px;
+	}
+	@media @media-screen-hbig{
+		margin-top: 65px;
+>>>>>>> fc4fbc9115c4aed966188b00a03a163cef77fda8
 	}
 	@media @media-screen-notebook{
 		margin-top: 25px;
@@ -6208,6 +6446,7 @@
 	@media @media-size-sm{
 		margin: 0;
 	}
+<<<<<<< HEAD
 	@media @media-screen-notebook{
 		height: 170px;
 	}
@@ -6242,8 +6481,47 @@
 	}
 	@media @media-screen-WSXGA900{
 		height: 120%;
+=======
+	@media @media-screen-notebook{
+		height: 170px;
+	}
+	@media @media-screen-WSXGA900{
+		height: 250px;
+	}
+	@media @media-screen-hbig{
+		height: 300px;
+	}
+	@media @media-screen-h1080{
+		height: 340px;
+>>>>>>> fc4fbc9115c4aed966188b00a03a163cef77fda8
+	}
+	margin-right: 10px;
+}
+<<<<<<< HEAD
+=======
+._newsI-text__scroll-element{
+	width: 110%;
+	height: 110%;
+    @media @media-size-xs{    
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto!important;
+    }
+    @media @media-size-sm{    
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto!important;
+    }
+	@media @media-screen-notebook{
+		height: 120%;
+	}
+	@media @media-screen-WSXGA900{
+		height: 120%;
 	}
 }
+>>>>>>> fc4fbc9115c4aed966188b00a03a163cef77fda8
 ._newsI-text__scroll-overflow{
     @media @media-size-xs{    
         padding: 0;
