@@ -6,6 +6,24 @@
 	@media @media-size-xs-l{
 		padding-top: 135px;
 	} 
+	@media @media-screen-WXGA768 { 
+		._ps__inside-line {
+			//min-height: 670px;
+			min-height: 570px;
+		}		
+	}
+	@media @media-screen-FullHD-sm{
+		._ps__inside-line {
+			//min-height: 670px;
+			min-height: 895px;
+		}
+
+	}
+	@media @media-screen-FullHD{
+		._ps__inside-line {
+			min-height: 900px;
+		}
+	}
 }
 ._menuP__bg{	
 	position: absolute;
@@ -276,6 +294,9 @@
 }
 ._menuP__btn-block{
 	margin-top: 45px;
+	@media @media-screen-WXGA768 { 
+		margin-top: 30px;
+	}
 }
 ._menuP__btn-green{
 	max-width: 300px;
@@ -596,6 +617,16 @@
 			    line-height: 50px;
 			}
 		} 
+		@media @media-screen-WXGA768 {
+	   		font-size: 20px;
+	    	line-height: 28px;
+			.scroll-hide{
+				height: 300px;
+			}
+			.scroll-element{
+				height: 110%;
+			}
+		}
 	}
 	&.step2{
 		padding-top: 55px;
@@ -608,6 +639,15 @@
 			margin-bottom: 80px;
 			@media @media-screen-hbig{
 				margin-bottom: 40px;				
+			}
+		}
+		@media @media-screen-WXGA768 {
+			padding-top: 0;
+			.scroll-hide{
+				height: 300px;
+			}
+			._menuP__delivery-step{
+				margin-bottom: 10px
 			}
 		}
 		@media @media-screen-WSXGA900{
@@ -647,6 +687,11 @@
 		.scroll-green(); 
 		.scroll-hide{
 			height: 300px;
+		}
+		@media @media-screen-WXGA768 {			
+			.scroll-hide{
+				height: 240px;
+			}
 		}
 	
 		@media @media-screen-WSXGA900{
@@ -713,6 +758,15 @@
 		margin-top: 20px;
 		margin-bottom: 20px;
 	}
+	@media @media-screen-WXGA768 {
+		font-size: 32px;
+    	line-height: 44px;
+		&:after{
+			background-size: 150px;
+			margin: 15px 0;
+			height: 22px;
+		}
+	}
 }
 ._menuP__delivery-step{
 	font-size: 16px;
@@ -747,6 +801,9 @@
 ._menuP__delivery-btn{
 	max-width: 300px;
 	margin: 80px auto 20px;
+	@media @media-screen-WXGA768 {
+		margin-top: 35px;
+	}
 	@media @media-screen-hbig{
 		margin: 20px auto 15px;
 	}
@@ -870,6 +927,9 @@
 	@media @media-screen-notebook{
 		margin: 20px auto 15px;
 	} 
+	@media @media-screen-WXGA768 {
+		margin: 20px auto 40px;
+	}
 	@media @media-screen-WSXGA900{
 		margin: 20px auto 15px;
 	} 

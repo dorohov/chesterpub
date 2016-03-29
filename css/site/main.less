@@ -23,11 +23,14 @@ body {
 }
 .fp-tableCell {    
     @media @media-screen-hbig{
-        max-height: 860px;
+        max-height: 810px;
     }  
-    @media @media-screen-h1080{
-        max-height: 970px;
-    }
+	@media @media-screen-FullHD-sm{
+		max-height: 885px;
+	}
+	@media @media-screen-FullHD{
+		max-height: 970px;
+	}
 }
 ._ps__inside-line{
 	border: 2px solid;
@@ -92,6 +95,12 @@ body {
 		font-size: 14px;
 		line-height: 28px;
     }
+
+	&:hover{
+		._ps__btn-line{
+    		//transform:  scale(1.1);
+		}
+	}
 }
 ._ps__btn-line{
     display: inline-block;
@@ -101,6 +110,7 @@ body {
     margin-right: 5px;
     position: relative;
     transform: translateY(-2px);
+    transition: all 0.8s ease;
 	span{
 		display: block;
 		width: 100%;
@@ -168,11 +178,20 @@ body {
 	top: -23px;
     right: -35px;
     outline: none;
+    @media @media-screen{    	
+		background: url('@{url-path-img}/round/icon-order-hover.png') no-repeat center;
+	    background-position: 0 0;
+	    transition: all .25s ease;
+	    &:hover{
+	    	background-position: 0 -75px;
+	    }
+    }
 	@media @media-size-sm{
 		width: 60px;
 		height: 60px;
 		top: -19px;
 		right: -21px;
+		background: url('@{url-path-img}/round/icon-order.png') no-repeat center;
 	}
 }
 .btn-green{	
@@ -188,11 +207,15 @@ body {
 	letter-spacing: 6px;
 	outline: none; 
 	box-shadow: 15px 15px 25px fadeout(@black, 85%);
+	transition: all 0.4s ease;
 	&:hover,
 	&:focus{
 		text-decoration: none;
 		color: @white;
 		outline: none; 
+	}
+	&:hover{
+		box-shadow: 10px 10px 15px fadeout(@black, 85%);
 	}
 }
 // header-block
@@ -675,4 +698,8 @@ body {
 	._s__scroll-container{
 
 	}
+}
+._tour__inside-line object {
+    position: relative;
+    z-index: 1;
 }
