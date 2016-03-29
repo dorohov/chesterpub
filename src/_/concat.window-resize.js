@@ -2,5 +2,5 @@ $(function(){var w={xs:{min:0,max:768},sm:{min:767,max:992},md:{min:991,max:1200
 
 $(function(){$(".scroll-container").trigger("init"),console.log("window-resize .scroll-container init")});
 device.mobile()&&$("._galleryP__owl").appendTo($("._galleryP__content-xs"));
-device.mobile()&&$("._newsP__panel .scroll-container").removeClass("horizontal bottom").addClass("vertical right").trigger("init");
 device.tablet()&&($("._menuP__navbar").appendTo($("._mp-modal__flex")),$("._menuP__delivery.step1").appendTo($("._menuP__panel-bottom .sm-panel")),$("._menuP__delivery.step2").appendTo($("._menuP__panel-bottom .sm-panel")),$("._menuP__delivery.editDev").appendTo($("._menuP__panel-bottom .sm-panel")),$(".editDev__price").each(function(){var e=$(this);e.appendTo(e.closest(".editDev__item").find(".editDev__item-cost"))})),device.mobile()&&($("._menuP__navbar").appendTo($("._mp-modal__flex")),$("._menuP__delivery.step1").appendTo($("._menuP__panel-bottom .sm-panel")),$("._menuP__delivery.step2").appendTo($("._menuP__panel-bottom .sm-panel")),$("._menuP__delivery.editDev").appendTo($("._menuP__panel-bottom .sm-panel")));
+device.mobile()&&$("._newsP__panel .scroll-container").removeClass("horizontal bottom").addClass("vertical right").trigger("init");
