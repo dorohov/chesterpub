@@ -487,6 +487,7 @@
 					background: transparent;
 					transform: rotate(45deg);
 					margin-left: 25px;
+					transition: all 0.1s ease-in-out;
 				}
 			}
 			&.active{	
@@ -502,10 +503,15 @@
 					//transform: scale(1.01);
 					span{
 						transform: rotate(45deg);
+						border-color: @green-line; 
 					}
-					&.active{
+					
+				}
+				&.active{
+					a{
 						span{
 							background: @green;
+							border-color: @green;
 						}
 					}
 				}

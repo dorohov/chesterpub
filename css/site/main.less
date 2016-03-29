@@ -65,13 +65,20 @@ body {
 	border-right: none;
 	bottom: 0px;
 	right: 0px;
-	cursor: pointer;
+	cursor: pointer;	
 	@media @media-size-xs{
 		display: none;
 	}
 	@media @media-size-sm{
 		display: none;
-	}
+	}	
+	background-position: center 25px !important;
+    transition: all .25s ease;
+    &:hover{
+    	background-position: center -60px!important;
+    }
+
+    
 
 }
 ._ps__btn{
@@ -336,7 +343,8 @@ body {
 }
 ._sgg__btn-top{
 	border-color: @green-line;
-	background: url('@{url-path-img}/index/icon-arrow-top-white.png') no-repeat center;	
+	background: url('@{url-path-img}/index/icon-arrow-top-white-hover.png') no-repeat center;
+    
 }
 ._sgg__phone{
 	color: @white;
@@ -400,7 +408,7 @@ body {
 }
 ._sg__btn-top{
 	border-color: @green-line;
-	background: url('@{url-path-img}/index/icon-arrow-top-white.png') no-repeat center;	
+	background: url('@{url-path-img}/index/icon-arrow-top-white-hover.png') no-repeat center;	
 }
 ._sg__phone{
 	color: @white;
@@ -469,7 +477,7 @@ body {
 }
 ._sgr__btn-top{
 	border-color: @grey-line;	
-	background: url('@{url-path-img}/index/icon-arrow-top.png') no-repeat center;	
+	background: url('@{url-path-img}/index/icon-arrow-top-hover.png') no-repeat center;	
 }
 // end's
 // news
@@ -672,13 +680,13 @@ body {
 }
 .scroll-hidden(){
 	.scroll-hide{
-		height: inherit;
-		overflow: inherit;
+		height: inherit!important;
+		overflow: inherit!important;
 	}
 	.scroll-element{
 		width: 100%;
 		height: 100%;
-		overflow: inherit;
+		overflow: inherit!important;
 	}
 	.scroll-overflow{
 		padding: 0;
@@ -686,7 +694,7 @@ body {
 		overflow: inherit!important;
 	}
 	.scroll-container{
-		display: none;
+		display: none!important;
 	} 
 }
 .scroll-site(){
