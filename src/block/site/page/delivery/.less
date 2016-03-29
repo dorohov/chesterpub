@@ -67,6 +67,9 @@
     height: 100%;
 	@media @media-size-xs{
 		display: block;
+		.scroll-hide{
+			overflow: inherit;
+		}
 		.scroll-container{
 			display: none
 		}
@@ -286,7 +289,7 @@
 	background: @green;
 	padding: 0!important; 
 	@media @media-size-xs{
-		display: none;
+		display: none!important;
 	}
 }
 ._deliveryP__flex-cont{ 

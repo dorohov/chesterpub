@@ -279,71 +279,6 @@
 	}
 	*/
 }
-.can-close {
-	position:relative;
-	
-	.close-btn {
-		position:absolute;
-		right:1em;
-		top:1em;
-		width:1em;
-		height:1em;
-		background-size:cover;
-		#fe.brep();
-		#fe.bpos();
-		#fe.bi('.can-close/close-btn.png');
-	}
-	
-	
-	/*
-	&.mod {
-		& {
-			
-		}
-	}
-	
-	@media @media-size-xs {
-		& {
-			
-		}
-	}
-	@media @media-size-sm {
-		& {
-			
-		}
-	}
-	@media @media-size-md {
-		& {
-			
-		}
-	}
-	@media @media-size-lg {
-		& {
-			
-		}
-	}
-	@media @media-size-portrait {
-		& {
-			
-		}
-	}
-	@media @media-size-landscape {
-		& {
-			
-		}
-	}
-	@media @media-size-retina {
-		& {
-			
-		}
-	}
-	@media @media-size-print {
-		& {
-			
-		}
-	}
-	*/
-}
 	.go-to-top {
 		position:fixed;
 		opacity:0;
@@ -713,6 +648,71 @@
 	left:0;
 	top:0;
 	width:100%;
+	
+	/*
+	&.mod {
+		& {
+			
+		}
+	}
+	
+	@media @media-size-xs {
+		& {
+			
+		}
+	}
+	@media @media-size-sm {
+		& {
+			
+		}
+	}
+	@media @media-size-md {
+		& {
+			
+		}
+	}
+	@media @media-size-lg {
+		& {
+			
+		}
+	}
+	@media @media-size-portrait {
+		& {
+			
+		}
+	}
+	@media @media-size-landscape {
+		& {
+			
+		}
+	}
+	@media @media-size-retina {
+		& {
+			
+		}
+	}
+	@media @media-size-print {
+		& {
+			
+		}
+	}
+	*/
+}
+.can-close {
+	position:relative;
+	
+	.close-btn {
+		position:absolute;
+		right:1em;
+		top:1em;
+		width:1em;
+		height:1em;
+		background-size:cover;
+		#fe.brep();
+		#fe.bpos();
+		#fe.bi('.can-close/close-btn.png');
+	}
+	
 	
 	/*
 	&.mod {
@@ -2520,6 +2520,9 @@
     height: 100%;
 	@media @media-size-xs{
 		display: block;
+		.scroll-hide{
+			overflow: inherit;
+		}
 		.scroll-container{
 			display: none
 		}
@@ -2739,7 +2742,7 @@
 	background: @green;
 	padding: 0!important; 
 	@media @media-size-xs{
-		display: none;
+		display: none!important;
 	}
 }
 ._deliveryP__flex-cont{ 
@@ -3141,7 +3144,7 @@
 	@media @media-screen-WSXGA900{
 		padding-right: 4%;
 	}
-
+	overflow-y: scroll; 
 	padding-right: 6%;
 }
 /* ._menuP__block-container{
@@ -3238,7 +3241,7 @@
 		@font-size: 18px, 
 		@line-height: inherit, 
 		@color: inherit);    
-	max-width: 50px;
+	max-width: 80px;
 	padding: 0!important;
 	@media @media-size-xs{
 		max-width: inherit;
