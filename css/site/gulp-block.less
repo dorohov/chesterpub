@@ -279,6 +279,71 @@
 	}
 	*/
 }
+.can-close {
+	position:relative;
+	
+	.close-btn {
+		position:absolute;
+		right:1em;
+		top:1em;
+		width:1em;
+		height:1em;
+		background-size:cover;
+		#fe.brep();
+		#fe.bpos();
+		#fe.bi('.can-close/close-btn.png');
+	}
+	
+	
+	/*
+	&.mod {
+		& {
+			
+		}
+	}
+	
+	@media @media-size-xs {
+		& {
+			
+		}
+	}
+	@media @media-size-sm {
+		& {
+			
+		}
+	}
+	@media @media-size-md {
+		& {
+			
+		}
+	}
+	@media @media-size-lg {
+		& {
+			
+		}
+	}
+	@media @media-size-portrait {
+		& {
+			
+		}
+	}
+	@media @media-size-landscape {
+		& {
+			
+		}
+	}
+	@media @media-size-retina {
+		& {
+			
+		}
+	}
+	@media @media-size-print {
+		& {
+			
+		}
+	}
+	*/
+}
 	.go-to-top {
 		position:fixed;
 		opacity:0;
@@ -648,71 +713,6 @@
 	left:0;
 	top:0;
 	width:100%;
-	
-	/*
-	&.mod {
-		& {
-			
-		}
-	}
-	
-	@media @media-size-xs {
-		& {
-			
-		}
-	}
-	@media @media-size-sm {
-		& {
-			
-		}
-	}
-	@media @media-size-md {
-		& {
-			
-		}
-	}
-	@media @media-size-lg {
-		& {
-			
-		}
-	}
-	@media @media-size-portrait {
-		& {
-			
-		}
-	}
-	@media @media-size-landscape {
-		& {
-			
-		}
-	}
-	@media @media-size-retina {
-		& {
-			
-		}
-	}
-	@media @media-size-print {
-		& {
-			
-		}
-	}
-	*/
-}
-.can-close {
-	position:relative;
-	
-	.close-btn {
-		position:absolute;
-		right:1em;
-		top:1em;
-		width:1em;
-		height:1em;
-		background-size:cover;
-		#fe.brep();
-		#fe.bpos();
-		#fe.bi('.can-close/close-btn.png');
-	}
-	
 	
 	/*
 	&.mod {
@@ -3144,7 +3144,8 @@
 	@media @media-screen-WSXGA900{
 		padding-right: 4%;
 	}
-	overflow-y: scroll; 
+	overflow: inherit!important; 
+	overflow-y: scroll!important; 
 	padding-right: 6%;
 }
 /* ._menuP__block-container{
@@ -3188,6 +3189,7 @@
 		&.active{
 			background: @green;
 			._menuP__item-name,
+			._menuP__item-note,
 			._menuP__item-cost{
 				display: none;
 			}
@@ -3241,7 +3243,7 @@
 		@font-size: 18px, 
 		@line-height: inherit, 
 		@color: inherit);    
-	max-width: 80px;
+	max-width: 80px; 
 	padding: 0!important;
 	@media @media-size-xs{
 		max-width: inherit;
@@ -3251,7 +3253,7 @@
 		padding: 5px 10px!important;
 	}
 }
-._menuP__item-qty-btn{
+._menuP__item-qty-btn{ 
 	color: @green;
 	font-size: 26px;
 	line-height: 26px;

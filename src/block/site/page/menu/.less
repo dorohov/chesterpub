@@ -150,7 +150,8 @@
 	@media @media-screen-WSXGA900{
 		padding-right: 4%;
 	}
-	overflow-y: scroll; 
+	overflow: inherit!important; 
+	overflow-y: scroll!important; 
 	padding-right: 6%;
 }
 /* ._menuP__block-container{
@@ -194,6 +195,7 @@
 		&.active{
 			background: @green;
 			._menuP__item-name,
+			._menuP__item-note,
 			._menuP__item-cost{
 				display: none;
 			}
@@ -247,7 +249,7 @@
 		@font-size: 18px, 
 		@line-height: inherit, 
 		@color: inherit);    
-	max-width: 80px;
+	max-width: 80px; 
 	padding: 0!important;
 	@media @media-size-xs{
 		max-width: inherit;
@@ -257,7 +259,7 @@
 		padding: 5px 10px!important;
 	}
 }
-._menuP__item-qty-btn{
+._menuP__item-qty-btn{ 
 	color: @green;
 	font-size: 26px;
 	line-height: 26px;
