@@ -551,45 +551,39 @@ $(document).ready(function() {
 	
 	
 	$(function(){
-		/*
-		var pl = $('<div/>', {
-			class : 'page-loader full-screen chester-style active',
-			html : '<div class="at-center" ><div class="middle" ><div class="chester-container" ><div class="blind" ></div></div><div class="load-word" >Загрузка</div></div></div>',
-		})
-			.prependTo($('body'));
-		*/
-		
 		var pl = $('div.page-loader.full-screen.chester-style.active');
 		var b = $('.blind', pl).eq(0);
 		
-		var pos = 0;
-		
-		b.css({'bottom' : pos + '%'}).attr('data-pos', pos);
-		
-		var intr = setInterval(function() {
+		if(b.size()) {
 			
-			var check = Math.random();
-			if(check > 0.5 && pos < 100) {
-				pos++;
+			var pos = 0;
+			
+			b.css({'bottom' : pos + '%'}).attr('data-pos', pos);
+			
+			var intr = setInterval(function() {
 				
-				if(b.data('fast-page-loading')) {
-					pos = pos + 6;
+				var check = Math.random();
+				if(check > 0.5 && pos < 100) {
+					pos++;
+					
+					if(b.data('fast-page-loading')) {
+						pos = pos + 6;
+					}
+					
+					var h = 100 + (pos);
+					//var o = (100 - (pos / 5.5)) / 100;
+					
+					b.css({'bottom' : pos + '%', 'height' : h + '%', 'width' : h + '%', 'left' : - (pos / 2) + '%'}).attr('data-pos', pos);//, 'height' : h + '%'
+				} else if(pos > 99) {
+					clearInterval(intr);
+					$('div.page-loader.full-screen.chester-style')
+						.data('counter-can-close-it', true)
+						.trigger('fecss.can-close-it');
 				}
 				
-				var h = 100 + (pos);
-				//var o = (100 - (pos / 5.5)) / 100;
-				
-				b.css({'bottom' : pos + '%', 'height' : h + '%', 'width' : h + '%', 'left' : - (pos / 2) + '%'}).attr('data-pos', pos);//, 'height' : h + '%'
-			} else if(pos > 99) {
-				clearInterval(intr);
-				$('div.page-loader.full-screen.chester-style')
-					.data('counter-can-close-it', true)
-					.trigger('fecss.can-close-it');
-			}
-			
-		}, 55);
-		
-	})
+			}, 55);
+		}
+	});
 	
 	
 	
