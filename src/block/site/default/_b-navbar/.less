@@ -21,6 +21,9 @@
 	@media @media-screen-h1080{
 		padding: 25px 50px 85px;
 	}
+	@media @media-screen-HD720{
+    	padding: 25px 25px 50px;
+	} 
 }
 ._nbmodal__inside-line{
 	padding: 70px 0 0 0;
@@ -349,9 +352,13 @@
 	}
 	._contP__rev-btn-green {
 		margin-top:35px;
+		@media @media-screen-WXGA768 {
+			margin-top: 15px;
+		}
 	}
 	._nbmodal__flex{
-		background: url('@{url-path-img}/navbar/bg-navbar-mod-top.png') no-repeat top left, url('@{url-path-img}/navbar/bg-navbar-mod-bottom.png') no-repeat bottom left;
+		background: url('@{url-path-img}/navbar/bg-navbar-mod-bottom.png') no-repeat bottom left;
+		background-size: 770px;
 	}
 	._nbmodal__nav{
 		background: none;
@@ -379,6 +386,18 @@
 	@media @media-screen-WXGA768 {		
 		.scroll-container._rev__scroll-container {
 			top: 6em;
+		}
+	}
+	@media @media-screen-HD720 {		
+		.scroll-container._rev__scroll-container {
+			top: 7em;
+		}
+		._contP__rev-heading:after {
+		    height: 23px;
+		    background-size: 150px!important;
+		}
+		._contP__rev-form {
+		    margin: 20px auto 35px;
 		}
 	}
 }

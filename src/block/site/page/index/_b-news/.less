@@ -20,6 +20,9 @@
 		    	background-position: center -68px!important;
 		    }
 		}
+		._ps__inside-line {
+			padding-left: 40px;
+		}
 	}
 }
 ._in__heading-block{	
@@ -38,7 +41,7 @@
 	@media @media-size-xs-l{
 		text-align: center;
 	}
-	@media @media-screen-notebook{
+	@media @media-screen-WXGA768{
 		letter-spacing: 11px;
 	}
 	@media @media-screen-WSXGA900{
@@ -102,7 +105,7 @@
 			max-width: 33.3333%;
 		}
 	}
-	@media @media-screen-notebook{
+	@media @media-screen-WXGA768{
 	    transform: translateY(-30px);
 	}
 }
@@ -147,7 +150,7 @@
 		display: flex;
 		align-items: center;
 	}
-	@media @media-screen-notebook{
+	@media @media-screen-WXGA768{
 		margin-bottom: 15px;
 		height: 130px;
 		overflow: hidden;
@@ -179,7 +182,7 @@
 		@media @media-screen-hbig{
 			font-size: 16px;
 		}
-		@media @media-screen-notebook{
+		@media @media-screen-WXGA768{
 			font-size: 14px;
 			line-height: 18px; 
 		}	
@@ -188,7 +191,7 @@
 	@media @media-size-sm{
 		margin-bottom: 25px;
 	}
-	@media @media-screen-notebook{
+	@media @media-screen-WXGA768{
 		line-height: 14px; 
 		margin-bottom: 5px;
 	}	
@@ -206,10 +209,13 @@
 	@media @media-screen-hbig{
 		margin-bottom: 15px;
 	}
-	@media @media-screen-notebook{
+	@media @media-screen-WXGA768{
 		font-size: 12px;
 		line-height: 20px;
 		margin-bottom: 10px;
+	}
+	@media @media-screen-HD720{
+		display: none;
 	}
 }
 ._in__item-link{
@@ -223,7 +229,7 @@
 		text-transform: uppercase;
 		letter-spacing: 2px;
 		position: relative;		
-		@media @media-screen-notebook{
+		@media @media-screen-WXGA768{
 			font-size: 14px;
 			line-height: 20px;
 		}
@@ -247,7 +253,7 @@
 			height: 12px;
 			margin-left: 25px;
 			.transition(@duration:0.2s, @ease:ease-out);
-			@media @media-screen-notebook{
+			@media @media-screen-WXGA768{
 				background-size: 18px; 
 				height: 10px;
 				margin-left: 15px;

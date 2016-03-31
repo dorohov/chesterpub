@@ -9,7 +9,12 @@
     	._ps__inside-line{
     		min-height: 670px;
     	}
-    }
+    }	
+	@media @media-screen-HD720{
+		._ps__inside-line {
+		    padding-left: 40px;
+		}
+	}
 }
 ._ir__heading{
 	@media @media-screen-notebook{
@@ -152,7 +157,7 @@
 	@media @media-screen-hbig{
 		max-width: 990px!important;
 	}
-	@media @media-screen-notebook{
+	@media @media-screen-WXGA768{
 		font-size: 14px;
 		line-height: 30px;
 	}	
@@ -181,7 +186,7 @@
 		@media @media-screen-hbig{
 			margin-bottom: 40px;
 		}
-		@media @media-screen-notebook{
+		@media @media-screen-WXGA768{
 			margin: 0 0 10px;
 		}
 	}
@@ -197,10 +202,13 @@
 		@media @media-screen-hbig{
 			margin-top: 25px;
 		}
-		@media @media-screen-notebook{
+		@media @media-screen-WXGA768{
 			background-size: 50px;
 			height: 80px;
 			margin-top: 10px; 
+		}
+		@media @media-screen-HD720{
+			display: none; 
 		}
 		@media @media-screen-WSXGA900{
 			background-size: 60px;
@@ -235,7 +243,7 @@
 	@media @media-screen-hbig{
 		max-width: 700px;
 	}
-	@media @media-screen-notebook{
+	@media @media-screen-WXGA768{
 		max-width: 640px;
 	}		
 }

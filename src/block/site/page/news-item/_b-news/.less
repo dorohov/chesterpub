@@ -46,7 +46,7 @@
 			display: none;
 		}
 	}
-	@media @media-screen-notebook{
+	@media @media-screen-WXGA768 { 
 		margin-top: 25px;
 	}
 	@media @media-screen-WSXGA900{
@@ -63,7 +63,7 @@
 	@media @media-size-sm{
 		margin: 0;
 	}
-	@media @media-screen-notebook{
+	@media @media-screen-WXGA768 { 
 		height: 170px;
 	}
 	@media @media-screen-WSXGA900{
@@ -92,7 +92,7 @@
         height: 100%;
         overflow: auto!important;
     }
-	@media @media-screen-notebook{
+	@media @media-screen-WXGA768 { 
 		height: 120%;
 	}
 	@media @media-screen-WSXGA900{
@@ -130,12 +130,18 @@
 		height: 16px;
 		display: block;
 		margin: 50px auto 30px;
-		@media @media-screen-notebook{
+		@media @media-screen-WXGA768 { 
 			margin: 20px auto;
+		}
+		@media @media-screen-HD720 { 
+			margin: 10px auto;
 		}
 		@media @media-screen-WSXGA900{
 			margin: 30px auto 30px;
 		}
+	}
+	@media @media-screen-HD720 { 
+		font-size: 14px;
 	}
 }
 ._newsI-text__soc-item{
@@ -143,8 +149,11 @@
 	display: inline-block;
 	width: 22px;
 	height: 22px;
-	@media @media-screen-notebook{
+	@media @media-screen-WXGA768 { 
 		margin: 15px 15px 0;
+	}
+	@media @media-screen-HD720 { 
+		margin: 5px 15px 0;
 	}
 	&.vk-icon{
 		background: url('@{url-path-img}/icon/icon-vk-green.png') no-repeat center;

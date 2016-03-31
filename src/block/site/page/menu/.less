@@ -8,8 +8,10 @@
 	} 
 	@media @media-screen-WXGA768 { 
 		._ps__inside-line {
-			//min-height: 670px;
-			min-height: 570px;
+			min-height: 660px;
+			//min-height: 570px;
+			padding-left: 40px;
+			padding-right: 40px;
 		}		
 	}
 	@media @media-screen-FullHD-sm{
@@ -66,7 +68,7 @@
 		@media @media-size-sm{
 			display: none;
 		}
-		@media @media-screen-notebook{
+		@media @media-screen-WXGA768{
 			background-size: 720px;
 		}	
 	}
@@ -80,6 +82,13 @@
 	}
 	@media @media-size-sm{
 		flex-wrap: wrap;
+	}
+}
+._menuP__heading {
+	@media @media-screen-WXGA768 { 
+	    font-size: 38px;
+	    line-height: 38px;
+	    letter-spacing: 20px;
 	}
 }
 ._menuP__left-col{
@@ -108,8 +117,9 @@
 		max-width: 100%;
 		.scroll-hidden();
 	}
-	@media @media-screen-notebook{
-		max-width: 470px;
+	@media @media-screen-WXGA768 { 
+		max-width: 500px;
+		transform: translateY(-25px);
 	}
 	@media @media-screen-WSXGA900{
 		max-width: 600px;
@@ -117,8 +127,8 @@
 	}
 }
 ._menuP__scroll-hide{
-	@media @media-screen-notebook{
-		height: 170px;
+	@media @media-screen-WXGA768 { 
+		height: 280px;
 	}
 	@media @media-screen-WSXGA900{
 		height: 300px;
@@ -139,8 +149,9 @@
 	@media @media-size-sm{
 		width: 106%;
 	}
-	@media @media-screen-notebook{
-		height: 120%;
+	@media @media-screen-WXGA768 { 
+		width: 109.5%;
+		height: 115%;
 	}
 }
 ._menuP__scroll-overflow{
@@ -178,6 +189,11 @@
 	padding-left: 15px;
 	@media @media-size-xs{
 		padding-left: 0;
+	}	
+	@media @media-screen-WXGA768 {
+		margin: 0 0 10px;
+		font-size: 20px;
+		line-height: 32px;
 	}
 }
 ._menuP__item{
@@ -203,6 +219,9 @@
 				display: block;
 			}
 		}
+	}
+	@media @media-screen-WXGA768 {
+		padding: 5px 10px 5px 15px;
 	}
 }
 ._menuP__item-flex{
@@ -236,6 +255,10 @@
 		span{
 			&:after{display: none}
 		}
+	}
+	@media @media-screen-WXGA768 {
+		font-size: 14px;
+		line-height: 30px;
 	}
 }
 ._menuP__item-cost{
@@ -297,13 +320,27 @@
 ._menuP__btn-block{
 	margin-top: 45px;
 	@media @media-screen-WXGA768 { 
-		margin-top: 30px;
+		margin-top: 10px;
 	}
 }
 ._menuP__btn-green{
 	max-width: 300px;
 	margin: 0 auto;
 	margin-bottom: 20px;
+	@media @media-screen-WXGA768 {
+		max-width: 250px;
+		margin-bottom: 15px;
+		.btn-green{
+			font-size: 18px;
+			line-height: 24px;
+			padding: 15px 10px;
+			letter-spacing: 4px;
+			box-shadow: 10px 10px 20px rgba(0,0,0,.15);
+			&:hover{
+				box-shadow: 7px 7px 20px rgba(0,0,0,.15);
+			}
+		}
+	}
 }
 ._menuP__link-italic{
 	text-align: center;
@@ -315,6 +352,9 @@
 		&:hover,
 		&:focus{
 			text-decoration: none;
+		}
+		@media @media-screen-WXGA768 {
+			font-size: 12px;
 		}
 	}
 }
@@ -368,7 +408,7 @@
 		transform: translateX(23px);
 		display: inline-block;
 		letter-spacing: 7px;
-		@media @media-screen-notebook{display: none;}
+		@media @media-screen-WXGA768{display: none;}
 	}
 	@media @media-size-xs{
 		//right: -114px;
@@ -390,7 +430,7 @@
 			display: none !important;
 		}
 	}
-	@media @media-screen-notebook{
+	@media @media-screen-WXGA768{
 		top: 20%;
 		right: 0px;
 	}
@@ -454,7 +494,7 @@
 		background-color: @green-line;
 	}
 	@media @media-screen-WXGA768 {
-		.scroll-hide{height: 275px;}
+		.scroll-hide{height: 330px;}
 	}
 }
 ._navbar__block-container{
