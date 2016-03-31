@@ -560,7 +560,6 @@ $(document).ready(function() {
 		*/
 		
 		var pl = $('div.page-loader.full-screen.chester-style.active');
-		
 		var b = $('.blind', pl).eq(0);
 		
 		var pos = 0;
@@ -573,18 +572,22 @@ $(document).ready(function() {
 			if(check > 0.5 && pos < 100) {
 				pos++;
 				
+				if(b.data('fast-page-loading')) {
+					pos = pos + 6;
+				}
+				
 				var h = 100 + (pos);
 				//var o = (100 - (pos / 5.5)) / 100;
 				
 				b.css({'bottom' : pos + '%', 'height' : h + '%', 'width' : h + '%', 'left' : - (pos / 2) + '%'}).attr('data-pos', pos);//, 'height' : h + '%'
-			} else if(pos == 100) {
+			} else if(pos > 99) {
 				clearInterval(intr);
 				$('div.page-loader.full-screen.chester-style')
 					.data('counter-can-close-it', true)
 					.trigger('fecss.can-close-it');
 			}
 			
-		}, 42);
+		}, 55);
 		
 	})
 	

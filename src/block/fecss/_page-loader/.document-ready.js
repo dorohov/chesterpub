@@ -27,4 +27,6 @@
 		$('div.page-loader.full-screen.chester-style')
 			.data('window-can-close-it', true)
 			.trigger('fecss.can-close-it');
+		
+		$('div.page-loader.full-screen.chester-style .blind').data('fast-page-loading', true);
 	});
