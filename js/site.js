@@ -154,33 +154,6 @@ $(document).ready(function() {
 	
 	
 	
-	
-	
-	$('._azbn_news-archive-open').on('click', function(event){
-		event.preventDefault();
-		
-		var btn = $(this);
-		$('._azbn_news-archive').fadeIn('fast');
-		
-	});
-	
-	$('._azbn_news-archive-close').on('click', function(event){
-		event.preventDefault();
-		
-		var btn = $(this);
-		$('._azbn_news-archive').fadeOut('fast');
-		
-	}).eq(0).trigger('click');
-	
-	
-	var _azbn_news_archive_list_w = 0;
-	$('._azbn_news-archive-list ._azbn_news-archive-item').each(function(){
-		_azbn_news_archive_list_w = _azbn_news_archive_list_w + $(this).outerWidth(true);
-	});
-	$('._azbn_news-archive-list').width(_azbn_news_archive_list_w);
-	
-	
-	
 	$('._azbn_productcat-switch a').on('click', function(event){
 		event.preventDefault();
 		
@@ -379,6 +352,8 @@ $(document).ready(function() {
 				
 				block.find('.jscart-suffix').html(amount_o_str);
 			});
+			
+			block.trigger('rebuild-editor');
 		});
 		block.trigger('rebuild');
 		
@@ -423,6 +398,7 @@ $(document).ready(function() {
 			});
 			
 		});
+		//block.trigger('rebuild-editor');
 		
 		block.on('clear', function(event){
 			Cart.clear();
@@ -458,8 +434,10 @@ $(document).ready(function() {
 					var neworder = JSON.parse(data);
 					Cart.saveOrder(neworder);
 					
-					Cart.clear();
-					block.trigger('rebuild');
+					//Cart.clear();
+					//block.trigger('rebuild');
+					
+					block.trigger('clear');
 				});
 				
 			})
@@ -535,6 +513,26 @@ $(document).ready(function() {
 			block.trigger('rebuild');
 		});
 		
+		$(document.body).on('click.jscart', '.jscart-item .jscart-remove-pos', function(event){
+			event.preventDefault();
+			
+			var btn = $(this);
+			
+			var product = btn.attr('data-jscart-product');
+			var taste = btn.attr('data-jscart-taste');
+			
+			if(product == '' || typeof product == 'underfined' || product == null) {
+				product = btn.closest('.jscart-item').attr('data-jscart-product');
+			}
+			if(taste == '' || typeof taste == 'underfined' || taste == null) {
+				taste = btn.closest('.jscart-item').attr('data-jscart-taste');
+			}
+			
+			Cart.remove(product, taste, 99999999);
+			console.log('product ' + product + ' removed from cart');
+			block.trigger('rebuild');
+		});
+		
 		$(document.body).on('click.jscart', '.jscart-clear-btn', function(event){
 			event.preventDefault();
 			block.trigger('clear');
@@ -546,6 +544,10 @@ $(document).ready(function() {
 		});
 		
 	});
+	
+	
+	
+	
 	
 	
 	
@@ -587,9 +589,48 @@ $(document).ready(function() {
 	
 	
 	
-	/*
+	
+	
+	$('._azbn_news-archive-open').on('click', function(event){
+		event.preventDefault();
+		
+		var btn = $(this);
+		$('._azbn_news-archive').fadeIn('fast');
+		
+	});
+	
+	$('._azbn_news-archive-close').on('click', function(event){
+		event.preventDefault();
+		
+		var btn = $(this);
+		$('._azbn_news-archive').fadeOut('fast');
+		
+	}).eq(0).trigger('click');
+	
+	
 	$(window).on('resize', function(event){
 		
+		
+		if(device.mobile()) {
+			
+			$('._azbn_news-archive-list').css({width : 'auto'});
+			
+			$('._azbn_news-archive .scroll-container').removeClass('horizontal bottom').addClass('vertical right').trigger('init');
+			
+		} else {
+			
+			$('._azbn_news-archive-list').css({width : 'auto'});
+			
+			var _azbn_news_archive_list_w = 0;
+			$('._azbn_news-archive-list ._azbn_news-archive-item').each(function(){
+				_azbn_news_archive_list_w = _azbn_news_archive_list_w + $(this).outerWidth(true);
+			});
+			$('._azbn_news-archive-list').css({width : _azbn_news_archive_list_w});
+			
+			$('._azbn_news-archive .scroll-container').removeClass('vertical right').addClass('horizontal bottom').trigger('init');
+		}
+		
+		/*
 		$(function(){
 			
 			var sc = $('.scroll-hide.scroll-recalc');
@@ -604,10 +645,10 @@ $(document).ready(function() {
 			});
 			
 		});
+		*/
 		
 	});
 	$(window).trigger('resize');
-	*/
 	
 	
 });
