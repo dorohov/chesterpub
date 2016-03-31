@@ -633,7 +633,7 @@ $(document).ready(function() {
 		/*
 		$(function(){
 			
-			var sc = $('.scroll-hide.scroll-recalc');
+			var sc = $('.menu-page__section .scroll-hide.scroll-recalc');
 			
 			sc.each(function(index){
 				var el = $(this);
@@ -646,6 +646,8 @@ $(document).ready(function() {
 			
 		});
 		*/
+		
+		//$('.scroll-container').trigger('init');
 		
 	});
 	$(window).trigger('resize');
