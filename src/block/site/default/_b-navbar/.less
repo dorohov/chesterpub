@@ -101,6 +101,9 @@
 			margin: 20px auto 0;
 			background: url('@{url-path-img}/index/ibm-venzel.png') center no-repeat; 
 		}
+		@media @media-screen-XGA768{
+			transform: translateY(0px);   
+		}
 		@media @media-screen-WXGA768 {
 			transform: translateY(0px);   			
 			&:after{
@@ -143,6 +146,10 @@
 				@media @media-screen-hsmall{
 				   line-height: 52px;
 				   font-size: 22px;
+				}				
+				@media @media-screen-XGA768{
+					line-height: 40px;
+					font-size: 20px;   
 				}
 				@media @media-screen-WXGA768 {
 				   line-height: 42px;
@@ -368,6 +375,13 @@
 	._nbmodal__nav{
 		background: none;
 	}
+	._ps__btn{
+		._ps__btn-line{
+			span{
+				background: @white!important;
+			}
+		}
+	}
 	@media @media-size-xs {
 		._nbmodal__flex{
 			background: none;
@@ -386,6 +400,11 @@
 		    font-size: 32px;
 		    line-height: 44px;
 		    letter-spacing: 8px;
+		}
+	}
+	@media @media-screen-XGA768 {		
+		.scroll-container._rev__scroll-container {
+			top: 5em;
 		}
 	}
 	@media @media-screen-WXGA768 {		

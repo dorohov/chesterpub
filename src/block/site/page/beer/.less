@@ -59,7 +59,7 @@
 		top: 0;
 	}
     @media @media-screen-WXGA768{
-   		top: -45px;
+   		top: -45px; 
     } 
 }
 ._beer__bg-text{
@@ -138,6 +138,9 @@
 		flex-wrap: wrap;
 		padding-top: 0;
 	}
+	@media @media-screen-XGA768 {
+		padding-top: 30px;
+	}	
     @media @media-screen-WXGA768{
 		padding-top: 40px;
 	}
@@ -301,6 +304,11 @@
 			display: none;
 		}
     }
+	@media @media-screen-XGA768{
+		margin-top: 0;
+		font-size: 14px;
+    	line-height: 22px;
+	}
 	@media @media-screen-WXGA768{
 		margin-top: 0px;
 	}
@@ -317,6 +325,9 @@
     @media @media-size-sm{
     	height: 300px;
     }	
+	@media @media-screen-XGA768 {
+		height: inherit;
+	}
 	@media @media-screen-WXGA768{
 		height: 300px;
 	}
@@ -336,6 +347,9 @@
     	width: 100%;
     	height: 100%;
     }
+	@media @media-screen-XGA768 {
+		overflow: initial !important;
+	}
 	@media @media-screen-WXGA768{
 		//height: 125%;
 	}
@@ -374,6 +388,11 @@
 		padding-right: 0;     
 		overflow: initial !important;
 	}
+	@media @media-screen-XGA768 {
+		width: 100%;
+		height: 100%;  
+		overflow: initial !important;
+	}
 	@media @media-screen-hbig{
 		padding-right: 0;     
 		overflow: initial !important;
@@ -386,6 +405,9 @@
 ._beer__scroll-container{
 	@media @media-size-xs{
 		display: none!important;
+	}
+	@media @media-screen-XGA768 {
+		display: none!important;		
 	}
 	@media @media-screen-hbig{
 		display: none!important;
@@ -418,6 +440,10 @@
 		background: @green;
 		width: 95px;
 		margin: 28px 0;
+
+		@media @media-screen-XGA768{
+			margin: 15px 0 12px;
+		}
 	}
 	span{
 		font-weight: 700; 

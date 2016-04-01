@@ -12,7 +12,6 @@ body {
     margin-right: auto;
     @media @media-screen-HD720 {
 		padding: 25px 25px 50px;
-
     }
     @media @media-size-sm{
     	padding: 12px 30px 20px;
@@ -22,6 +21,9 @@ body {
     }
 }
 .fp-tableCell {    
+    @media @media-screen-XGA768{
+        max-height: 600px;
+    }
     @media @media-screen-hbig{
         max-height: 810px;
     }  
@@ -230,7 +232,7 @@ body {
 .header-block{
 	position: absolute;
 	width: 100%;
-	z-index: 10;
+	z-index: 11;
 	@media @media-size-xs{
 		display: none;
 	}
@@ -289,8 +291,7 @@ body {
 		background-color: #34bc71;
 		@media @media-size-sm {
 			background-color: @grey-line;
-			background-color: #34bc71;
-
+			//background-color: #34bc71;
 		}
 	}
 }
@@ -537,6 +538,9 @@ body {
     	@media @media-screen-notebook{
     		right: 75px;
     	}  
+		@media @media-screen-XGA768 {
+			right: 45px;
+		}
 		@media @media-screen-HD720{
     		right: 55px;
     	}	

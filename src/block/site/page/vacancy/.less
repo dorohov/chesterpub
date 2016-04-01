@@ -9,12 +9,17 @@
 	{
 		padding-top: 125px;
 	}
-	@media @media-screen-WXGA768{
-		._ps__inside-line {
-		    padding-top: 170px;
-		    padding-left: 40px;
-		    padding-right: 40px;
+	._ps__inside-line{
+		@media @media-screen-WXGA768 {
+			min-height: 555px;
+		    padding: 100px 40px 30px 40px;
 		}
+		@media @media-screen-FullHD-sm {
+			min-height: 865px;
+		}
+		@media @media-screen-FullHD {
+			min-height: 875px;
+		}	
 	}
 }
 ._vacP__rel
@@ -152,15 +157,14 @@
 	}
 	@media @media-screen-HD720 {
 		margin-top: 0px;
-		margin-bottom: 10px;   
-		transform: translateY(-40px);
+		//margin-bottom: 10px;   
+		//transform: translateY(-40px);
 	}
 	@media @media-screen-notebook
 	{
 		margin: 0 0 35px;
 	}
-	@media @media-screen-WSXGA900
-	{
+	@media @media-screen-WXGA768{
 		margin: 0 0 35px;
 	}
 	@media @media-screen-hbig
@@ -279,9 +283,16 @@
 	{
 		transform: translateY(0);
 	}
-	@media @media-screen-HD720{
-		transform: translateY(-60px);
+	@media @media-screen-WXGA768 {
+		transform: translateY(0px);
+		margin-bottom: 35px;
 	}
+	@media @media-screen-HD720 {
+		margin-bottom: 30px;
+	}
+	/*@media @media-screen-HD720{
+		transform: translateY(-60px);
+	}*/
 }
 ._vacP__heading
 {
@@ -324,9 +335,9 @@
 	}
 	@media @media-screen-HD720{
 		max-width: 250px;
-		margin-bottom: 5px;
+		margin-bottom: 10px;
 		padding-bottom: 0;
-		transform: translateY(-30px);
+		//transform: translateY(-30px);
 		.btn-green{
 			font-size: 18px;
 			line-height: 24px;
@@ -381,7 +392,7 @@
 		margin-bottom: 25px;
 	}
 	@media @media-screen-HD720{
-		transform: translateY(-20px);
+		//transform: translateY(-20px);
 		line-height: 20px;
 	}
 	@media @media-screen-WSXGA900
@@ -431,6 +442,7 @@
 		.scroll-site();
 		.scroll-green();
 		@media @media-screen-WXGA768 {
+			.scroll-hidden();
 			._s__scroll-hide{            
 			   height: 380px; 
 			   ._s__scroll-element{
@@ -455,6 +467,17 @@
 			   }
 			}
 			.btn-close-xs{right: -14px;}
+			._contP__rev-heading {
+				font-size: 30px;
+				line-height: 40px;
+				letter-spacing: 8px;
+			}
+			._contP__rev-form {
+				margin: 10px auto;
+				._icon{
+					margin-bottom: 10px;
+				}
+			}
 		}
 		@media @media-screen-WSXGA900 {
 			._s__scroll-hide{
@@ -489,6 +512,14 @@
 			line-height: 20px;
 
 			padding: 15px 20px;
+		}
+	}
+	@media @media-screen-WXGA768{
+		margin-top: 25px;
+		.btn-deliv{
+			font-size: 18px;
+			line-height: 20px;
+			padding: 15px;
 		}
 	}
 }

@@ -5,7 +5,8 @@
 
 	</head>
 	
-	<body> 
+	<!--<body class="open-rev "> -->
+	<body>   
 		<div id="fullpage-second" class="fullpage-site">
 			[snp tpl="src/block/site/default/_b-navbar/xs.html" class="navbar-xs navbar-second "]
 
@@ -16,13 +17,13 @@
 		[snp tpl="src/block/site/default/_b-navbar/.html" class="navbar-modal-block"] 
 		<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 		<script>
-			if(device.desktop()) {
+			/*if(device.desktop()) {
 				$('#fullpage-second').fullpage({
 					navigation: true,
 					navigationPosition: 'right',
 					navigation: false,
 				});
-			} 
+			} */
 			ymaps.ready(init);
 			function init () {
 			    var myMap = new ymaps.Map("map", {
