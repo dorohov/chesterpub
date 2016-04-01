@@ -1,16 +1,18 @@
-<div id="fullpage" class="fullpage-site">
+<div id="fullpage-second" class="fullpage-site ">
 
 <?
 $this->tpl('_/top-nav', array());
 ?>
 
-<div class="section index-header__section section-green page-section">
-	<div class="_ps__rel">
-		<header class="header-block _sg__header">
+<div class="section vacancy-page__section section-grey-green page-section">
+	<div class="_vacP__left-bg _vacP__bg "></div>
+	<div class="_vacP__right-bg _vacP__bg"></div>
+	<div class="_ps__rel _vacP__rel">
+		<header class="header-block _sgg__header">
 			<div class="_hb__flex">
 				<div>
-					<button type="button" class="_ps__btn _sg__btn" data-toggle="modal" data-target="#modal-navbar">
-						<span class="_ps__btn-line">
+					<button type="button" class="_ps__btn _sgg__btn" data-toggle="modal" data-target="#modal-navbar">
+						<span class="_ps__btn-line _sgg__btn-line">
 							<span></span>
 							<span></span>
 							<span></span>
@@ -23,283 +25,157 @@ $this->tpl('_/top-nav', array());
 						<a href="/"><img src="<?php echo $this->path('img');?>/index/logotip-green.png" alt=""></a>
 					</div>				
 				</div>
-				<div class="_hb__phone _sg__phone ">
+				<div class="_hb__phone _sgg__phone ">
 					<div>Заказ столов <a href="tel:+74862543054"><span>+7 (4862)</span> 54-30-54</a></div>
-					<button type="button" class="btn-order"></button>
+						<button type="button" class="btn-order" data-toggle="modal" data-target="#modal-contactme" ></button>
 				</div>
 			</div>
 		</header>
-		<div class="_ps__inside-line _sg__inside-line _ih__flex">
-			<h1 class="_ih__heading">Chester pub</h1>
-			<div class="_ih__heading-small">Кусочек старой Европы в историческом центре г. Орла</div>
-			<div class="_ih__btn-box">
-				<a href="#" class="btn-bron">Забронировать столик</a>
-			</div>
-			<div class="_ih__btn-scroll">Прокрутите вниз</div>
-		</div>
-	</div>
-</div>
-
-
-
-
-
-<div class="section index-restaurant__section section-grey page-section">
-	<div class="_ps__rel">
-		<header class="header-block _sgr__header">
-			<div class="_hb__flex">
-				<div>
-					<button type="button" class="_ps__btn _sgr__btn" data-toggle="modal" data-target="#modal-navbar">
-						<span class="_ps__btn-line _sgr__btn-line">
-							<span></span>
-							<span></span>
-							<span></span>
-						</span>					
-						меню сайта
-					</button>
-				</div>
-				<div class="_hb__logotip">
+		<div class="_ps__inside-line _sgg__inside-line">			
+			<div class="_vacP__flex">
+				<div class="_vacP__left-col">
 					<div>
-						<a href="/"><img src="<?php echo $this->path('img');?>/index/logotip-green.png" alt=""></a>
-					</div>				
-				</div>
-				<div class="_hb__phone _sgr__phone ">
-					<div>Заказ столов <a href="tel:+74862543054"><span>+7 (4862)</span> 54-30-54</a></div>
-					<button type="button" class="btn-order"></button>
-				</div>
-			</div>
-		</header>
-		<div class="_ps__inside-line _sgr__inside-line ">
-			<div class="_ps__heading-block"><h2 class="_ps__heading _ir__heading">о ресторане</h2></div>
-			<div class="_ir__flex">
-				<div class="_ir__left-col">
-					<div id="carousel-example-generic" class="carousel _ir__carousel slides" data-ride="carousel">
-						<div class="carousel-inner _ir__carousel-inner">
-							<div class="item active">
-								<img src="http://chester.dorohovdesign.ru/wp-content/uploads/2016/03/ch_0007.jpg" alt="">			
-								<div class="carousel-caption">
-									<!--На фото: 2-ой этаж ресторана-->
+						<div class="_ps__heading-block _vacP__heading-block">
+							<h1 class="_ps__heading _vacP__heading">вакансии</h1>
+						</div>	
+						<div class="_vacP__flex-scroll">
+							<div id="overflow-container" class="scroll-hide _vacP__scroll-hide" >
+								<div class="overflow-container scroll-element _vacP__scroll-element">
+									<div class="overflowed scroll-overflow _vacP__scroll-overflow">
+										<div>
+											<? the_content();?>
+										</div>
+									</div>
 								</div>
 							</div>
-							
-							<div class="item ">
-								<img src="http://chester.dorohovdesign.ru/wp-content/uploads/2016/03/ch_0004.jpg" alt="">			
-								<div class="carousel-caption">
-									<!--На фото: 2-ой этаж ресторана-->
+							<div class="scroll-container _vacP__scroll-container vertical right" data-target="#overflow-container" > 
+								<div class="scroll-line" >
+									<div class="scroll" ></div>
 								</div>
 							</div>
-							<div class="item ">
-								<img src="http://chester.dorohovdesign.ru/wp-content/uploads/2016/03/ch_0015.jpg" alt="">			
-								<div class="carousel-caption">
-									<!--На фото: 2-ой этаж ресторана-->
-								</div>
-							</div>
-							<div class="item ">
-								<img src="http://chester.dorohovdesign.ru/wp-content/uploads/2016/03/ch_0041.jpg" alt="">			
-								<div class="carousel-caption">
-									<!--На фото: 2-ой этаж ресторана-->
-								</div>
-							</div>
-							<div class="item ">
-								<img src="http://chester.dorohovdesign.ru/wp-content/uploads/2016/03/ch_0033.jpg" alt="">			
-								<div class="carousel-caption">
-									<!--На фото: 2-ой этаж ресторана-->
-								</div>
-							</div>
-							
-							<div class="item ">
-								<img src="http://chester.dorohovdesign.ru/wp-content/uploads/2016/03/ch_0067.jpg" alt="">			
-								<div class="carousel-caption">
-									<!--На фото: 2-ой этаж ресторана-->
-								</div>
-							</div>
-							<div class="item ">
-								<img src="http://chester.dorohovdesign.ru/wp-content/uploads/2016/03/ch_0075.jpg" alt="">			
-								<div class="carousel-caption">
-									<!--На фото: 2-ой этаж ресторана-->
-								</div>
-							</div>
-							<div class="item ">
-								<img src="http://chester.dorohovdesign.ru/wp-content/uploads/2016/03/ch_0069.jpg" alt="">			
-								<div class="carousel-caption">
-									<!--На фото: 2-ой этаж ресторана-->
-								</div>
-							</div>
-							<div class="item ">
-								<img src="http://chester.dorohovdesign.ru/wp-content/uploads/2016/03/ch_0092.jpg" alt="">			
-								<div class="carousel-caption">
-									<!--На фото: 2-ой этаж ресторана-->
-								</div>
-							</div>
-							
 						</div>
-						<a class="left carousel-control " href="#carousel-example-generic" data-slide="prev"></a>
-						<a class="right carousel-control " href="#carousel-example-generic" data-slide="next"></a>
+						<div class="_vacP__btn-green hidden-sm hidden-xs">
+							<a href="#" class="btn-green _azbn_vacancy-get-form ">отправить резюме</a>
+						</div>	
+						<div class="_vacP__btn-green visible-sm visible-xs">
+							<a href="#" class="btn-green" data-toggle="modal" data-target="#modal-rev">отправить резюме</a>
+						</div>	
 					</div>
-					<div class="_ir__fotogal-link">
-						<a href="#">
-							<img src="<?php echo $this->path('img');?>/index/img-fotogal.jpg" alt="">
-						</a>
-					</div>
-					<div class="_ir__virt-link">
-						<a class="" href="<?=l(14);?>">
-							<img src="<?php echo $this->path('img');?>/index/virt-tour.jpg" class="hidden-sm hover-scale" alt="">
-							<img src="<?php echo $this->path('img');?>/index/virt-tour-sm.jpg" class="visible-sm" alt="">
-						</a>
-					</div>
+					<div class="_vacP__note-small">
+						Также Вы можете заполнить анкету в ресторане по адресу : ул. Комсомольская, 36,<br> или выслать резюме на <a href="mailto:ele009@mail.ru">ele009@mail.ru</a>
+					</div>	
 				</div>
-				<div class="_ir__note">
-					<div class="_ir__note-content">
-						<? the_content();?>
-					</div>
-				</div>
-			</div>
-			<div class="_ps__btn-top _sgr__btn-top "></div>
-		</div>
-	</div>
-</div>
-		    
-
-
-<div class="section index-beer__section section-green page-section">
-	<div class="_ibm__left-bg _ibm__bg "></div>
-	<div class="_ibm__right-bg _ibm__bg"></div>
-	<div class="_ps__rel">
-		<header class="header-block _sg__header">
-			<div class="_hb__flex">
-				<div>
-					<button type="button" class="_ps__btn _sg__btn" data-toggle="modal" data-target="#modal-navbar">
-						<span class="_ps__btn-line _sg__btn-line">
-							<span></span>
-							<span></span>
-							<span></span>
-						</span>					
-						меню сайта
-					</button>
-				</div>
-				<div class="_hb__logotip">
-					<div>
-						<a href="/"><img src="<?php echo $this->path('img');?>/index/logotip-green.png" alt=""></a>
-					</div>				
-				</div>
-				<div class="_hb__phone _sg__phone ">
-					<div>Заказ столов <a href="tel:+74862543054"><span>+7 (4862)</span> 54-30-54</a></div>
-					<button type="button" class="btn-order"></button>
-				</div>
-			</div>
-		</header>
-		<div class="_ps__inside-line _sg__inside-line ">
-			<div class="_ibm__flex">
-				<div class="_ibm__left-col">
-					<div class="_ibm__col-inner">
-						<h3 class="_ibm__heading _ibm__heading-beer">Наше пиво</h3>
-						<div class="_ibm__note">
-							Мы рады предложить Вам 4 сорта настоящего пива премиум класса высочайшего качества, сваренного на нашей собственной пивоварне.
+				<div class="_vacP__right-col">
+					<div class="_contP__rev _azbn_vacancy-form-cont">
+						<!--<button type="button" class="btn-close-xs _azbn_cancel"></button>-->
+						<div id="overflow-container-rev" class="scroll-hide _s__scroll-hide" >
+							<div class="overflow-container scroll-element _s__scroll-element">
+								<div class="overflowed scroll-overflow _s__scroll-overflow">
+									<h3 class="_contP__rev-heading">заполнение анкеты</h3>
+									<div class="_vacP__rev-note">Пожалуйста, заполните все поля анкеты.</div> 
+									<form class="vacancy-form _contP__rev-form">
+										<div class="icon-user _icon"><input type="text" placeholder="Ваше имя"></div>
+										<div class="icon-mail _icon"><input type="text" placeholder="Ваш e-mail"></div>
+										<div class="icon-commit _icon"><input type="text" placeholder="Немного о себе"></div>
+										<div class="file-block">
+											<input type="file" >
+											<div class="file-visible">
+												<span class="file-btn">Прикрепить</span> Ваше резюме (не более 10 Mb)
+											</div>					
+										</div>
+										<div class="_vacP__rev-btn-green">
+											<button type="submit" class="btn-deliv _azbn_cancel">Отправить</button> 
+										</div>
+									</form>
+									<div class="_contP__link-italic">
+										<a class="_azbn_cancel" href="#">Отмена</a>
+									</div>	
+								</div>
+							</div>
 						</div>
-						<div class="_ibm__btn-block">
-							<a href="<?=l(24);?>" class="btn-bron hover-scale">Подробнее</a>			
+						<div class="scroll-container _s__scroll-container vertical right" data-target="#overflow-container-rev" > 
+							<div class="scroll-line" >
+								<div class="scroll" ></div>
+							</div>
 						</div>
+					
 					</div>
-				</div>
-				<div class="_ibm__right-col">
-					<div class="_ibm__col-inner">
-						<h3 class="_ibm__heading _ibm__heading-menu">Наше меню</h3>
-						<div class="_ibm__note">
-							Наши повара предлагают Вашему вниманию разнообразные блюда традиционной европейской кухни, которые оценят даже самые утонченные гурманы.
-						</div>
-						<div class="_ibm__btn-block">
-							<a href="<?=l(7);?>" class="btn-bron hover-scale">Подробнее</a>			
-						</div>
-					</div>							
-				</div>
-			</div>
-			<div class="_ps__btn-top _sg__btn-top "></div>
+				</div> 
+			</div> 
 		</div>		
 	</div>
 </div>
 
-
-<div class="section index-news__section section-grey page-section">
-	<div class="_ps__rel">
-		<header class="header-block _sgr__header">
-			<div class="_hb__flex">
-				<div>
-					<button type="button" class="_ps__btn _sgr__btn" data-toggle="modal" data-target="#modal-navbar">
-						<span class="_ps__btn-line _sgr__btn-line">
-							<span></span>
-							<span></span>
-							<span></span>
-						</span>					
-						меню сайта
-					</button>
-				</div>
-				<div class="_hb__logotip">
+<div class="modal fade _vacP__modal" id="modal-rev" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class=" section-green _nbmodal__dialog _vacP__dialog">
+		<div class="_ps__rel">
+			<header class="header-block _sg__header">
+				<div class="_hb__flex">
 					<div>
-						<a href="/"><img src="<?php echo $this->path('img');?>/index/logotip-green.png" alt=""></a>
-					</div>				
+						<button type="button" class="_ps__btn _sg__btn" data-toggle="modal" data-target="#modal-navbar">
+							<span class="_ps__btn-line _sgg__btn-line">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>					
+							меню сайта
+						</button>
+					</div>
+					<div class="_hb__logotip">
+						<div>
+							<a href="/"><img src="<?php echo $this->path('img');?>/index/logotip-green.png" alt=""></a>
+						</div>				
+					</div>
+					<div class="_hb__phone _sg__phone ">
+						<div>Заказ столов <a href="tel:+74862543054"><span>+7 (4862)</span> 54-30-54</a></div>
+						<button type="button" class="btn-order" data-toggle="modal" data-target="#modal-contactme" ></button>
+					</div>
 				</div>
-				<div class="_hb__phone _sgr__phone ">
-					<div>Заказ столов <a href="tel:+74862543054"><span>+7 (4862)</span> 54-30-54</a></div>
-					<button type="button" class="btn-order"></button>
-				</div>
-			</div>
-		</header>
-		<div class="_ps__inside-line _sgr__inside-line ">
-			<div class="_ps__heading-block _in__heading-block">
-				<h2 class="_ps__heading _in__heading">Новости <span>и акции</span></h2>			
-				<div class="_in__btn-block">
-					<a href="<?=l(12);?>" class="btn-bron">Все новости и акции</a>	
-				</div> 				
-			</div>
-			<div class="_in__flex">
-				
-				<?
-				$per_page = 4;
-				
-				$query = new WP_Query(array(
-					'post_type' => 'post',
-					//'category_name' => 'club-actions',//$param['cat_slug'],
-					'posts_per_page' => $per_page,
-					//'paged' => $paged,
-				));
-				?>
-				
-				<?
-				while ($query->have_posts()) {
-					$query->the_post();
-					$id = get_the_ID();
-					$link = l($id);
-					$img_sm = $this->Imgs->postImg($id, 'news-preview');
-					//$d = get_the_date("j");
-					//$m = get_the_date("F");
-					$c_arr = explode('.', c($id));
-						
-					?>
-					
-					<article class="_in__item news__item">
-						<div class="_in__item-preview news__item-preview">
-							<a href="<?=$link;?>">
-								<img src="<?=$img_sm;?>" alt="">
-							</a>
+			</header>
+			<nav class="navbar navbar-fixed-top navbar-xs">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> -->
+						<button type="button" class="navbar-toggle" data-toggle="modal" data-target="#modal-navbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<div class="_nbxs__logotip">
+							<a href="/"><img src="<?php echo $this->path('img');?>/index/logotip-green.png" alt=""></a>
 						</div>
-						<div class="_in__item-time news__item-time"><?=get_the_date();?></div>
-						<h4 class="_in__item-heading news__item-heading"><a href="<?=$link;?>"><?=t($id);?></a></h4>
-						<div class="_in__item-note news__item-note"><?=$c_arr[0];?></div>
-						<div class="_in__item-link news__item-link"><a href="<?=$link;?>">подробнее</a></div>
-					</article>
-					
-					<?
-				}
-				//pagination($query, $query->max_num_pages, $paged, $per_page);
-				wp_reset_postdata();
-				?>
-				
+						<button type="button" class="btn-order"></button>
+					</div>
+				</div> 
+			</nav>
+			<div class="_ps__inside-line _sg__inside-line _nbmodal__inside-line _vacP__inside-line">
+				<div class="_vacP__modal-inner">				
+					<button type="button" class="btn-close-xs _azbn_cancel" data-dismiss="modal"></button>	
+					<h3 class="_contP__rev-heading">заполнение анкеты</h3>
+					<div class="_vacP__rev-note">Пожалуйста, заполните все поля анкеты.</div> 
+					<form action="" class="_contP__rev-form vacancy-form">
+						<div class="icon-user _icon"><input type="text" placeholder="Ваше имя"></div>
+						<div class="icon-mail _icon"><input type="text" placeholder="Ваш e-mail"></div>
+						<div class="icon-commit _icon"><input type="text" placeholder="Немного о себе"></div>
+						<div class="file-block">
+							<input type="file" >
+							<div class="file-visible">
+								<span class="file-btn">Прикрепить</span> Ваше резюме (не более 10 Mb)
+							</div>					
+						</div>
+						<div class="_vacP__rev-btn-green">
+							<button type="submit" class="btn-deliv _azbn_cancel">Отправить</button> 
+						</div>
+					</form>
+					<div class="_contP__link-italic">
+						<a href="#" data-dismiss="modal _azbn_cancel">Отмена</a>
+					</div>
+				</div>
 			</div>
-
-			<div class="_ps__btn-top _sgr__btn-top "></div>
 		</div>
 	</div>
-</div> 
+</div>
+
 
 <?
 $this->tpl('_/section-footer-block', array());
@@ -311,13 +187,14 @@ $this->tpl('_/section-footer-block', array());
 $this->tpl('_/menu-modal', array());
 
 ?>
-
-<script>			
-	if(device.desktop()) {
-		$('#fullpage').fullpage({
-			navigation: true,
-			navigationPosition: 'right',
-			//scrollOverflow: true
-		});
-	}
-</script>
+		<script>
+			/*
+			if(device.desktop()) {
+				$('#fullpage-second').fullpage({
+					navigation: true,
+					navigationPosition: 'right',
+					navigation: false,
+				});
+			}
+			*/
+		</script>
