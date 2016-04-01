@@ -279,6 +279,71 @@
 	}
 	*/
 }
+.can-close {
+	position:relative;
+	
+	.close-btn {
+		position:absolute;
+		right:1em;
+		top:1em;
+		width:1em;
+		height:1em;
+		background-size:cover;
+		#fe.brep();
+		#fe.bpos();
+		#fe.bi('.can-close/close-btn.png');
+	}
+	
+	
+	/*
+	&.mod {
+		& {
+			
+		}
+	}
+	
+	@media @media-size-xs {
+		& {
+			
+		}
+	}
+	@media @media-size-sm {
+		& {
+			
+		}
+	}
+	@media @media-size-md {
+		& {
+			
+		}
+	}
+	@media @media-size-lg {
+		& {
+			
+		}
+	}
+	@media @media-size-portrait {
+		& {
+			
+		}
+	}
+	@media @media-size-landscape {
+		& {
+			
+		}
+	}
+	@media @media-size-retina {
+		& {
+			
+		}
+	}
+	@media @media-size-print {
+		& {
+			
+		}
+	}
+	*/
+}
 	.go-to-top {
 		position:fixed;
 		opacity:0;
@@ -434,71 +499,76 @@
 	}
 	*/
 }
-.can-close {
-	position:relative;
-	
-	.close-btn {
-		position:absolute;
-		right:1em;
-		top:1em;
-		width:1em;
-		height:1em;
-		background-size:cover;
-		#fe.brep();
-		#fe.bpos();
-		#fe.bi('.can-close/close-btn.png');
-	}
-	
-	
-	/*
-	&.mod {
-		& {
+		.full-screen.page-loader {
+			@dark-el-color-bg:rgba(0,0,0,0.75);
+			@dark-el-color-font:#ffffff;
 			
-		}
-	}
-	
-	@media @media-size-xs {
-		& {
+			@semi-dark-el-color-bg:rgba(0,0,0,0.4);
+			@semi-dark-el-color-font:#ffffff;
 			
-		}
-	}
-	@media @media-size-sm {
-		& {
+			transition: all 0.7s ease;
 			
-		}
-	}
-	@media @media-size-md {
-		& {
+			opacity:0;
+			height: 0%;
 			
-		}
-	}
-	@media @media-size-lg {
-		& {
+			&.active {
+				opacity:1;
+				height: 100%;
+			}
 			
-		}
-	}
-	@media @media-size-portrait {
-		& {
+			.process-container {
+				display:block;
+				position:relative;
+				width:300px;
+				height:3em;
+				line-height:3em;
+				margin:2em auto;
+				white-space:nowrap;
+				#fe.uppercase(lowercase);
+				#fe.bold();
+				#fe.size(1em);
+				#fe.bg(transparent);
+				#fe.color(@dark-el-color-font);
+				
+				.process-level {
+					position:absolute;
+					left:50%;
+					top:0;
+					display:block;
+					width: 0%;
+					height:100%;
+					margin:0 auto;
+					z-index:0;
+					overflow-x:hidden;
+					text-align:center;
+					#fe.underline(none);
+					
+					#fe.bg(@dark-el-color-font);
+					animation: processloading 1s infinite;
+				}
+				
+			}
 			
+			.close-loader {
+				display:block;
+				margin:2em auto;
+				width:30em;
+				height:3em;
+				line-height:3em;
+				#fe.bold();
+				#fe.size(1em);
+				#fe.underline(none);
+				#fe.uppercase();
+				#fe.bg(@dark-el-color-font * 0.6);
+				#fe.color(@dark-el-color-bg);
+				
+				transition: all 0.4s ease;
+				
+				&:hover {
+					#fe.bg(@dark-el-color-font);
+				}
+			}
 		}
-	}
-	@media @media-size-landscape {
-		& {
-			
-		}
-	}
-	@media @media-size-retina {
-		& {
-			
-		}
-	}
-	@media @media-size-print {
-		& {
-			
-		}
-	}
-	*/
-}
 .scroll-hide {
 	overflow:hidden;
 	width: 100%;
@@ -695,76 +765,6 @@
 	}
 	*/
 }
-		.full-screen.page-loader {
-			@dark-el-color-bg:rgba(0,0,0,0.75);
-			@dark-el-color-font:#ffffff;
-			
-			@semi-dark-el-color-bg:rgba(0,0,0,0.4);
-			@semi-dark-el-color-font:#ffffff;
-			
-			transition: all 0.7s ease;
-			
-			opacity:0;
-			height: 0%;
-			
-			&.active {
-				opacity:1;
-				height: 100%;
-			}
-			
-			.process-container {
-				display:block;
-				position:relative;
-				width:300px;
-				height:3em;
-				line-height:3em;
-				margin:2em auto;
-				white-space:nowrap;
-				#fe.uppercase(lowercase);
-				#fe.bold();
-				#fe.size(1em);
-				#fe.bg(transparent);
-				#fe.color(@dark-el-color-font);
-				
-				.process-level {
-					position:absolute;
-					left:50%;
-					top:0;
-					display:block;
-					width: 0%;
-					height:100%;
-					margin:0 auto;
-					z-index:0;
-					overflow-x:hidden;
-					text-align:center;
-					#fe.underline(none);
-					
-					#fe.bg(@dark-el-color-font);
-					animation: processloading 1s infinite;
-				}
-				
-			}
-			
-			.close-loader {
-				display:block;
-				margin:2em auto;
-				width:30em;
-				height:3em;
-				line-height:3em;
-				#fe.bold();
-				#fe.size(1em);
-				#fe.underline(none);
-				#fe.uppercase();
-				#fe.bg(@dark-el-color-font * 0.6);
-				#fe.color(@dark-el-color-bg);
-				
-				transition: all 0.4s ease;
-				
-				&:hover {
-					#fe.bg(@dark-el-color-font);
-				}
-			}
-		}
 .footer-block{
 	//opacity: @opacity;
 	font-size: 14px;

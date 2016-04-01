@@ -21,9 +21,19 @@
 			if(block.hasClass('horizontal')) {
 				type = 0;
 				
-				scroll.width(line.width() * (target.outerWidth(true) / otarget.outerWidth(true)));
+				var l_w = line.outerWidth(true);
+				var t_w = target.outerWidth(true);
+				var ot_w = otarget.outerWidth(true);
 				
-				block.attr('data-ratio-h', (otarget.outerWidth(true) / (line.outerWidth(true))));
+				if(ot_w < t_w || ot_w == t_w) {
+					block.hide();
+				} else {
+					block.fadeIn('fast')
+				}
+				
+				scroll.width(l_w * (t_w / ot_w));
+				
+				block.attr('data-ratio-h', (ot_w / l_w));
 				
 				scroll.draggable({
 					axis:'x',
@@ -39,9 +49,21 @@
 			} else if(block.hasClass('vertical')) {
 				type = 1;
 				
-				scroll.height(line.height() * (target.outerHeight(true) / otarget.outerHeight(true)));
+				var l_h = line.outerHeight(true);
+				var t_h = target.outerHeight(true);
+				var ot_h = otarget.outerHeight(true);
 				
-				block.attr('data-ratio-v', (otarget.outerHeight(true) / (line.outerHeight(true))));
+				
+				if(ot_h < t_h || ot_h == t_h) {
+					block.hide();
+				} else {
+					block.show();
+				}
+				
+				
+				scroll.height(l_h * (t_h / ot_h));
+				
+				block.attr('data-ratio-v', (ot_h / l_h));
 				
 				scroll.draggable({
 					axis:'y',
@@ -76,7 +98,7 @@
 		});
 		
 	});
-	
+
 $('.modal').on('shown.bs.modal', function (event) {
 	//alert(2);
 	$('.scroll-container').trigger('init');
