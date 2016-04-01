@@ -503,7 +503,7 @@
 							</div>
 						</div>
 					</div>
-					<!--<div class="_menuP__delivery step1">
+					<div class="_menuP__delivery step1">
 						<div id="overflow-step1" class="scroll-hide _menuP__scroll-hide" >
 							<div class="overflow-container scroll-element _menuP__scroll-element">
 								<div class="overflowed scroll-overflow _menuP__scroll-overflow">
@@ -525,8 +525,8 @@
 								</div>
 							</div>
 						</div> 	
-					</div>-->
-					<!--<div class="_menuP__delivery step2">
+					</div>
+					<div class="_menuP__delivery step2">
 						<div id="overflow-step2" class="scroll-hide _menuP__scroll-hide" >
 							<div class="overflow-container scroll-element _menuP__scroll-element">
 								<div class="overflowed scroll-overflow _menuP__scroll-overflow">
@@ -535,7 +535,7 @@
 									<div class="_menuP__delivery-text">Укажите ваш телефон, и наш менеджер<br> перезвонит Вам для уточнения деталей заказа</div>
 									<div class="_menuP__delivery-input"><input type="tel" placeholder="Номер телефона"></div>
 									<div class="_menuP__delivery-btn"><button type="button" class="btn-deliv">отправить заявку</button></div>
-									<div class="_menuP__delivery-close"><a href="#">Отменить</a></div>
+									<div class="_menuP__delivery-close"><a href="#" data-dismiss="modal">Отменить</a></div>
 								</div>
 							</div>
 						</div>						
@@ -544,9 +544,9 @@
 								<div class="scroll" ></div> 
 							</div>
 						</div>
-					</div>-->
-					<!--<div class="_menuP__delivery editDev">
-					 	<button class="editDev__btn-close" type="button"></button>
+					</div>
+					<div class="_menuP__delivery editDev">
+					 	<button class="editDev__btn-close" type="button" data-dismiss="modal"></button>
 						<div class="_menuP__delivery-heading editDev__heading">редактирование заказа</div>
 						<div class="editDev__flex">
 							<div id="overflow-edit" class="scroll-hide _menuP__scroll-hide" >
@@ -558,7 +558,7 @@
 											</div>
 											<div class="_editDev__item-name-flex">
 												<div class="_editDev__item-name">Кольца кальмара в кляре с чесночным соусом</div> 
-												<div class="editDev__price"><b>250 руб. х 2</b></div>
+												<div class="editDev__price"><b><span>250 руб.</span> х 2</b></div>
 											</div> 
 											<div class="_menuP__item-qty">
 												<span class="qty-minus _menuP__item-qty-btn">-</span>
@@ -573,7 +573,7 @@
 											</div>
 											<div class="_editDev__item-name-flex">
 												<div class="_editDev__item-name">Кольца кальмара в кляре с чесночным соусом</div> 
-												<div class="editDev__price"><b>250 руб. х 2</b></div>
+												<div class="editDev__price"><b><span>250 руб.</span> х 2</b></div>
 											</div> 
 											<div class="_menuP__item-qty">
 												<span class="qty-minus _menuP__item-qty-btn">-</span>
@@ -588,7 +588,7 @@
 											</div>
 											<div class="_editDev__item-name-flex">
 												<div class="_editDev__item-name">Кольца кальмара в кляре с чесночным соусом</div> 
-												<div class="editDev__price"><b>250 руб. х 2</b></div>
+												<div class="editDev__price"><b><span>250 руб.</span> х 2</b></div>
 											</div> 
 											<div class="_menuP__item-qty">
 												<span class="qty-minus _menuP__item-qty-btn">-</span>
@@ -603,7 +603,7 @@
 											</div>
 											<div class="_editDev__item-name-flex">
 												<div class="_editDev__item-name">Кольца кальмара в кляре с чесночным соусом</div> 
-												<div class="editDev__price"><b>250 руб. х 2</b></div>
+												<div class="editDev__price"><b><span>250 руб.</span> х 2</b></div>
 											</div> 
 											<div class="_menuP__item-qty">
 												<span class="qty-minus _menuP__item-qty-btn">-</span>
@@ -618,7 +618,7 @@
 											</div>
 											<div class="_editDev__item-name-flex">
 												<div class="_editDev__item-name">Кольца кальмара в кляре с чесночным соусом</div> 
-												<div class="editDev__price"><b>250 руб. х 2</b></div>
+												<div class="editDev__price"><b><span>250 руб.</span> х 2</b></div>
 											</div> 
 											<div class="_menuP__item-qty">
 												<span class="qty-minus _menuP__item-qty-btn">-</span>
@@ -633,7 +633,7 @@
 											</div>
 											<div class="_editDev__item-name-flex">
 												<div class="_editDev__item-name">Кольца кальмара в кляре с чесночным соусом</div> 
-												<div class="editDev__price"><b>250 руб. х 2</b></div>
+												<div class="editDev__price"><b><span>250 руб.</span> х 2</b></div>
 											</div> 
 											<div class="_menuP__item-qty">
 												<span class="qty-minus _menuP__item-qty-btn">-</span>
@@ -655,7 +655,7 @@
 							<div class="editDev__cost">Итого 1250 рублей</div>
 							<div class="editDev__btn"><button type="button" class="btn-deliv">Сохранить</button></div>
 						</div>
-					</div>-->							
+					</div>							
 				</div> 
 			</div> 
 			<div class="_menuP__panel-bottom">
@@ -663,9 +663,127 @@
 					
 				</div>
 			</div> 
+			<div class="_menuP__panel-bay-xs">
+				<div class="_panel-bay__flex">
+					<button type="button" class="btn-menu-xs" data-toggle="modal" data-target="#modal-menu">меню</button>		
+					<div class="btn-edit-card-xs" data-toggle="modal" data-target="#modal-bay-edit">
+						<div>Вы заказали 4 блюда на сумму</div>
+						<div class="__cost">1250 рублей</div>	
+					</div>
+					<button class="btn-delivery-xs" type="button" data-toggle="modal" data-target="#modal-bay"></button>
+				</div>
+			</div> 
 		</div>		
 	</div>
 </div>
+
+<!--новое-->
+<div class="modal fade _panel-bay__modal" id="modal-bay" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class=" section-green _nbmodal__dialog _vacP__dialog">
+		<div class="_ps__rel">
+			<header class="header-block _sg__header">
+				<div class="_hb__flex">
+					<div>
+						<button type="button" class="_ps__btn _sg__btn" data-toggle="modal" data-target="#modal-navbar">
+							<span class="_ps__btn-line _sgg__btn-line">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>					
+							меню сайта
+						</button>
+					</div>
+					<div class="_hb__logotip">
+						<div>
+							<a href="/"><img src="img/index/logotip-green.png" alt=""></a>
+						</div>				
+					</div>
+					<div class="_hb__phone _sg__phone ">
+						<div>Заказ столов <a href="tel:+74862543054"><span> +7 (4862)</span> 54-30-54</a></div>
+						<button type="button" class="btn-order"></button>
+					</div>
+				</div>
+			</header>
+			<nav class="navbar navbar-fixed-top navbar-xs">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="modal" data-target="#modal-navbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<div class="_nbxs__logotip">
+							<a href="/"><img src="img/index/logotip-green.png" alt=""></a>
+						</div>
+						<button type="button" class="btn-order" data-toggle="modal" data-target="#modal-contactme"></button>
+					</div>
+				</div> 
+			</nav>
+			<div class="_ps__inside-line _sg__inside-line _nbmodal__inside-line">
+				<div class="_panel-bay-modal__inner">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade _panel-bay__modal" id="modal-bay-edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class=" section-green _nbmodal__dialog _vacP__dialog">
+		<div class="_ps__rel">
+			<header class="header-block _sg__header">
+				<div class="_hb__flex">
+					<div>
+						<button type="button" class="_ps__btn _sg__btn" data-toggle="modal" data-target="#modal-navbar">
+							<span class="_ps__btn-line _sgg__btn-line">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>					
+							меню сайта
+						</button>
+					</div>
+					<div class="_hb__logotip">
+						<div>
+							<a href="/"><img src="img/index/logotip-green.png" alt=""></a>
+						</div>				
+					</div>
+					<div class="_hb__phone _sg__phone ">
+						<div>Заказ столов <a href="tel:+74862543054"><span> +7 (4862)</span> 54-30-54</a></div>
+						<button type="button" class="btn-order"></button>
+					</div>
+				</div>
+			</header>
+			<nav class="navbar navbar-fixed-top navbar-xs">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="modal" data-target="#modal-navbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<div class="_nbxs__logotip">
+							<a href="/"><img src="img/index/logotip-green.png" alt=""></a>
+						</div>
+						<button type="button" class="btn-order" data-toggle="modal" data-target="#modal-contactme"></button>
+					</div>
+				</div> 
+			</nav>
+			<div class="_ps__inside-line _sg__inside-line _nbmodal__inside-line">
+				<div class="_panel-bay-modal__inner">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--end's новое-->
+
+
+
+
+
 <div class="modal fade _menuP__modal" id="modal-menu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="menu-modal__section section-grey-green page-section">
 		<div class="_mp-modal__bg-left modal-bg"></div>

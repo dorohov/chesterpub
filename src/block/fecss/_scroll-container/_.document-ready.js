@@ -13,8 +13,6 @@
 		scroll_ball.appendTo(scroll.empty());
 		var type = 0;
 		
-		target.css({'padding-bottom' : '30px'});
-		
 		block.on('init', function(event){
 			event.preventDefault();
 			
@@ -23,19 +21,9 @@
 			if(block.hasClass('horizontal')) {
 				type = 0;
 				
-				var l_w = line.outerWidth(true);
-				var t_w = target.outerWidth(true);
-				var ot_w = otarget.outerWidth(true);
+				scroll.width(line.width() * (target.outerWidth(true) / otarget.outerWidth(true)));
 				
-				if((ot_w + 20) < t_w || ot_w == t_w) {
-					block.css({'visibility' : 'hidden'});
-				} else {
-					block.css({'visibility' : 'visible'});
-				}
-				
-				scroll.width(l_w * (t_w / ot_w));
-				
-				block.attr('data-ratio-h', (ot_w / l_w));
+				block.attr('data-ratio-h', (otarget.outerWidth(true) / (line.outerWidth(true))));
 				
 				scroll.draggable({
 					axis:'x',
@@ -51,21 +39,9 @@
 			} else if(block.hasClass('vertical')) {
 				type = 1;
 				
-				var l_h = line.outerHeight(true);
-				var t_h = target.outerHeight(true);
-				var ot_h = otarget.outerHeight(true);
+				scroll.height(line.height() * (target.outerHeight(true) / otarget.outerHeight(true)));
 				
-				
-				if((ot_h + 20) < t_h || ot_h == t_h) {
-					block.css({'visibility' : 'hidden'});
-				} else {
-					block.css({'visibility' : 'visible'});
-				}
-				
-				
-				scroll.height(l_h * (t_h / ot_h));
-				
-				block.attr('data-ratio-v', (ot_h / l_h));
+				block.attr('data-ratio-v', (otarget.outerHeight(true) / (line.outerHeight(true))));
 				
 				scroll.draggable({
 					axis:'y',
@@ -100,7 +76,7 @@
 		});
 		
 	});
-
+	
 $('.modal').on('shown.bs.modal', function (event) {
 	//alert(2);
 	$('.scroll-container').trigger('init');
