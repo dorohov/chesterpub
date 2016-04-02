@@ -1,3 +1,4 @@
+
 if(device.tablet()){
 	$('._menuP__navbar').appendTo($("._mp-modal__flex"));
 	$('._menuP__delivery.step1').appendTo($('._menuP__panel-bottom .sm-panel'));
@@ -8,10 +9,11 @@ if(device.tablet()){
 		el.appendTo(el.closest('.editDev__item').find('.editDev__item-cost'))
 	}); 
 }
-if(device.mobile()){
+
+if(device.mobile() || (device.tablet() && device.portrait())){
 	$('._menuP__navbar').appendTo($("._mp-modal__flex"));
 	//$('._menuP__delivery.step1').appendTo($('._menuP__panel-bottom .sm-panel'));
 	//$('._menuP__delivery.step2').appendTo($('._menuP__panel-bottom .sm-panel'));
-	$('._menuP__delivery.step2').appendTo($('#modal-bay ._panel-bay-modal__inner'));
-	$('._menuP__delivery.editDev').appendTo($('#modal-bay-edit ._panel-bay-modal__inner'));
+	$('._menuP__delivery.step2').appendTo($('#modal-bay ._panel-bay-modal__inner')).show();
+	$('._menuP__delivery.editDev').appendTo($('#modal-bay-edit ._panel-bay-modal__inner')).show();
 } 
