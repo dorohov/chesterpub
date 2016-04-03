@@ -14,5 +14,6 @@ $('.modal').on('shown.bs.modal', function (event) {
 $(document.body).on('click.fecss', '._menuP__panel-bay-xs .btn-edit-card-xs', {}, function(event){
 	event.preventDefault();
 	
-	$('.fecss-jscart').trigger('rebuild');
+	$('.fecss-jscart').trigger('rebuild', [{rebuild_editor : true,}]);
+	
 })

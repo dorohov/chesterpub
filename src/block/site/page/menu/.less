@@ -87,6 +87,10 @@
 		
 		@media @media-size-md{
 			width: 50%;
+			
+			.tablet & {
+				width: 100%;
+			}
 		}
 		@media @media-size-lg{
 			width: 50%;
@@ -142,6 +146,10 @@
 	@media @media-screen-WSXGA900{
 		max-width: 600px;
 		//padding-right: 40px;
+	}
+	
+	.tablet.landscape &{
+		max-width: 860px;
 	}
 }
 ._menuP__scroll-hide{
@@ -239,6 +247,14 @@
 			}
 			span{
 				display: none;
+				
+				&.badge {
+					display: inline-block;
+					
+					&:empty {
+						display:none;
+					}
+				}
 			}
 		}
 		._menuP__item-name{
@@ -323,6 +339,14 @@
 	max-width: 80px; 
 	padding: 0!important;
 	@media @media-size-xs{
+		max-width: inherit;
+		color: @white;
+		font-size: 30px;
+		line-height: 20px;
+		padding: 5px 10px!important;
+	}
+	
+	@media @media-size-sm{
 		max-width: inherit;
 		color: @white;
 		font-size: 30px;
@@ -1087,6 +1111,14 @@
 	@media @media-size-xs{		 
 		display: block;
 	}
+	@media @media-size-sm{		 
+		display: block;
+	}
+	@media @media-size-sm{		 
+		.tablet & {
+			display: block;
+		}
+	}
 	._panel-bay__flex{
 		display: flex;
 		justify-content: space-between;
@@ -1144,6 +1176,10 @@
 	._panel-bay-modal__inner{
 		position: relative;
 		padding: 0 20px;
+		
+		.tablet & {
+			margin-top:30px;
+		}
 	}
 	.step2{
 		.scroll-hidden();

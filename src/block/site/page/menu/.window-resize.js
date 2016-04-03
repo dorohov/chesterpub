@@ -1,4 +1,4 @@
-
+/*
 if(device.tablet()){
 	$('._menuP__navbar').appendTo($("._mp-modal__flex"));
 	$('._menuP__delivery.step1').appendTo($('._menuP__panel-bottom .sm-panel'));
@@ -9,8 +9,9 @@ if(device.tablet()){
 		el.appendTo(el.closest('.editDev__item').find('.editDev__item-cost'))
 	}); 
 }
+*/
 
-if(device.mobile() || (device.tablet() && device.portrait())){
+if(device.mobile() || device.tablet()){
 	$('._menuP__navbar').appendTo($("._mp-modal__flex"));
 	//$('._menuP__delivery.step1').appendTo($('._menuP__panel-bottom .sm-panel'));
 	//$('._menuP__delivery.step2').appendTo($('._menuP__panel-bottom .sm-panel'));

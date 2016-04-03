@@ -271,7 +271,13 @@ $(document).ready(function() {
 		
 		var btn = $(this);
 		var step = btn.attr('data-jscart-step');
-		$('._azbn_jscart-step').hide();
+		
+		if(device.mobile() || device.tablet()) {
+			
+		} else {
+			$('._azbn_jscart-step').hide();
+		}
+		
 		$('._azbn_jscart-step[data-jscart-step="' + step + '"]').fadeIn('fast').find('.scroll-container').trigger('init');
 		
 	});
@@ -397,7 +403,8 @@ $(document).ready(function() {
 		
 		var Cart = new jsCart();
 		
-		block.on('rebuild', function(event){
+		block.on('rebuild', null, {}, function(event, p){
+			
 			block.find('.jscart-item').each(function(index){
 				
 				var item = $(this);
@@ -408,8 +415,18 @@ $(document).ready(function() {
 				//var amount = item.attr('data-jscart-amount');
 				
 				var c_item = Cart.getItem(product, taste);
-				item.find('input.jscart-item-amount').attr('value', parseInt(c_item.amount));
-				item.find('div.jscart-item-amount, span.jscart-item-amount, a.jscart-item-amount').html(parseInt(c_item.amount));
+				
+				var _c_i_amonut = parseInt(c_item.amount);
+				
+				if(_c_i_amonut) {
+					item.find('input.jscart-item-amount').attr('value', _c_i_amonut);
+					item.find('div.jscart-item-amount, span.jscart-item-amount, a.jscart-item-amount').html(_c_i_amonut);
+				} else {
+					item.find('input.jscart-item-amount').attr('value', 0);
+					item.find('div.jscart-item-amount, span.jscart-item-amount, a.jscart-item-amount').html('').empty();;
+				}
+				
+				
 				
 				var result = Cart.calculate();
 				block.attr('data-jscart-sum', result.sum).find('.jscart-sum').html(result.sum);
@@ -444,9 +461,12 @@ $(document).ready(function() {
 				block.find('.jscart-suffix').html(amount_o_str);
 			});
 			
-			block.trigger('rebuild-editor');
+			if(p.rebuild_editor) {
+				block.trigger('rebuild-editor');
+			}
 		});
-		block.trigger('rebuild');
+		block.trigger('rebuild', [{rebuild_editor : false,}]);
+		
 		
 		block.on('rebuild-editor', function(event){
 			
@@ -493,7 +513,7 @@ $(document).ready(function() {
 		
 		block.on('clear', function(event){
 			Cart.clear();
-			block.trigger('rebuild');
+			block.trigger('rebuild', [{rebuild_editor : false,}]);
 		});
 		
 		block.on('create-order', function(event){
@@ -573,7 +593,12 @@ $(document).ready(function() {
 			
 			Cart.add(product, taste, cost, parseInt(amount));
 			console.log('product ' + product + ' added to cart');
-			block.trigger('rebuild');
+			
+			var p = {rebuild_editor : false,};
+			if(btn.closest('_azbn_jscart-edit-order')) {
+				p.rebuild_editor = true;
+			}
+			block.trigger('rebuild', [p]);
 		});
 		
 		$(document.body).on('click.jscart', '.jscart-item .jscart-remove-btn', function(event){
@@ -601,7 +626,12 @@ $(document).ready(function() {
 			
 			Cart.remove(product, taste, parseInt(amount));
 			console.log('product ' + product + ' removed from cart');
-			block.trigger('rebuild');
+			
+			var p = {rebuild_editor : false,};
+			if(btn.closest('_azbn_jscart-edit-order')) {
+				p.rebuild_editor = true;
+			}
+			block.trigger('rebuild', [p]);
 		});
 		
 		$(document.body).on('click.jscart', '.jscart-item .jscart-remove-pos', function(event){
@@ -621,7 +651,12 @@ $(document).ready(function() {
 			
 			Cart.remove(product, taste, 99999999);
 			console.log('product ' + product + ' removed from cart');
-			block.trigger('rebuild');
+			
+			var p = {rebuild_editor : false,};
+			if(btn.closest('_azbn_jscart-edit-order')) {
+				p.rebuild_editor = true;
+			}
+			block.trigger('rebuild', [p]);
 		});
 		
 		$(document.body).on('click.jscart', '.jscart-clear-btn', function(event){

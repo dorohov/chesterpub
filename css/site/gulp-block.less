@@ -1264,6 +1264,561 @@
     	position: relative;
     }
 }
+.beer-page__section{
+	//opacity: @opacity;
+	position: relative;
+	background: 
+		url('@{url-path-img}/beer/bg-beer-top-left.png') no-repeat left 7%, 
+		url('@{url-path-img}/beer/bg-beer-bottom-right.png') no-repeat right 160%,
+		url('@{url-path-img}/beer/bg-beer-bottom-left.png') no-repeat left bottom,
+		url('@{url-path-img}/beer/bg-beer.jpg') no-repeat center top;
+	/* @media @media-size-sm{
+		._ps__inside-line{
+			padding-top: 135px;
+		}
+	} */
+    @media @media-size-xs{
+    	background: 
+			url('@{url-path-img}/beer/bg-beer.jpg') repeat center top;
+			&.hell-beer__section{
+				padding-top: 155px;
+			}
+			&.pilcner-beer__section,
+			&.stout-beer__section,
+			&.weisen-beer__section{
+				._beer__heading-block{display: none}
+			}
+    }
+    @media @media-size-xs-l{
+    	&.hell-beer__section{
+			//padding-top: 135px;
+			padding-top: 115px;
+		}
+    }
+    @media @media-size-sm{
+    	background: 
+			url('@{url-path-img}/beer/bg-beer-bottom-right.png') no-repeat right 95%,
+			url('@{url-path-img}/beer/bg-beer.jpg') repeat center top;
+		background-size: 400px auto;
+    }
+	@media @media-screen-WXGA768{ 
+		background:
+			url('@{url-path-img}/beer/bg-beer.jpg') no-repeat center top;
+	} 
+	@media @media-screen-WSXGA900{ 
+		background:
+			url('@{url-path-img}/beer/bg-beer.jpg') no-repeat center top;
+	} 
+}
+._beer__inner{
+	position: relative;
+	height: 100%;
+}
+._beer__heading-block{
+	transform: translateY(0);    
+	position: absolute;
+    top: -35px;
+    @media @media-size-xs{
+		top: 0;
+		position: relative;
+	}
+    @media @media-size-sm{
+		top: 0;
+	}
+    @media @media-screen-WXGA768{
+   		top: -45px; 
+    } 
+}
+._beer__bg-text{
+	color:  rgba(228, 211, 173, 0.35);
+	font-size: 140px;
+	font-weight: 700;
+	letter-spacing: 14px;
+	line-height: 24px;
+	text-transform: uppercase;
+	position: absolute; 
+	top: 140px;	
+    @media @media-size-xs{
+    	display: none;
+    }
+    @media @media-size-sm{
+    	font-size: 50px;
+    	top: 80px;
+    }
+    @media @media-screen-WXGA768{
+		top: 55px;
+		font-size: 55px;
+		letter-spacing: 10px;
+	}
+	@media @media-screen-WSXGA900{
+		top: 80px;	
+		font-size: 100px;	
+	}
+	&.pilsner{
+		font-size: 130px;
+	    @media @media-size-sm{
+	    	font-size: 40px;
+	    }
+	    @media @media-screen-WXGA768{
+			font-size: 55px;
+		}
+		@media @media-screen-WSXGA900{
+			font-size: 90px;	
+		}
+	}
+	&.weisen{
+		font-size: 130px;
+	    @media @media-size-sm{
+	    	font-size: 42px;
+	    }
+	    @media @media-screen-WXGA768{
+			font-size: 55px;
+		}
+		@media @media-screen-WSXGA900{
+			font-size: 90px;	
+		}
+	}
+	&.stout{
+	    @media @media-size-sm{
+	    	font-size: 40px;
+	    }
+		@media @media-screen-WSXGA900{
+			font-size: 80px;	
+		}
+	}
+}
+._beer__flex{	
+	display: flex;
+    height: 100%;
+    padding-top: 80px;
+    margin-left: -20px;
+    margin-right: -20px;
+    position: relative;
+    z-index: 10;
+    align-items: flex-start;
+	> div{
+		width: 100%;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	@media @media-size-xs{
+		flex-wrap: wrap;
+		padding-top: 0;
+	}
+	@media @media-screen-XGA768 {
+		padding-top: 30px;
+	}	
+    @media @media-screen-WXGA768{
+		padding-top: 40px;
+	}
+	@media @media-screen-WSXGA900{
+		padding-top: 30px;
+	}
+}
+._beer__left-col{
+	max-width: 775px;    
+	display: flex;
+	height: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 125px;    
+    @media @media-size-xs{
+    	flex-direction: row;
+    	padding: 0;
+    }
+    @media @media-size-sm{
+		padding-top: 50px;
+    }
+    @media @media-screen-WXGA768{
+    	padding-top: 40px;
+		max-width: 450px;
+	}
+	@media @media-screen-WSXGA900{
+		max-width: 575px;
+	}
+}
+._beer__flex-sort{
+	display: none;
+    @media @media-size-xs{  
+		display: flex;
+		margin-bottom: 20px;
+    }
+}
+._beer__item-sort{
+	color: @green;
+	font-style: italic;
+    width: 110px;
+    text-align: center;
+	span{
+		display: block;
+		font-style: normal;
+		.mixin-headings(
+			@font-family: @bebas, 
+			@font-size: 60px, 
+			@line-height: 60px, 
+			@color: inherit);
+	}
+	&:first-child{
+		margin-bottom: 30px;
+	} 
+    @media @media-size-xs{
+		&:first-child{
+			margin-bottom: 0px;
+		} 
+    }
+}
+.beer-hell{
+	background: url('@{url-path-img}/beer/beer-hell.png') no-repeat center;
+    @media @media-size-xs{
+		background-size: 240px auto;
+		padding-top: 220px;
+    	background-position: center top!important;
+    }     
+    @media @media-size-sm{
+		min-height: 480px;
+		background-size: 340px auto;
+    }    
+    @media @media-size-sm-l{
+		background-size: 460px auto; 
+    }
+    @media @media-screen-WXGA768{
+		background-size: 360px;
+	}
+	@media @media-screen-WSXGA900{
+		background-size: 500px;
+	}	
+}
+.beer-pilsner{
+	background: url('@{url-path-img}/beer/beer-pilsner.png') no-repeat top center;     
+	@media @media-size-xs{
+		background-size: 240px auto;
+		padding-top: 270px;
+    	background-position: center top!important;
+    }    
+	@media @media-size-sm{
+		min-height: 480px;
+		background-size: 340px auto;
+    } 
+    @media @media-size-sm-l{
+		background-size: 430px auto; 
+    }
+    @media @media-screen-WXGA768{
+		background-size: 320px;
+	}
+    @media @media-screen-HD720{
+		background-size: 280px;
+	}
+	@media @media-screen-WSXGA900{
+		background-size: 390px;
+		background-position: center;
+	}	
+}
+.beer-weisen{
+	background: url('@{url-path-img}/beer/beer-weisen.png') no-repeat top center;    
+	@media @media-size-xs{
+		background-size: 240px auto;
+		padding-top: 285px;
+    	background-position: center top!important;
+    }  
+	@media @media-size-sm{
+		min-height: 480px;
+		background-size: 340px auto;
+    } 
+    @media @media-size-sm-l{
+		background-size: 400px auto; 
+    }
+    @media @media-screen-WXGA768{
+		background-size: 260px;
+		background-position: center;
+	}
+	@media @media-screen-WSXGA900{
+		background-size: 380px;
+		background-position: center;
+	}	
+}
+.beer-stout{
+	background: url('@{url-path-img}/beer/beer-stout.png') no-repeat center;        
+	@media @media-size-xs{
+		background-size: 240px auto;
+		padding-top: 270px;
+    	background-position: center top!important;
+    }  
+	@media @media-size-sm{
+		min-height: 480px;
+		background-size: 340px auto;
+    } 
+    @media @media-size-sm-l{
+		background-size: 400px auto; 
+    }
+    @media @media-screen-WXGA768{
+		background-size: 260px;
+	}
+	@media @media-screen-WSXGA900{
+		background-size: 380px;
+	}	
+}
+._beer__right-col{
+	display: flex;
+	max-width: 620px;
+	margin-top: 80px;
+	position: relative;  
+    @media @media-size-xs{
+    	margin-top: 10px;
+    }
+    @media @media-size-sm{
+		margin-top: 55px;
+		.scroll-container{
+			display: none;
+		}
+    }
+	@media @media-screen-XGA768{
+		margin-top: 0;
+		font-size: 14px;
+    	line-height: 22px;
+	}
+	@media @media-screen-WXGA768{
+		margin-top: 0px;
+	}
+	@media @media-screen-WSXGA900{
+		margin-top: 40px;
+		padding-bottom: 20px; 
+		max-width: 580px;
+	}
+	@media @media-screen-hbig{
+		margin-top: 0px;
+	}
+}
+._beer__scroll-hide{
+    @media @media-size-sm{
+    	height: 300px;
+    }	
+	@media @media-screen-XGA768 {
+		height: inherit;
+	}
+	@media @media-screen-WXGA768{
+		height: 300px;
+	}
+	@media @media-screen-WSXGA900{
+		height: 330px;
+	}
+}
+._beer__scroll-element{
+	width: 110%;
+	height: 110%;
+    @media @media-size-xs{
+    	width: 100%;
+    	height: 100%;
+		overflow: initial !important;
+    }
+    @media @media-size-sm{
+    	width: 100%;
+    	height: 100%;
+    }
+	@media @media-screen-XGA768 {
+		overflow: initial !important;
+	}
+	@media @media-screen-WXGA768{
+		//height: 125%;
+	}
+	@media @media-screen-WSXGA900{
+		height: 120%;
+	}
+	@media @media-screen-hbig{
+		width: 100%;
+		height: 100%;    
+		overflow: initial !important;
+	}
+	@media @media-screen-h1080{
+		width: 100%;
+		height: 100%;    
+		overflow: initial !important;
+	}
+}
+._beer__scroll-overflow{
+	@media @media-screen-WXGA768{
+		padding-right: 4%;
+	}
+	@media @media-screen-WSXGA900{
+		padding-right: 4%;
+	}
+
+	padding-right: 6%;
+    @media @media-size-xs{
+    	padding: 0;
+    	overflow: initial !important;
+    }
+    /* @media @media-size-sm{
+    	padding: 0;
+    		overflow: initial !important;
+    } */
+	@media @media-size-xs{
+		padding-right: 0;     
+		overflow: initial !important;
+	}
+	@media @media-screen-XGA768 {
+		width: 100%;
+		height: 100%;  
+		overflow: initial !important;
+	}
+	@media @media-screen-hbig{
+		padding-right: 0;     
+		overflow: initial !important;
+	}
+	@media @media-screen-h1080{
+		padding-right: 0;     
+		overflow: initial !important;
+	}
+}
+._beer__scroll-container{
+	@media @media-size-xs{
+		display: none!important;
+	}
+	@media @media-screen-XGA768 {
+		display: none!important;		
+	}
+	@media @media-screen-hbig{
+		display: none!important;
+	}
+	@media @media-screen-h1080{
+		display: none!important;
+	}
+}
+// ._beer__scroll-line{	
+// 	@media @media-screen-h1080{
+// 		display: none;
+// 	}
+// }
+._beer__item-heading{
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 30px;
+	margin-bottom: 20px;
+}
+._beer__item-note{
+	div{
+		margin-bottom: 10px;
+	}
+}
+._beer__item-cost{
+	&:before{
+		content: '';
+		height: 1px;
+		display: block;
+		background: @green;
+		width: 95px;
+		margin: 28px 0;
+
+		@media @media-screen-XGA768{
+			margin: 15px 0 12px;
+		}
+	}
+	span{
+		font-weight: 700; 
+	}
+}
+
+._beer__nav {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    right: 100px;
+    transform: translateY(-50%);
+    @media @media-size-xs{
+    	display: none;
+    }
+    @media @media-size-sm{
+    	display: none;
+    }
+	@media @media-screen-HD720{
+		right: 50px;
+	}
+	ul{
+		margin: 0;
+		padding: 0;
+		li{			
+			display: block;
+			//width: 12px;
+			margin: 25px 0px;
+			position:relative;
+			&:after{
+				content: '';
+				position: absolute;
+				border-left: 1px dashed @green;
+				height: 35px;
+				right: 6px;
+				top: 10px;
+				width: 1px;
+				transform: translateY(16px);
+			}
+			&:last-child:after{display: none}
+			a{				
+				display: block;
+				position: relative;
+				z-index: 1;
+				width: 100%;
+				height: 100%;
+				cursor: pointer;
+				text-decoration: none;
+				text-align: right;
+				//transition: all 0.1s ease-in-out;
+				i{
+					font-style: normal;
+					@media @media-screen-WXGA768{
+						display: none;
+					}
+					@media @media-screen-WSXGA900{
+						display: none;
+					}
+				}
+				.mixin-headings(
+					@font-family: @bebas, 
+					@font-size: 20px, 
+					@line-height: 30px, 
+					@color: #bfb695);
+				span{
+					display: inline-block;
+					vertical-align: middle;
+					z-index: 1;
+					height: 12px;
+					width: 12px;
+					border: 0;
+					border: 1px solid @green;
+					background: transparent;
+					transform: rotate(45deg);
+					margin-left: 25px;
+					transition: all 0.1s ease-in-out;
+				}
+			}
+			&.active{	
+				a{				
+					color: @green;
+					span{
+						background: @green;
+					}					
+				}
+			}
+			&:hover{
+				a {
+					//transform: scale(1.01);
+					span{
+						transform: rotate(45deg);
+						border-color: @green-line; 
+					}
+					
+				}
+				&.active{
+					a{
+						span{
+							background: @green;
+							border-color: @green;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//end's
 .contacts-page__section{
 	//opacity: @opacity;
 	@media @media-size-xs{
@@ -2040,778 +2595,6 @@
 	box-shadow: 15px 20px 25px fadeout(@black, 80%);
 }
 // end's
-.beer-page__section{
-	//opacity: @opacity;
-	position: relative;
-	background: 
-		url('@{url-path-img}/beer/bg-beer-top-left.png') no-repeat left 7%, 
-		url('@{url-path-img}/beer/bg-beer-bottom-right.png') no-repeat right 160%,
-		url('@{url-path-img}/beer/bg-beer-bottom-left.png') no-repeat left bottom,
-		url('@{url-path-img}/beer/bg-beer.jpg') no-repeat center top;
-	/* @media @media-size-sm{
-		._ps__inside-line{
-			padding-top: 135px;
-		}
-	} */
-    @media @media-size-xs{
-    	background: 
-			url('@{url-path-img}/beer/bg-beer.jpg') repeat center top;
-			&.hell-beer__section{
-				padding-top: 155px;
-			}
-			&.pilcner-beer__section,
-			&.stout-beer__section,
-			&.weisen-beer__section{
-				._beer__heading-block{display: none}
-			}
-    }
-    @media @media-size-xs-l{
-    	&.hell-beer__section{
-			//padding-top: 135px;
-			padding-top: 115px;
-		}
-    }
-    @media @media-size-sm{
-    	background: 
-			url('@{url-path-img}/beer/bg-beer-bottom-right.png') no-repeat right 95%,
-			url('@{url-path-img}/beer/bg-beer.jpg') repeat center top;
-		background-size: 400px auto;
-    }
-	@media @media-screen-WXGA768{ 
-		background:
-			url('@{url-path-img}/beer/bg-beer.jpg') no-repeat center top;
-	} 
-	@media @media-screen-WSXGA900{ 
-		background:
-			url('@{url-path-img}/beer/bg-beer.jpg') no-repeat center top;
-	} 
-}
-._beer__inner{
-	position: relative;
-	height: 100%;
-}
-._beer__heading-block{
-	transform: translateY(0);    
-	position: absolute;
-    top: -35px;
-    @media @media-size-xs{
-		top: 0;
-		position: relative;
-	}
-    @media @media-size-sm{
-		top: 0;
-	}
-    @media @media-screen-WXGA768{
-   		top: -45px; 
-    } 
-}
-._beer__bg-text{
-	color:  rgba(228, 211, 173, 0.35);
-	font-size: 140px;
-	font-weight: 700;
-	letter-spacing: 14px;
-	line-height: 24px;
-	text-transform: uppercase;
-	position: absolute; 
-	top: 140px;	
-    @media @media-size-xs{
-    	display: none;
-    }
-    @media @media-size-sm{
-    	font-size: 50px;
-    	top: 80px;
-    }
-    @media @media-screen-WXGA768{
-		top: 55px;
-		font-size: 55px;
-		letter-spacing: 10px;
-	}
-	@media @media-screen-WSXGA900{
-		top: 80px;	
-		font-size: 100px;	
-	}
-	&.pilsner{
-		font-size: 130px;
-	    @media @media-size-sm{
-	    	font-size: 40px;
-	    }
-	    @media @media-screen-WXGA768{
-			font-size: 55px;
-		}
-		@media @media-screen-WSXGA900{
-			font-size: 90px;	
-		}
-	}
-	&.weisen{
-		font-size: 130px;
-	    @media @media-size-sm{
-	    	font-size: 42px;
-	    }
-	    @media @media-screen-WXGA768{
-			font-size: 55px;
-		}
-		@media @media-screen-WSXGA900{
-			font-size: 90px;	
-		}
-	}
-	&.stout{
-	    @media @media-size-sm{
-	    	font-size: 40px;
-	    }
-		@media @media-screen-WSXGA900{
-			font-size: 80px;	
-		}
-	}
-}
-._beer__flex{	
-	display: flex;
-    height: 100%;
-    padding-top: 80px;
-    margin-left: -20px;
-    margin-right: -20px;
-    position: relative;
-    z-index: 10;
-    align-items: flex-start;
-	> div{
-		width: 100%;
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-	@media @media-size-xs{
-		flex-wrap: wrap;
-		padding-top: 0;
-	}
-	@media @media-screen-XGA768 {
-		padding-top: 30px;
-	}	
-    @media @media-screen-WXGA768{
-		padding-top: 40px;
-	}
-	@media @media-screen-WSXGA900{
-		padding-top: 30px;
-	}
-}
-._beer__left-col{
-	max-width: 775px;    
-	display: flex;
-	height: 100%;
-    flex-direction: column;
-    align-items: flex-end;
-    padding-top: 125px;    
-    @media @media-size-xs{
-    	flex-direction: row;
-    	padding: 0;
-    }
-    @media @media-size-sm{
-		padding-top: 50px;
-    }
-    @media @media-screen-WXGA768{
-    	padding-top: 40px;
-		max-width: 450px;
-	}
-	@media @media-screen-WSXGA900{
-		max-width: 575px;
-	}
-}
-._beer__flex-sort{
-	display: none;
-    @media @media-size-xs{  
-		display: flex;
-		margin-bottom: 20px;
-    }
-}
-._beer__item-sort{
-	color: @green;
-	font-style: italic;
-    width: 110px;
-    text-align: center;
-	span{
-		display: block;
-		font-style: normal;
-		.mixin-headings(
-			@font-family: @bebas, 
-			@font-size: 60px, 
-			@line-height: 60px, 
-			@color: inherit);
-	}
-	&:first-child{
-		margin-bottom: 30px;
-	} 
-    @media @media-size-xs{
-		&:first-child{
-			margin-bottom: 0px;
-		} 
-    }
-}
-.beer-hell{
-	background: url('@{url-path-img}/beer/beer-hell.png') no-repeat center;
-    @media @media-size-xs{
-		background-size: 240px auto;
-		padding-top: 220px;
-    	background-position: center top!important;
-    }     
-    @media @media-size-sm{
-		min-height: 480px;
-		background-size: 340px auto;
-    }    
-    @media @media-size-sm-l{
-		background-size: 460px auto; 
-    }
-    @media @media-screen-WXGA768{
-		background-size: 360px;
-	}
-	@media @media-screen-WSXGA900{
-		background-size: 500px;
-	}	
-}
-.beer-pilsner{
-	background: url('@{url-path-img}/beer/beer-pilsner.png') no-repeat top center;     
-	@media @media-size-xs{
-		background-size: 240px auto;
-		padding-top: 270px;
-    	background-position: center top!important;
-    }    
-	@media @media-size-sm{
-		min-height: 480px;
-		background-size: 340px auto;
-    } 
-    @media @media-size-sm-l{
-		background-size: 430px auto; 
-    }
-    @media @media-screen-WXGA768{
-		background-size: 320px;
-	}
-    @media @media-screen-HD720{
-		background-size: 280px;
-	}
-	@media @media-screen-WSXGA900{
-		background-size: 390px;
-		background-position: center;
-	}	
-}
-.beer-weisen{
-	background: url('@{url-path-img}/beer/beer-weisen.png') no-repeat top center;    
-	@media @media-size-xs{
-		background-size: 240px auto;
-		padding-top: 285px;
-    	background-position: center top!important;
-    }  
-	@media @media-size-sm{
-		min-height: 480px;
-		background-size: 340px auto;
-    } 
-    @media @media-size-sm-l{
-		background-size: 400px auto; 
-    }
-    @media @media-screen-WXGA768{
-		background-size: 260px;
-		background-position: center;
-	}
-	@media @media-screen-WSXGA900{
-		background-size: 380px;
-		background-position: center;
-	}	
-}
-.beer-stout{
-	background: url('@{url-path-img}/beer/beer-stout.png') no-repeat center;        
-	@media @media-size-xs{
-		background-size: 240px auto;
-		padding-top: 270px;
-    	background-position: center top!important;
-    }  
-	@media @media-size-sm{
-		min-height: 480px;
-		background-size: 340px auto;
-    } 
-    @media @media-size-sm-l{
-		background-size: 400px auto; 
-    }
-    @media @media-screen-WXGA768{
-		background-size: 260px;
-	}
-	@media @media-screen-WSXGA900{
-		background-size: 380px;
-	}	
-}
-._beer__right-col{
-	display: flex;
-	max-width: 620px;
-	margin-top: 80px;
-	position: relative;  
-    @media @media-size-xs{
-    	margin-top: 10px;
-    }
-    @media @media-size-sm{
-		margin-top: 55px;
-		.scroll-container{
-			display: none;
-		}
-    }
-	@media @media-screen-XGA768{
-		margin-top: 0;
-		font-size: 14px;
-    	line-height: 22px;
-	}
-	@media @media-screen-WXGA768{
-		margin-top: 0px;
-	}
-	@media @media-screen-WSXGA900{
-		margin-top: 40px;
-		padding-bottom: 20px; 
-		max-width: 580px;
-	}
-	@media @media-screen-hbig{
-		margin-top: 0px;
-	}
-}
-._beer__scroll-hide{
-    @media @media-size-sm{
-    	height: 300px;
-    }	
-	@media @media-screen-XGA768 {
-		height: inherit;
-	}
-	@media @media-screen-WXGA768{
-		height: 300px;
-	}
-	@media @media-screen-WSXGA900{
-		height: 330px;
-	}
-}
-._beer__scroll-element{
-	width: 110%;
-	height: 110%;
-    @media @media-size-xs{
-    	width: 100%;
-    	height: 100%;
-		overflow: initial !important;
-    }
-    @media @media-size-sm{
-    	width: 100%;
-    	height: 100%;
-    }
-	@media @media-screen-XGA768 {
-		overflow: initial !important;
-	}
-	@media @media-screen-WXGA768{
-		//height: 125%;
-	}
-	@media @media-screen-WSXGA900{
-		height: 120%;
-	}
-	@media @media-screen-hbig{
-		width: 100%;
-		height: 100%;    
-		overflow: initial !important;
-	}
-	@media @media-screen-h1080{
-		width: 100%;
-		height: 100%;    
-		overflow: initial !important;
-	}
-}
-._beer__scroll-overflow{
-	@media @media-screen-WXGA768{
-		padding-right: 4%;
-	}
-	@media @media-screen-WSXGA900{
-		padding-right: 4%;
-	}
-
-	padding-right: 6%;
-    @media @media-size-xs{
-    	padding: 0;
-    	overflow: initial !important;
-    }
-    /* @media @media-size-sm{
-    	padding: 0;
-    		overflow: initial !important;
-    } */
-	@media @media-size-xs{
-		padding-right: 0;     
-		overflow: initial !important;
-	}
-	@media @media-screen-XGA768 {
-		width: 100%;
-		height: 100%;  
-		overflow: initial !important;
-	}
-	@media @media-screen-hbig{
-		padding-right: 0;     
-		overflow: initial !important;
-	}
-	@media @media-screen-h1080{
-		padding-right: 0;     
-		overflow: initial !important;
-	}
-}
-._beer__scroll-container{
-	@media @media-size-xs{
-		display: none!important;
-	}
-	@media @media-screen-XGA768 {
-		display: none!important;		
-	}
-	@media @media-screen-hbig{
-		display: none!important;
-	}
-	@media @media-screen-h1080{
-		display: none!important;
-	}
-}
-// ._beer__scroll-line{	
-// 	@media @media-screen-h1080{
-// 		display: none;
-// 	}
-// }
-._beer__item-heading{
-	font-weight: 700;
-	font-size: 24px;
-	line-height: 30px;
-	margin-bottom: 20px;
-}
-._beer__item-note{
-	div{
-		margin-bottom: 10px;
-	}
-}
-._beer__item-cost{
-	&:before{
-		content: '';
-		height: 1px;
-		display: block;
-		background: @green;
-		width: 95px;
-		margin: 28px 0;
-
-		@media @media-screen-XGA768{
-			margin: 15px 0 12px;
-		}
-	}
-	span{
-		font-weight: 700; 
-	}
-}
-
-._beer__nav {
-    position: absolute;
-    z-index: 100;
-    top: 50%;
-    right: 100px;
-    transform: translateY(-50%);
-    @media @media-size-xs{
-    	display: none;
-    }
-    @media @media-size-sm{
-    	display: none;
-    }
-	@media @media-screen-HD720{
-		right: 50px;
-	}
-	ul{
-		margin: 0;
-		padding: 0;
-		li{			
-			display: block;
-			//width: 12px;
-			margin: 25px 0px;
-			position:relative;
-			&:after{
-				content: '';
-				position: absolute;
-				border-left: 1px dashed @green;
-				height: 35px;
-				right: 6px;
-				top: 10px;
-				width: 1px;
-				transform: translateY(16px);
-			}
-			&:last-child:after{display: none}
-			a{				
-				display: block;
-				position: relative;
-				z-index: 1;
-				width: 100%;
-				height: 100%;
-				cursor: pointer;
-				text-decoration: none;
-				text-align: right;
-				//transition: all 0.1s ease-in-out;
-				i{
-					font-style: normal;
-					@media @media-screen-WXGA768{
-						display: none;
-					}
-					@media @media-screen-WSXGA900{
-						display: none;
-					}
-				}
-				.mixin-headings(
-					@font-family: @bebas, 
-					@font-size: 20px, 
-					@line-height: 30px, 
-					@color: #bfb695);
-				span{
-					display: inline-block;
-					vertical-align: middle;
-					z-index: 1;
-					height: 12px;
-					width: 12px;
-					border: 0;
-					border: 1px solid @green;
-					background: transparent;
-					transform: rotate(45deg);
-					margin-left: 25px;
-					transition: all 0.1s ease-in-out;
-				}
-			}
-			&.active{	
-				a{				
-					color: @green;
-					span{
-						background: @green;
-					}					
-				}
-			}
-			&:hover{
-				a {
-					//transform: scale(1.01);
-					span{
-						transform: rotate(45deg);
-						border-color: @green-line; 
-					}
-					
-				}
-				&.active{
-					a{
-						span{
-							background: @green;
-							border-color: @green;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-//end's
-.fullpage-gallery{
-	position: relative;
-	&:before{
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		z-index: 1;
-		background: fadeout(@black, 70%);
-		@media @media-size-xs{display: none}
-	}
-}
-.gallery-page__section{
-	//opacity: @opacity;
-	position: relative;
-	color: @white;
-	/* &:after{
-		content: '';
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		background: fadeout(@black, 40%);
-		height: 100%;
-		z-index: 1;
-	}	 */
-	@media @media-size-xs{
-		padding-top: 155px;
-		background: url('@{url-path-img}/menu/bg-yellow-left.jpg') repeat center top !important;
-	} 
-	@media @media-size-xs-l{
-		padding-top: 135px;
-	} 
-}
-._galleryP__lock{
-	background: fadeout(@black, 30%);
-	position: absolute;
-	z-index: 999;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: @white;
-	text-align: center;
-	font-size: 18px;
-	@media @media-size-xs{display: none}
-}
-._galleryP__lock-img{
-	width: 135px;
-	height: 90px;
-	margin: 0 auto;
-	background: url('@{url-path-img}/gallery/keybord-img.png') no-repeat center;
-}
-._galleryP__lock-note{
-	margin: 60px 0;
-}
-._galleryP__btn{
-	.btn-bron{
-		padding: 12px 25px;
-		max-width: 160px;		
-	}
-}
-._galleryP__heading{
-	color: @white;
-	@media @media-size-xs{
-		color: @green;
-		margin: 0;
-	}
-}
-._galleryP__flex{
-	display: flex;
-	height: 100%;
-    flex-direction: column;
-    justify-content: space-between;
-   	@media @media-size-sm-p{
-    	min-height: 900px; 
-    }
-    @media @media-size-sm-l{
-    	min-height: 700px; 
-    }
-}
-._galleryP__controls{
-	background: url('@{url-path-img}/icon/icon-owl-controls.png') no-repeat center;
-	width: 55px;
-	height: 55px;
-	position: absolute;
-	top: 50%;
-	z-index: 20;
-	cursor: pointer;
-	&.left{
-		left: 55px;
-		//transform: translateY(-50%) rotate(180deg);
-		transform: rotate(180deg);
-	}
-	&.right{
-		right: 55px;
-		//transform: translateY(-50%);
-	}
-
-	@media @media-size-xs{display: none}
-	
-}
-._galleryP__carousel{
-	padding-bottom: 20px;
-	&.__open{
-		._galleryP__owl{
-			padding-bottom: 25px;
-		}
-		._galleryP__btn-panel{
-			margin: 0 auto 35px;
-		}	
-		._galleryP__carousel-counter{
-			display: none;
-		}	
-	}
-	&.__close{
-		._galleryP__owl{
-			display: none!important;
-		}
-		._galleryP__btn-panel{
-			transform: rotate(180deg);
-			margin: 0 auto 15px;
-		}
-	}
-	@media @media-size-xs{display: none}
-}
-._galleryP__carousel-counter{
-	.mixin-headings(
-		@font-family: @proxima, 
-		@font-size: 18px, 
-		@line-height: 24px, 
-		@color: @white);
-	text-align: center;
-}
-._galleryP__btn-panel{
-	width: 32px;
-	height: 32px;
-	background: url('@{url-path-img}/icon/icon-arrow-down-white.png') no-repeat center;
-	border: none; 
-	outline: none;
-	display: block;
-}
-._galleryP__owl{
-	.owl-item{
-		//width: 100% !important;
-		.item{
-			max-width: 200px;
-			margin-right: 50px;
-			overflow: hidden;
-			position: relative;
-			transition: all 0.2s ease-out;
-			img{   	
-				transition: all 0.2s ease-out;	
-			}
-			&:before{
-				transition: all 0.2s ease-out; 		
-				content: '';
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				background: fadeout(@green, 100%);
-				z-index: 10;
-			}
-			&:hover{
-				img{
-					transform: scale(1.1);
-				}
-				&:before{
-					background: fadeout(@green, 30%);
-				}
-			}
-			&.active{
-				&:before{
-					background: fadeout(@green, 30%);
-				}
-				&:hover{
-					img{
-						transform: scale(1);
-					}
-				}
-			}
-		}
-	}
-}
-._galleryP__content-xs{
-	display: none;
-	@media @media-size-xs{
-		display: block;
-		._galleryP__owl{
-			display: flex;
-			flex-wrap: wrap;			
-			.item{
-				margin-bottom: 20px;
-			}
-		}
-	}
-
-	@media @media-size-xs-l{
-		._galleryP__owl{
-			margin-left: -10px;
-			margin-right: -10px;			
-			.item{
-				width: 50%;
-				padding-left: 10px;
-				padding-right: 10px;
-			}
-		}
-	}
-}
 .delivery-page__section{
 	//opacity: @opacity;
 	@media @media-size-xs{
@@ -3204,6 +2987,223 @@
 
 	}  
 }
+.fullpage-gallery{
+	position: relative;
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+		background: fadeout(@black, 70%);
+		@media @media-size-xs{display: none}
+	}
+}
+.gallery-page__section{
+	//opacity: @opacity;
+	position: relative;
+	color: @white;
+	/* &:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: fadeout(@black, 40%);
+		height: 100%;
+		z-index: 1;
+	}	 */
+	@media @media-size-xs{
+		padding-top: 155px;
+		background: url('@{url-path-img}/menu/bg-yellow-left.jpg') repeat center top !important;
+	} 
+	@media @media-size-xs-l{
+		padding-top: 135px;
+	} 
+}
+._galleryP__lock{
+	background: fadeout(@black, 30%);
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: @white;
+	text-align: center;
+	font-size: 18px;
+	@media @media-size-xs{display: none}
+}
+._galleryP__lock-img{
+	width: 135px;
+	height: 90px;
+	margin: 0 auto;
+	background: url('@{url-path-img}/gallery/keybord-img.png') no-repeat center;
+}
+._galleryP__lock-note{
+	margin: 60px 0;
+}
+._galleryP__btn{
+	.btn-bron{
+		padding: 12px 25px;
+		max-width: 160px;		
+	}
+}
+._galleryP__heading{
+	color: @white;
+	@media @media-size-xs{
+		color: @green;
+		margin: 0;
+	}
+}
+._galleryP__flex{
+	display: flex;
+	height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+   	@media @media-size-sm-p{
+    	min-height: 900px; 
+    }
+    @media @media-size-sm-l{
+    	min-height: 700px; 
+    }
+}
+._galleryP__controls{
+	background: url('@{url-path-img}/icon/icon-owl-controls.png') no-repeat center;
+	width: 55px;
+	height: 55px;
+	position: absolute;
+	top: 50%;
+	z-index: 20;
+	cursor: pointer;
+	&.left{
+		left: 55px;
+		//transform: translateY(-50%) rotate(180deg);
+		transform: rotate(180deg);
+	}
+	&.right{
+		right: 55px;
+		//transform: translateY(-50%);
+	}
+
+	@media @media-size-xs{display: none}
+	
+}
+._galleryP__carousel{
+	padding-bottom: 20px;
+	&.__open{
+		._galleryP__owl{
+			padding-bottom: 25px;
+		}
+		._galleryP__btn-panel{
+			margin: 0 auto 35px;
+		}	
+		._galleryP__carousel-counter{
+			display: none;
+		}	
+	}
+	&.__close{
+		._galleryP__owl{
+			display: none!important;
+		}
+		._galleryP__btn-panel{
+			transform: rotate(180deg);
+			margin: 0 auto 15px;
+		}
+	}
+	@media @media-size-xs{display: none}
+}
+._galleryP__carousel-counter{
+	.mixin-headings(
+		@font-family: @proxima, 
+		@font-size: 18px, 
+		@line-height: 24px, 
+		@color: @white);
+	text-align: center;
+}
+._galleryP__btn-panel{
+	width: 32px;
+	height: 32px;
+	background: url('@{url-path-img}/icon/icon-arrow-down-white.png') no-repeat center;
+	border: none; 
+	outline: none;
+	display: block;
+}
+._galleryP__owl{
+	.owl-item{
+		//width: 100% !important;
+		.item{
+			max-width: 200px;
+			margin-right: 50px;
+			overflow: hidden;
+			position: relative;
+			transition: all 0.2s ease-out;
+			img{   	
+				transition: all 0.2s ease-out;	
+			}
+			&:before{
+				transition: all 0.2s ease-out; 		
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: fadeout(@green, 100%);
+				z-index: 10;
+			}
+			&:hover{
+				img{
+					transform: scale(1.1);
+				}
+				&:before{
+					background: fadeout(@green, 30%);
+				}
+			}
+			&.active{
+				&:before{
+					background: fadeout(@green, 30%);
+				}
+				&:hover{
+					img{
+						transform: scale(1);
+					}
+				}
+			}
+		}
+	}
+}
+._galleryP__content-xs{
+	display: none;
+	@media @media-size-xs{
+		display: block;
+		._galleryP__owl{
+			display: flex;
+			flex-wrap: wrap;			
+			.item{
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	@media @media-size-xs-l{
+		._galleryP__owl{
+			margin-left: -10px;
+			margin-right: -10px;			
+			.item{
+				width: 50%;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
+	}
+}
 .menu-page__section{
 	//opacity: @opacity;
 	@media @media-size-xs{
@@ -3293,6 +3293,10 @@
 		
 		@media @media-size-md{
 			width: 50%;
+			
+			.tablet & {
+				width: 100%;
+			}
 		}
 		@media @media-size-lg{
 			width: 50%;
@@ -3348,6 +3352,10 @@
 	@media @media-screen-WSXGA900{
 		max-width: 600px;
 		//padding-right: 40px;
+	}
+	
+	.tablet.landscape &{
+		max-width: 860px;
 	}
 }
 ._menuP__scroll-hide{
@@ -3445,6 +3453,14 @@
 			}
 			span{
 				display: none;
+				
+				&.badge {
+					display: inline-block;
+					
+					&:empty {
+						display:none;
+					}
+				}
 			}
 		}
 		._menuP__item-name{
@@ -3529,6 +3545,14 @@
 	max-width: 80px; 
 	padding: 0!important;
 	@media @media-size-xs{
+		max-width: inherit;
+		color: @white;
+		font-size: 30px;
+		line-height: 20px;
+		padding: 5px 10px!important;
+	}
+	
+	@media @media-size-sm{
 		max-width: inherit;
 		color: @white;
 		font-size: 30px;
@@ -4293,6 +4317,14 @@
 	@media @media-size-xs{		 
 		display: block;
 	}
+	@media @media-size-sm{		 
+		display: block;
+	}
+	@media @media-size-sm{		 
+		.tablet & {
+			display: block;
+		}
+	}
 	._panel-bay__flex{
 		display: flex;
 		justify-content: space-between;
@@ -4350,6 +4382,10 @@
 	._panel-bay-modal__inner{
 		position: relative;
 		padding: 0 20px;
+		
+		.tablet & {
+			margin-top:30px;
+		}
 	}
 	.step2{
 		.scroll-hidden();
@@ -6994,6 +7030,7 @@
 		&:after{
 			display: none;
 		}
+		height:auto;
 	}	
 	@media @media-size-xs-l{
 		padding-top: 135px;
