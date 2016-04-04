@@ -1147,7 +1147,8 @@
 		background: rgb(38, 112, 59);		
 	}
 	.btn-order{
-		background: @green-line url('@{url-path-img}/round/icon-order.png') center no-repeat;
+		//background: @green-line url('@{url-path-img}/round/icon-order.png') center no-repeat;
+		background: #34bc71 url('@{url-path-img}/round/icon-order.png') center no-repeat;
 	}
 	
 	&#modal-contactme .btn-order {
@@ -3486,6 +3487,29 @@
 	@media @media-size-xs-l{
 		padding: 0;
 	}
+	@media @media-size-sm-p{
+		._menuP__item-qty{
+			background: url('@{url-path-img}/icon/btn-bay-xs.png') no-repeat center;
+			background-size: 28px;
+			max-width: 32px;
+			height: 32px;
+			padding: 0!important;
+			._menuP__item-qty-btn{
+				display: none;
+			}
+			span{
+				display: none;
+				
+				&.badge {
+					display: inline-block;
+					
+					&:empty {
+						display:none;
+					}
+				}
+			}
+		}
+	}
 	@media @media-screen-WXGA768 {
 		padding: 5px 10px 5px 15px;
 		margin-bottom: 5px;
@@ -3554,7 +3578,8 @@
 	
 	@media @media-size-sm{
 		max-width: inherit;
-		color: @white;
+		//color: @white;
+		color: @black;
 		font-size: 30px;
 		line-height: 20px;
 		padding: 5px 10px!important;
@@ -3841,6 +3866,7 @@
 .menu-modal__section{
 	height: 100%;
 	&:before{
+		display: none;
 		height: 19px;
 		background: url('@{url-path-img}/round/round-grey-green-top-sm.png') no-repeat center top;
 	}
@@ -4314,6 +4340,7 @@
 	right: 0;
 	box-shadow: 0px -10px 20px fadeout(@black, 80%);
 	background: rgb(255, 243, 208);
+	z-index: 10;
 	@media @media-size-xs{		 
 		display: block;
 	}
@@ -4338,10 +4365,10 @@
 		text-transform: uppercase;
 		color: @green;
 		border-right: 1px solid fadeout(#b6aa87, 50%);
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		//align-items: center;
+		//display: flex;
+		//flex-direction: column;
+		//justify-content: center;
 		font-size: 16px;
 		line-height: 18px;
 		&:before{
@@ -4363,6 +4390,8 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		outline: none;
+		text-decoration: none;
 		.__cost{
 			color: @green;
 			font-size: 16px;
@@ -4459,6 +4488,7 @@
 			visibility: visible;
 			width: 32px;
 			height: 32px;
+			outline: none;
 		}
 
 		._menuP__item-qty{
@@ -4900,6 +4930,17 @@
 					padding-left: 1em;
 			}
 
+@media @media-size-sm{
+	._menuP__modal{
+		._ps__inside-line{
+			padding: 0px;
+			border: none; 
+		}
+		._ps__inside-line:after,
+		.header-block,
+		._ps__btn-top{display: none;}
+	}
+}
 // end's
 .news-page__section
 {
