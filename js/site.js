@@ -423,7 +423,13 @@ $(document).ready(function() {
 					item.find('div.jscart-item-amount, span.jscart-item-amount, a.jscart-item-amount').html(_c_i_amonut);
 				} else {
 					item.find('input.jscart-item-amount').attr('value', 0);
-					item.find('div.jscart-item-amount, span.jscart-item-amount, a.jscart-item-amount').html('').empty();;
+					
+					if(device.mobile() || device.tablet()) {
+						item.find('div.jscart-item-amount, span.jscart-item-amount, a.jscart-item-amount').html('').empty();
+					} else {
+						item.find('div.jscart-item-amount, span.jscart-item-amount, a.jscart-item-amount').html(_c_i_amonut);
+					}
+					
 				}
 				
 				
