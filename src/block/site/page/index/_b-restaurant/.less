@@ -46,6 +46,14 @@
 	@media @media-size-sm-p{
 		flex-wrap: wrap;
 	}
+	@media @media-size-mdl{
+		height: 100%;
+		max-height: 340px; 
+	}
+	@media @media-size-xl{
+		height: 100%;
+		max-height: 470px;
+	}
 	@media @media-screen-hsmall{
 		height: 100%;
 		max-height: 290px;
@@ -148,6 +156,13 @@
 		.visible-sm{
 			display: block!important;
 		}
+	}
+	@media @media-size-mdl{
+    	display: none;
+	}
+	@media @media-size-xl{		
+		bottom: -45px;
+		right: -5px;
 	}
 	@media @media-screen-WSXGA900{
 		bottom: -45px;
