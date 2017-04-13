@@ -1,6 +1,18 @@
+var ShowAlert = function(title, text, cb) {
+	$('body').jqfeInfoMsg({html:text,showtime:4500});
+};
+
 $(document).ready(function() {
 	
-	
+	$(function(){
+		
+		var __msg = $('body').eq(0).attr('data-msg') || '';
+		
+		if(__msg != '') {
+			ShowAlert('',__msg,function(){});
+		}
+		
+	});
 	
 	
 	$('._azbn__galleryP__lock-btn').on('click.fecss', function(event){
@@ -146,18 +158,37 @@ $(document).ready(function() {
 			
 			var f = $(this);
 			
-			var order = {
+			var ph = f.find('input[name="phone"]').val();
+			
+			var r1 = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+			
+			if(ph != '' && r1.test(ph)) {
+				
+				var order = {
 					action : 'azbnajax_call',
 					method : 'call/create',
 					type:'json',
-					phone : f.find('input[name="phone"]').val(),
+					phone : ph,
 				};
 				
 				//order = JSON.stringify(order);
 				
 				$.post('/wp-admin/admin-ajax.php', order, function(data){
+					//alert('Заявка добавлена');
+					
+					ShowAlert('','Ваша заявка принята. Наши администраторы перезвонят Вам для уточнения ее деталей',function(){});
+					
 					f.find('input[name="phone"]').val('');
+					f.closest('.modal').find('.btn-order[data-dismiss="modal"]').trigger('click');
 				});
+				
+			} else {
+				
+				ShowAlert('','Введите номер телефона в общепринятом формате, он не должен быть пустым',function(){});
+				
+			}
+			
+			
 		});
 		
 	});
@@ -343,7 +374,77 @@ $(document).ready(function() {
 	});
 	
 	
-	
+	$('._azbn_contact-form').on('submit', function(event){
+		event.preventDefault();
+		
+		var res = 0;
+		var res_txt = '';
+		
+		var f = $(this);
+		
+		var name = f.find('input[name="contact-name"]').val();
+		var email = f.find('input[name="contact-email"]').val();
+		var msg = f.find('input[name="contact-msg"]').val();
+		
+		if(name != '') {
+			res++;
+		} else {
+			res_txt = 'Введите Ваше имя. Пустое значение не принимается';
+		}
+		
+		var re1 = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+		//var re2 = /^\d[\d\(\)\ -\+]{4,14}\d$/;
+		if(email != '' || (re1.test(email))) {//email.indexOf('@') > 0 || || re2.test(email)
+			res++;
+		} else {
+			res_txt = 'Введите корректный email';
+		}
+		
+		if(msg != '') {
+			res++;
+		} else {
+			res_txt = 'Введите текст сообщения';
+		}
+		
+		if(res == 3) {
+			
+			var order = $.extend(
+				{
+					
+				},
+				{
+					action : 'azbnajax_call',
+					method : 'contact/create',
+					type:'json',
+				},
+				{
+					name : name,
+					email : email,
+					msg : msg,
+				}
+			);
+			
+			$.post('/wp-admin/admin-ajax.php', {}, function(data){
+				//alert('Данные отправлены');
+				
+				ShowAlert('','Данные отправлены. Наши администраторы свяжутся с Вами',function(){});
+				
+				f.trigger('reset');
+				f.closest('.modal').find('.btn-order[data-dismiss="modal"]').trigger('click');
+			});
+			
+		} else {
+			
+			ShowAlert('', res_txt, function(){});
+			
+		}
+		
+	});
+	$('._azbn_contact-form-btn').on('click.azbn', function(event){
+		event.preventDefault();
+		
+		$('._azbn_contact-form').trigger('submit');
+	});
 	
 	
 	
@@ -389,7 +490,12 @@ $(document).ready(function() {
 				//order = JSON.stringify(order);
 				
 				$.post('/wp-admin/admin-ajax.php', order, function(data){
+					//alert('Данные отправлены');
+					
+					ShowAlert('','Данные отправлены. Наши администраторы свяжутся с Вами после рассмотрения резюме',function(){});
+					
 					f.trigger('reset');
+					f.closest('.modal').find('.btn-order[data-dismiss="modal"]').trigger('click');
 				});
 		});
 		
@@ -532,32 +638,48 @@ $(document).ready(function() {
 				profile = {};
 			}
 			profile.phone = $('._azbn_jscart-order-phone').eq(0).val();
-			Cart.setProfile(profile);
 			
-			Cart.saveCart(function(profile, cart){
+			var r1 = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+			
+			if(profile.phone != '' && r1.test(profile.phone)) {
 				
-				var order = {
-					action : 'azbnajax_call',
-					method : 'order/create',
-					type:'json',
-					profile : profile,
-					cart : cart,
-				};
+				Cart.setProfile(profile);
 				
-				//order = JSON.stringify(order);
-				
-				$.post('/wp-admin/admin-ajax.php', order, function(data){
+				Cart.saveCart(function(profile, cart){
 					
-					var neworder = JSON.parse(data);
-					Cart.saveOrder(neworder);
+					var order = {
+						action : 'azbnajax_call',
+						method : 'order/create',
+						type:'json',
+						profile : profile,
+						cart : cart,
+					};
 					
-					//Cart.clear();
-					//block.trigger('rebuild');
+					//order = JSON.stringify(order);
 					
-					block.trigger('clear');
-				});
+					$.post('/wp-admin/admin-ajax.php', order, function(data){
+						
+						var neworder = JSON.parse(data);
+						Cart.saveOrder(neworder);
+						
+						//Cart.clear();
+						//block.trigger('rebuild');
+						
+						$('._azbn_jscart-order-phone').eq(0).val('');
+						$('._azbn_jscart-step-next[data-jscart-step="0"]').eq(0).trigger('click');
+						ShowAlert('','Заказ принят. Наши администраторы свяжутся с Вами для подтверждения заказа',function(){});
+						
+						block.trigger('clear');
+					});
+					
+				})
 				
-			})
+			} else {
+				
+				ShowAlert('','Для заказа необходимо ввести номер телефона',function(){});
+				
+			}
+			
 		});
 		
 		
@@ -762,24 +884,11 @@ $(document).ready(function() {
 			$('._azbn_news-archive .scroll-container').removeClass('vertical right').addClass('horizontal bottom').trigger('init');
 		}
 		
-		/*
-		$(function(){
-			
-			var sc = $('.menu-page__section .scroll-hide.scroll-recalc');
-			
-			sc.each(function(index){
-				var el = $(this);
-				var p = el.parent();
-				
-				el.css({'height': $(window).height() * 0.53});
-				$('.scroll-container[data-target="#' + el.attr('id') + '"]').trigger('init');
-				
-			});
-			
-		});
-		*/
-		
-		//$('.scroll-container').trigger('init');
+		if(device.mobile() || device.tablet()) {
+			$('._azbn_menu-order-delivery-block').hide();
+		} else {
+			$('._azbn_menu-order-delivery-block').show();
+		}
 		
 	});
 	$(window).trigger('resize');

@@ -18,7 +18,7 @@ $('._ibm__right-col').hover(
 
 $('._azbn_contact-form-block, ._azbn_contact-get-form').on('click.not-_azbn_contact-form-block', function(event){
 	event.preventDefault();
-	//event.stopPropagation();
+	event.stopPropagation();
 	//я не помню, зачем я это сделал, но сделал я это не случайно
 });
 
