@@ -97,7 +97,7 @@
 						<div class="_contP__tel" ><a href="tel:+74862543054">+7 (4862) 54-30-54</a></div>
 						<div>E-mail</div>
 						<div  class="_contP__mail"><a href="mailto:chesterpub57@mail.ru">chesterpub57@mail.ru</a></div>
-						<div class="_contP__btn-green hidden-sm hidden-xs"><a href="#" class="btn-green" >напишите нам!</a></div> 
+						<div class="_contP__btn-green hidden-sm hidden-xs"><a href="#" class="btn-green" data-toggle="modal" data-target="#modal-cont">напишите нам!</a></div> 
 						<div class="_contP__btn-green visible-sm visible-xs"><a href="#" class="btn-green" data-toggle="modal" data-target="#modal-cont">напишите нам!</a></div> 
 					</div>
 				</div>
@@ -183,6 +183,14 @@
 						<div class="icon-user _icon"><input type="text" placeholder="Ваше имя"></div>
 						<div class="icon-mail _icon"><input type="text" placeholder="Ваш e-mail"></div>
 						<div class="icon-commit _icon"><input type="text" placeholder="Ваше сообщение"></div>
+
+						<div class="_contP__agreement">
+			                <input class="_contP__agreement-checkbox validate[required]" id="f[processing]" name="f[processing]" type="checkbox" checked>
+			                <label for="f[processing]" class="_contP__agreement-label"></label>
+							<label for="f[processing]" class="_contP__agreement-text">
+								Я согласен на обработку <a href="/agreement.html">персональных данных</a>
+							</label>           
+						</div>
 						<div class="_contP__rev-btn-green">
 							<button type="submit" class="btn-deliv">Отправить</button> 
 						</div>
