@@ -3,5 +3,5 @@ $(function(){var w={xs:{min:0,max:768},sm:{min:767,max:992},md:{min:991,max:1200
 $(function(){$(".scroll-container").trigger("init"),console.log("window-resize .scroll-container init")});
 var h_window=$(window).height(),w_window=$(window).width(),h_footer=$(".footer-block").outerHeight(!0),h_404=h_window-h_footer-50;$(".error-page__section ._ps__inside-line").css("height",h_404);
 device.mobile()&&$("._galleryP__owl").appendTo($("._galleryP__content-xs"));
-(device.mobile()||device.tablet())&&($("._menuP__navbar").appendTo($("._mp-modal__flex")),$("._menuP__delivery.step2").appendTo($("#modal-bay ._panel-bay-modal__inner")).show(),$("._menuP__delivery.editDev").appendTo($("#modal-bay-edit ._panel-bay-modal__inner")).show());
+(device.mobile()||device.tablet())&&($("._menuP__navbar").appendTo($("._mp-modal__flex")),$("._menuP__delivery.step2").appendTo($("#modal-bay ._panel-bay-modal__inner")).show().find('input[type="tel"]').trigger("focus"),$("._menuP__delivery.editDev").appendTo($("#modal-bay-edit ._panel-bay-modal__inner")).show());
 device.mobile()&&$("._newsP__panel .scroll-container").removeClass("horizontal bottom").addClass("vertical right").trigger("init");
