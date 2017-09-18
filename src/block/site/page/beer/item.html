@@ -1,0 +1,71 @@
+<div class="{class} page-section" id="{id}">
+	<div class="_ps__rel">
+		<header class="header-block _sgr__header">
+			<div class="_hb__flex">
+				<div>
+					<button type="button" class="_ps__btn _sgg__btn" data-toggle="modal" data-target="#modal-navbar">
+						<span class="_ps__btn-line _sgr__btn-line">
+							<span></span>
+							<span></span>
+							<span></span>
+						</span>					
+						меню сайта
+					</button>
+				</div>
+				<div class="_hb__logotip">
+					<div>
+						<a href="/"><img src="img/index/logotip-green.png" alt=""></a>
+					</div>				
+				</div>
+				<div class="_hb__phone _sgr__phone ">
+					<div>Заказ столов <a href="tel:+74862543054"><span>+7 (4862)</span> 54-30-54</a></div>
+					<button type="button" class="btn-order"></button>
+				</div>
+			</div>
+		</header>
+		<div class="_ps__inside-line _sgr__inside-line">
+			<div class="_beer__inner">
+				<div class="_ps__heading-block _beer__heading-block  is--hidden">
+					<h2 class="_ps__heading _beer__heading">Пиво с собой</h2>		
+				</div>
+				<div class="_beer__bg-text  is--long">{heading}</div>	
+				<div class="_beer__flex">
+					<div class="_beer__left-col  is--bg" style="background-image: url(/img/beer/{preview})">
+						<div class="_beer__item-sort hidden-xs">
+							Доля спирта <span>{abv}</span>
+						</div>
+						<div class="_beer__item-sort hidden-xs">
+							Плотность <span>{og}</span>
+						</div>
+					</div>
+					<div class="_beer__right-col">
+						<div id="overflow-container" class="scroll-hide _beer__scroll-hide" >
+							<div class="overflow-container scroll-element _beer__scroll-element">
+								<div class="overflowed scroll-overflow _beer__scroll-overflow">
+									<h3 class="_beer__item-heading">{heading}</h3>
+									<div class="_beer__flex-sort ">
+										<div class="_beer__item-sort">
+											Доля спирта <span>{abv}</span>
+										</div>
+										<div class="_beer__item-sort">
+											Плотность <span>{og}</span>
+										</div>
+									</div>
+									<div>{note}</div>
+									<div class="_beer__item-cost">
+										{cost}
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="scroll-container _beer__scroll-container vertical right" data-target="#overflow-container" >
+							<div class="scroll-line" >
+								<div class="scroll" ></div>
+							</div>
+						</div>
+					</div>				
+				</div>
+			</div>	
+		</div>		
+	</div>
+</div>

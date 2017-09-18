@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[snp tpl="src/block/site/page/head/.html" ]
+	</head>
+	<body>
+		<div id="fullpage-second" class="fullpage-site">
+			[snp tpl="src/block/site/default/_b-navbar/xs.html" class="navbar-xs navbar-second "] 
+			
+			[snp tpl="src/block/site/page/beer/hell.html" class="section beer-page__section section-grey"]
+
+			[snp tpl="src/block/site/page/beer/pilsner.html" class="section beer-page__section section-grey"]
+
+			[snp tpl="src/block/site/page/beer/weisen.html" class="section beer-page__section section-grey"]
+
+			[snp tpl="src/block/site/page/beer/stout.html" class="section beer-page__section section-grey"]
+			
+			[snp tpl="src/block/site/default/_b-footer/.html" class="section footer-block"] 
+		</div>
+		[snp tpl="src/block/site/default/_b-navbar/.html" class="navbar-modal-block"] 
+
+		[snp tpl="src/block/site/page/beer/nav.html" class=""]
+		<script>
+			if(device.desktop()) {
+				$('#fullpage-second').fullpage({
+					navigation: true,
+					navigationPosition: 'right',
+					navigation: false,
+					anchors: ['Chester-Hell', 'Chester-Pilsner', 'Chester-Weisen', 'Chester-Stout', 'footer'],
+					menu: '._beer__nav',
+				});
+			}
+		</script>
+	</body>
+</html>

@@ -209,7 +209,9 @@
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	background: url('@{url-path-img}/navbar/preview-lock.png') no-repeat center;
+	background-image: url('@{url-path-img}/navbar/preview-lock.png');
+	background-position: center;
+	background-repeat: no-repeat;
 	text-decoration: none;
 	&:hover,
 	&:focus{
@@ -238,12 +240,12 @@
     	padding: 5px 20px;
     	z-index: 10;
 	}
-	&.item-bl{
+	/*&.item-bl{
 		background: url('@{url-path-img}/navbar/preview-bl.jpg') no-repeat center;
 	}
 	&.item-beer{
 		background: url('@{url-path-img}/navbar/preview-beer.jpg') no-repeat center;
-	}
+	}*/
 }
 .navbar-xs{
 	display: none;
